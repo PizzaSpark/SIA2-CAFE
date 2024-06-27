@@ -1,18 +1,16 @@
 const mongoose = require("mongoose");
 const { Schema, model: _model } = mongoose;
 
-const collectionName = "users";
-const requiredUniqueString = { type: String, required: true, unique: true };
+const collectionName = "products";
 const requiredString = { type: String, required: true };
 const requiredNumber = { type: Number, required: true };
 const requiredBoolean = { type: Boolean, required: true };
 
 const DataModel = new Schema(
     {
-        email: requiredUniqueString,
-        password: requiredString,
+        picture: requiredString,
         name: requiredString,
-        type: requiredString,
+        price: requiredNumber,
         disabled: requiredBoolean,
     },
     { collection: collectionName }

@@ -14,33 +14,40 @@ import {
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 export default function Login() {
-    //MARK: INIT
-    const initialData = {
-        user_email: "",
-        user_password: "",
-    };
-    const [currentData, setCurrentData] = useState(initialData);
-    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
-    const handleChange = (e) => {
-        setCurrentData({
-            ...currentData,
-            [e.target.name || e.target.id]: e.target.value,
-        });
+
+    //MARK: INIT
+    const initialFormData = {
+        email: "",
+        password: "",
     };
+    const [formData, setFormData] = useState(initialFormData);
+    const [showPassword, setShowPassword] = useState(false);
+    
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+      };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const { user_email, user_password } = currentData;
+        const { email, password } = formData;
 
-        if(user_email != "admin@gmail.com" && user_password != "admin") {
+        if (email != "admin@gmail.com" && password != "admin") {
             alert("Invalid password");
             return;
         }
 
         navigate("/dashboard");
     };
+
+    const resetForm = () => {
+        setFormData(initialFormState);
+      };
 
     return (
         <div className="auth-page">
@@ -50,18 +57,20 @@ export default function Login() {
 
                     <form onSubmit={handleSubmit}>
                         <TextField
-                            id="user_email"
+                            id="email"
+                            name="email"
                             label="Email"
-                            value={currentData.user_email}
+                            value={formData.email}
                             onChange={handleChange}
                             variant="outlined"
                         />
 
                         <TextField
-                            id="user_password"
+                            id="password"
+                            name="password"
                             label="Password"
                             type={showPassword ? "text" : "password"}
-                            value={currentData.user_password}
+                            value={formData.password}
                             onChange={handleChange}
                             variant="outlined"
                             InputProps={{

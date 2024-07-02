@@ -1,23 +1,19 @@
 const mongoose = require("mongoose");
-const { Schema, model: _model } = mongoose;
 
 const collectionName = "users";
 const requiredUniqueString = { type: String, required: true, unique: true };
 const requiredString = { type: String, required: true };
+const defaultRole = { type: String, required: true, default: 'Customer'};
+const requiredBoolean = { type: Boolean, required: true, default: false };
+
 const requiredNumber = { type: Number, required: true };
-const requiredBoolean = { type: Boolean, required: true };
 
-const DataModel = new Schema(
-    {
-        email: requiredUniqueString,
-        password: requiredString,
-        name: requiredString,
-        type: requiredString,
-        disabled: requiredBoolean,
-    },
-    { collection: collectionName }
-);
+const DataModel = new mongoose.Schema({
+    email: requiredUniqueString,
+    password: requiredString,
+    name: requiredString,
+    role: defaultRole,
+    disabled: requiredBoolean,
+});
 
-const model = _model(collectionName, DataModel);
-
-module.exports = model;
+module.exports = mongoose.model(collectionName, DataModel);

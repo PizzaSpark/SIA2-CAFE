@@ -4,7 +4,7 @@ exports.createUser = async (req, res) => {
     try {
         const dataObject = new User(req.body);
         const savedData = await dataObject.save();
-        res.status(201).json(savedUser);
+        res.status(201).json(savedData);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }

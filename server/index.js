@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const path = require("path"); //
 const cors = require("cors"); //
+const path = require("path"); //
 
 // Server configuration
 const port = 1337;

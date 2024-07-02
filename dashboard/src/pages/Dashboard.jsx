@@ -18,27 +18,17 @@ import {
     Typography,
 } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
+import Sidebar from "../components/Sidebar";
 
 export default function Dashboard() {
     const navigate = useNavigate();
-    const handleLogout = () => {
-        navigate("/");
-    };
 
     return (
         <div className="page">
+            <Sidebar/>
             <div className="page-content">
                 <div className="space-between">
                     <h1>Dashboard</h1>
-                    <IconButton
-                        onClick={handleLogout}
-                        style={{ fontSize: "2em" }}
-                    >
-                        <AccountCircle
-                            className="actionicon"
-                            style={{ fontSize: "2em" }}
-                        />
-                    </IconButton>
                 </div>
             </div>
         </div>

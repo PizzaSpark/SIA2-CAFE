@@ -27,8 +27,9 @@ app.use("/uploads", express.static(uploadsDir));
 
 // Server configuration
 const port = 1337;
+const host = "0.0.0.0";
 const dbName = "siacafe-database";
-app.listen(port, () => {
+app.listen(port, host, () => {
     console.log(`Server is running on port ${port}`);
 });
 

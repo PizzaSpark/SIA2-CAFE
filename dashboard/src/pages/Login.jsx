@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import bcrypt from "bcryptjs";
 import "../styles/Login.css";
 
 import {
@@ -37,7 +36,7 @@ export default function Login() {
 
         const { email, password } = formData;
 
-        if (email != "admin@gmail.com" && password != "admin") {
+        if (email != "admin" && password != "admin") {
             alert("Invalid password");
             return;
         }

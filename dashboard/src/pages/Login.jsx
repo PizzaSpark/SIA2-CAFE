@@ -56,7 +56,6 @@ export default function Login() {
 
                     <form onSubmit={handleSubmit}>
                         <TextField
-                            id="email"
                             name="email"
                             label="Email"
                             value={formData.email}
@@ -65,7 +64,6 @@ export default function Login() {
                         />
 
                         <TextField
-                            id="password"
                             name="password"
                             label="Password"
                             type={showPassword ? "text" : "password"}

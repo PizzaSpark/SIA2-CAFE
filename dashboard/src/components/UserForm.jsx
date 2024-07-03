@@ -26,11 +26,9 @@ export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
     }, [open]);
 
     const handleChange = (e) => {
-        // const { name, value } = e.target;
         const { name, value, type, checked } = e.target;
         setFormData((prev) => ({
             ...prev,
-            // [name]: value,
             [name]: type === 'checkbox' ? checked : value,
         }));
     };

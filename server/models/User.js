@@ -6,8 +6,6 @@ const requiredString = { type: String, required: true };
 const defaultRole = { type: String, required: true, default: 'customer'};
 const requiredBoolean = { type: Boolean, required: true, default: false };
 
-const requiredNumber = { type: Number, required: true };
-
 const DataModel = new mongoose.Schema({
     email: requiredUniqueString,
     password: requiredString,

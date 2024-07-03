@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Sidebar.css";
+import "../../styles/Sidebar.css";
 import { useNavigate, NavLink } from "react-router-dom";
 import {
     BarChart,

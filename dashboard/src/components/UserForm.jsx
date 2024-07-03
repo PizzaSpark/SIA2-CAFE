@@ -54,6 +54,7 @@ export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
                     bgcolor: "background.paper",
                     boxShadow: 24,
                     p: 4,
+                    borderRadius: 5,
                 }}
             >
                 <Typography variant="h6" component="h2">

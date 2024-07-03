@@ -4,10 +4,12 @@ import { useNavigate, NavLink } from "react-router-dom";
 import {
     BarChart,
     Category,
+    FormatListBulleted,
     Inventory,
     Logout,
     MenuBook,
     People,
+    ShoppingBag,
     SpaceDashboard,
 } from "@mui/icons-material";
 
@@ -30,21 +32,33 @@ export default function Sidebar() {
                     />
 
                     <SidebarLink
-                        to="/manageusers"
+                        to="/users"
                         Icon={People}
-                        label="Manage Users"
+                        label="Users"
                     />
 
                     <SidebarLink
-                        to="/manageinventory"
+                        to="/ingredients"
                         Icon={Inventory}
-                        label="Manage Ingredients"
+                        label="Ingredients"
                     />
 
                     <SidebarLink
-                        to="/manageproducts"
+                        to="/menu"
                         Icon={MenuBook}
-                        label="Manage Menu"
+                        label="Menu"
+                    />
+
+                    <SidebarLink
+                        to="/order"
+                        Icon={ShoppingBag}
+                        label="Order Here"
+                    />
+
+                    <SidebarLink
+                        to="/auditlog"
+                        Icon={FormatListBulleted}
+                        label="Audit Log"
                     />
 
                     <SidebarLink

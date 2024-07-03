@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
 
-export default function Dashboard() {
+export default function Menu() {
     const navigate = useNavigate();
 
     return (
@@ -11,7 +11,7 @@ export default function Dashboard() {
             <Sidebar/>
             <div className="page-content">
                 <div className="space-between">
-                    <h1>Dashboard</h1>
+                    <h1>Menu</h1>
                 </div>
             </div>
         </div>

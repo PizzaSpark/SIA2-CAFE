@@ -3,7 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./App.css";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import ManageUsers from "./pages/ManageUsers";
+import Users from "./pages/Users";
+import Ingredients from "./pages/Ingredients";
+import Menu from "./pages/Menu";
+import Order from "./pages/Order";
+import AuditLog from "./pages/AuditLog";
 
 function App() {
 
@@ -12,7 +16,11 @@ function App() {
             <Routes>
                 <Route path="/" Component={Login} />
                 <Route path="/dashboard" Component={Dashboard} />
-                <Route path="/manageusers" Component={ManageUsers} />
+                <Route path="/users" Component={Users} />
+                <Route path="/ingredients" Component={Ingredients} />
+                <Route path="/menu" Component={Menu} />
+                <Route path="/order" Component={Order} />
+                <Route path="/auditlog" Component={AuditLog} />
 
                 {/* <Route Component={NotFound} /> */}
             </Routes>

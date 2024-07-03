@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
+import axios from "axios";
 
 import {
     Card,
@@ -14,6 +15,7 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 export default function Login() {
     const navigate = useNavigate();
+    const { VITE_REACT_APP_API_HOST } = import.meta.env;
 
     //MARK: INIT
     const initialFormData = {
@@ -22,31 +24,38 @@ export default function Login() {
     };
     const [formData, setFormData] = useState(initialFormData);
     const [showPassword, setShowPassword] = useState(false);
-    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
-          ...prev,
-          [name]: value,
+            ...prev,
+            [name]: value,
         }));
-      };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const { email, password } = formData;
-
-        if (email != "admin" && password != "admin") {
-            alert("Invalid password");
-            return;
-        }
-
-        navigate("/dashboard");
     };
 
-    const resetForm = () => {
-        setFormData(initialFormState);
-      };
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // Prevent default form submission behavior
+
+        try {
+            const response = await axios.post(
+                `${VITE_REACT_APP_API_HOST}/api/users/login`,
+                formData
+            );
+
+            // Assuming the response includes a token you need to store
+            localStorage.setItem("userToken", response.data.token);
+
+            // Redirect the user
+            navigate("/dashboard"); // Adjust the path as needed
+        } catch (error) {
+            // Handle error (e.g., showing an error message)
+            console.error(
+                "Login failed",
+                error.response ? error.response.data : error
+            );
+            // Optionally, update the state to show an error message
+        }
+    };
 
     return (
         <div className="auth-page">

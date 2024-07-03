@@ -55,3 +55,30 @@ exports.deleteUser = async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 };
+
+exports.loginUser = async (req, res) => {
+    try {
+        // Find the user by email
+        const user = await User.findOne({ email: req.body.email });
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Compare the provided password with the stored hashed password
+        // const isMatch = await bcrypt.compare(req.body.password, user.password);
+
+        const isMatch = req.body.password == user.password;
+
+        if (!isMatch) {
+            return res.status(400).json({ message: "Invalid credentials" });
+        }
+
+        // Respond with user data (omit sensitive information)
+        // Here you might also generate a token or session
+        const { password, ...userDataWithoutPassword } = user.toObject();
+        res.json(userDataWithoutPassword);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+

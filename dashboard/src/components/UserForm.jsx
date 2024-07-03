@@ -1,3 +1,4 @@
+import { Box, Button, Checkbox, FormControlLabel, Modal, TextField, Typography } from "@mui/material";
 import { React, useState, useEffect } from "react";
 
 export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
@@ -25,16 +26,88 @@ export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
     }, [open]);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        // const { name, value } = e.target;
+        const { name, value, type, checked } = e.target;
         setFormData((prev) => ({
             ...prev,
-            [name]: value,
+            // [name]: value,
+            [name]: type === 'checkbox' ? checked : value,
         }));
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSubmit(formData);
+        setFormData(initialFormData);
+        onClose();
+    };
+
     return (
-        <div>
-            <div className="uwu">hi</div>
-        </div>
+        <Modal open={open} onClose={onClose}>
+            <Box
+                sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: 400,
+                    bgcolor: "background.paper",
+                    boxShadow: 24,
+                    p: 4,
+                }}
+            >
+                <Typography variant="h6" component="h2">
+                    User Form
+                </Typography>
+                <form onSubmit={handleSubmit}>
+                    <TextField
+                        margin="normal"
+                        fullWidth
+                        label="Email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
+                    <TextField
+                        margin="normal"
+                        fullWidth
+                        label="Password"
+                        name="password"
+                        type="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                    />
+                    <TextField
+                        margin="normal"
+                        fullWidth
+                        label="Name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                    />
+                    <TextField
+                        margin="normal"
+                        fullWidth
+                        label="Role"
+                        name="role"
+                        value={formData.role}
+                        onChange={handleChange}
+                    />
+                    <FormControlLabel
+                        control={
+                            <Checkbox
+                                checked={formData.disabled}
+                                onChange={handleChange}
+                                name="disabled"
+                            />
+                        }
+                        label="Disabled"
+                    />
+                    <Button type="submit" variant="contained" color="primary">
+                        {userToEdit ? "Update" : "Submit"}
+                    </Button>
+                </form>
+            </Box>
+        </Modal>
     );
 }

@@ -12,6 +12,6 @@ const DataModel = new mongoose.Schema({
     name: requiredString,
     role: defaultRole,
     disabled: requiredBoolean,
-}, { versionKey: false });
+}, { versionKey: false, timestamps: true });
 
 module.exports = mongoose.model(collectionName, DataModel);

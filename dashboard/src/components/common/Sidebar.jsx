@@ -2,8 +2,6 @@ import React from "react";
 import "../../styles/Sidebar.css";
 import { useNavigate, NavLink } from "react-router-dom";
 import {
-    BarChart,
-    Category,
     FormatListBulleted,
     Inventory,
     Logout,
@@ -38,9 +36,9 @@ export default function Sidebar() {
                     />
 
                     <SidebarLink
-                        to="/ingredients"
+                        to="/stocks"
                         Icon={Inventory}
-                        label="Ingredients"
+                        label="Stocks"
                     />
 
                     <SidebarLink

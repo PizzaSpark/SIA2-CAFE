@@ -4,10 +4,10 @@ import "./App.css";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
-import Ingredients from "./pages/Ingredients";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order";
 import AuditLog from "./pages/AuditLog";
+import Stocks from "./pages/Stocks";
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
                 <Route path="/" Component={Login} />
                 <Route path="/dashboard" Component={Dashboard} />
                 <Route path="/users" Component={Users} />
-                <Route path="/ingredients" Component={Ingredients} />
+                <Route path="/stocks" Component={Stocks} />
                 <Route path="/menu" Component={Menu} />
                 <Route path="/order" Component={Order} />
                 <Route path="/auditlog" Component={AuditLog} />

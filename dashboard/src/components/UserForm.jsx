@@ -120,6 +120,12 @@ export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
                     <Button type="submit" variant="contained" color="primary">
                         {userToEdit ? "Update" : "Submit"}
                     </Button>
+
+                    {userToEdit && (
+                        <Button variant="outlined" color="primary">
+                            Delete
+                        </Button>
+                    )}
                 </form>
             </Box>
         </Modal>

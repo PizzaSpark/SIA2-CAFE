@@ -1,4 +1,13 @@
-import { Box, Button, Checkbox, FormControlLabel, Modal, TextField, Typography } from "@mui/material";
+import {
+    Box,
+    Button,
+    Checkbox,
+    FormControlLabel,
+    MenuItem,
+    Modal,
+    TextField,
+    Typography,
+} from "@mui/material";
 import { React, useState, useEffect } from "react";
 
 export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
@@ -29,7 +38,7 @@ export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
         const { name, value, type, checked } = e.target;
         setFormData((prev) => ({
             ...prev,
-            [name]: type === 'checkbox' ? checked : value,
+            [name]: type === "checkbox" ? checked : value,
         }));
     };
 
@@ -87,11 +96,17 @@ export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
                     <TextField
                         margin="normal"
                         fullWidth
+                        select
                         label="Role"
                         name="role"
                         value={formData.role}
                         onChange={handleChange}
-                    />
+                    >
+                        <MenuItem value="Customer">Customer</MenuItem>
+                        <MenuItem value="Admin">Admin</MenuItem>
+                        <MenuItem value="Owner">Owner</MenuItem>
+                        <MenuItem value="Staff">Staff</MenuItem>
+                    </TextField>
                     <FormControlLabel
                         control={
                             <Checkbox

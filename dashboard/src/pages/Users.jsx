@@ -25,6 +25,7 @@ export default function Users() {
         });
     }, []);
 
+    //create user
     const handleOpen = () => {
         setDataToEdit(null);
         setOpen(true);

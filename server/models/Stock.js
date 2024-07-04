@@ -8,6 +8,6 @@ const DataModel = new mongoose.Schema({
     name: requiredUniqueString,
     quantity: requiredNumber,
     minimum: requiredNumber,
-});
+}, { versionKey: false });
 
 module.exports = mongoose.model(collectionName, DataModel);

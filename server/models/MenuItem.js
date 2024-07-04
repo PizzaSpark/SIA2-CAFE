@@ -11,6 +11,6 @@ const DataModel = new mongoose.Schema({
     price: requiredNumber,
     image: requiredString,
     disabled: requiredBoolean,
-});
+}, { versionKey: false });
 
 module.exports = mongoose.model(collectionName, DataModel);

@@ -10,35 +10,35 @@ export default function Users() {
     const navigate = useNavigate();
     const { VITE_REACT_APP_API_HOST } = import.meta.env;
     const [open, setOpen] = useState(false);
-    const [users, setUsers] = useState([]);
-    const [userToEdit, setUserToEdit] = useState(null);
+    const [dataList, setDataList] = useState([]);
+    const [dataToEdit, setDataToEdit] = useState(null);
 
     useEffect(() => {
       axios.get(`${VITE_REACT_APP_API_HOST}/api/users`)
         .then((response) => {
-          setUsers(response.data);
+          setDataList(response.data);
         })
         .catch((error) => {
-          console.error('Error fetching users:', error);
-          setUsers([]);
+          console.error('Error fetching dataList:', error);
+          setDataList([]);
         });
     }, []);
 
     const handleOpen = () => {
-        setUserToEdit(null);
+        setDataToEdit(null);
         setOpen(true);
     };
 
     const handleClose = () => setOpen(false);
 
     const handleSubmit = (formData) => {
-      if (userToEdit) {
+      if (dataToEdit) {
         // Update user
-        axios.put(`${VITE_REACT_APP_API_HOST}/api/users/${userToEdit._id}`, formData)
+        axios.put(`${VITE_REACT_APP_API_HOST}/api/users/${dataToEdit._id}`, formData)
           .then((response) => {
-            setUsers((prevUsers) =>
+            setDataList((prevUsers) =>
               prevUsers.map((user) =>
-                user.id === userToEdit.id ? response.data : user
+                user.id === dataToEdit.id ? response.data : user
               )
             );
             setOpen(false);
@@ -50,7 +50,7 @@ export default function Users() {
         // Add new user
         axios.post(`${VITE_REACT_APP_API_HOST}/api/users`, formData)
           .then((response) => {
-            setUsers((prevUsers) => [
+            setDataList((prevUsers) => [
               ...prevUsers,
               response.data,
             ]);
@@ -63,7 +63,7 @@ export default function Users() {
     };
 
     const handleEdit = (user) => {
-        setUserToEdit(user);
+        setDataToEdit(user);
         setOpen(true);
     };
 
@@ -80,12 +80,12 @@ export default function Users() {
                 >
                     Create User
                 </Button>
-                <UserTable users={users} onEdit={handleEdit} />
+                <UserTable dataList={dataList} onEdit={handleEdit} />
                 <UserForm
                     open={open}
                     onClose={handleClose}
                     onSubmit={handleSubmit}
-                    userToEdit={userToEdit}
+                    dataToEdit={dataToEdit}
                 />
             </div>
         </div>

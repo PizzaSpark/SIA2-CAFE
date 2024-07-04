@@ -11,10 +11,10 @@ import {
 } from "@mui/material";
 import { Edit } from "@mui/icons-material";
 
-export default function UserTable({ users, onEdit }) {
+export default function UserTable({ dataList, onEdit }) {
 
-    if (!Array.isArray(users)) {
-        return <div>No users available.</div>;
+    if (!Array.isArray(dataList)) {
+        return <div>No dataList available.</div>;
       }
 
     return (
@@ -30,7 +30,7 @@ export default function UserTable({ users, onEdit }) {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {users.map((user) => (
+                    {dataList.map((user) => (
                         <TableRow key={user._id}>
                             <TableCell>{user.email}</TableCell>
                             <TableCell>{user.name}</TableCell>

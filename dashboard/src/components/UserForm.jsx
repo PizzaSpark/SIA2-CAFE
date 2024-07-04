@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { React, useState, useEffect } from "react";
 
-export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
+export default function UserForm({ open, onClose, onSubmit, dataToEdit }) {
     const initialFormData = {
         email: "",
         password: "",
@@ -21,12 +21,12 @@ export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
     const [formData, setFormData] = useState(initialFormData);
 
     useEffect(() => {
-        if (userToEdit) {
-            setFormData(userToEdit);
+        if (dataToEdit) {
+            setFormData(dataToEdit);
         } else {
             setFormData(initialFormData);
         }
-    }, [userToEdit]);
+    }, [dataToEdit]);
 
     useEffect(() => {
         if (!open) {
@@ -118,10 +118,10 @@ export default function UserForm({ open, onClose, onSubmit, userToEdit }) {
                         label="Disabled"
                     />
                     <Button type="submit" variant="contained" color="primary">
-                        {userToEdit ? "Update" : "Submit"}
+                        {dataToEdit ? "Update" : "Submit"}
                     </Button>
 
-                    {userToEdit && (
+                    {dataToEdit && (
                         <Button variant="outlined" color="primary">
                             Delete
                         </Button>

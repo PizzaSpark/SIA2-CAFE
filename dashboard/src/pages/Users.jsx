@@ -9,12 +9,13 @@ import UserForm from "../components/UserForm";
 export default function Users() {
     const navigate = useNavigate();
     const { VITE_REACT_APP_API_HOST } = import.meta.env;
+    const resourceName = 'users';
     const [open, setOpen] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [dataToEdit, setDataToEdit] = useState(null);
 
     useEffect(() => {
-      axios.get(`${VITE_REACT_APP_API_HOST}/api/users`)
+      axios.get(`${VITE_REACT_APP_API_HOST}/api/${resourceName}`)
         .then((response) => {
           setDataList(response.data);
         })
@@ -34,11 +35,11 @@ export default function Users() {
     const handleSubmit = (formData) => {
       if (dataToEdit) {
         // Update user
-        axios.put(`${VITE_REACT_APP_API_HOST}/api/users/${dataToEdit._id}`, formData)
+        axios.put(`${VITE_REACT_APP_API_HOST}/api/${resourceName}/${dataToEdit._id}`, formData)
           .then((response) => {
-            setDataList((prevUsers) =>
-              prevUsers.map((user) =>
-                user.id === dataToEdit.id ? response.data : user
+            setDataList((prevDataList) =>
+              prevDataList.map((item) =>
+                item._id === dataToEdit._id ? response.data : item
               )
             );
             setOpen(false);
@@ -48,10 +49,10 @@ export default function Users() {
           });
       } else {
         // Add new user
-        axios.post(`${VITE_REACT_APP_API_HOST}/api/users`, formData)
+        axios.post(`${VITE_REACT_APP_API_HOST}/api/${resourceName}`, formData)
           .then((response) => {
-            setDataList((prevUsers) => [
-              ...prevUsers,
+            setDataList((prevDataList) => [
+              ...prevDataList,
               response.data,
             ]);
             setOpen(false);
@@ -62,8 +63,8 @@ export default function Users() {
       }
     };
 
-    const handleEdit = (user) => {
-        setDataToEdit(user);
+    const handleEdit = (item) => {
+        setDataToEdit(item);
         setOpen(true);
     };
 

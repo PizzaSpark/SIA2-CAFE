@@ -1,6 +1,6 @@
-const dataModel = require("../models/User");
+const dataModel = require("../models/Stock");
 
-exports.createUser = async (req, res) => {
+exports.createStock = async (req, res) => {
     try {
         const dataObject = new dataModel(req.body);
         const savedData = await dataObject.save();
@@ -10,7 +10,7 @@ exports.createUser = async (req, res) => {
     }
 };
 
-exports.getUsers = async (req, res) => {
+exports.getStocks = async (req, res) => {
     try {
         const dataObject = await dataModel.find();
         res.json(dataObject);
@@ -19,8 +19,8 @@ exports.getUsers = async (req, res) => {
     }
 };
 
-// Get a single user
-exports.getUser = async (req, res) => {
+// Get a single stock
+exports.getStock = async (req, res) => {
     try {
         const dataObject = await dataModel.findById(req.params.id);
         if (!dataObject) return res.status(404).json({ message: "Data not found" });
@@ -30,7 +30,7 @@ exports.getUser = async (req, res) => {
     }
 };
 
-exports.updateUser = async (req, res) => {
+exports.updateStock = async (req, res) => {
     try {
         const updatedObject = await dataModel.findByIdAndUpdate(
             req.params.id,
@@ -45,7 +45,7 @@ exports.updateUser = async (req, res) => {
     }
 };
 
-exports.deleteUser = async (req, res) => {
+exports.deleteStock = async (req, res) => {
     try {
         const deletedObject = await dataModel.findByIdAndDelete(req.params.id);
         if (!deletedObject)
@@ -53,32 +53,6 @@ exports.deleteUser = async (req, res) => {
         res.json({ message: "Data deleted" });
     } catch (error) {
         res.status(400).json({ message: error.message });
-    }
-};
-
-exports.loginUser = async (req, res) => {
-    try {
-        // Find the user by email
-        const dataObject = await dataModel.findOne({ email: req.body.email });
-        if (!dataObject) {
-            return res.status(404).json({ message: "User not found" });
-        }
-
-        // Compare the provided password with the stored hashed password
-        // const isMatch = await bcrypt.compare(req.body.password, dataObject.password);
-
-        const isMatch = req.body.password == dataObject.password;
-
-        if (!isMatch) {
-            return res.status(400).json({ message: "Invalid credentials" });
-        }
-
-        // Respond with user data (omit sensitive information)
-        // Here you might also generate a token or session
-        const { password, ...dataObjectWithoutPassword } = dataObject.toObject();
-        res.json(dataObjectWithoutPassword);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
     }
 };
 

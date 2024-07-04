@@ -20,6 +20,9 @@ app.use('/api/users', userRoutes);
 const menuItemRoutes = require('./routes/menuItems');
 app.use('/api/menuItems', menuItemRoutes);
 
+const stockRoutes = require('./routes/stocks');
+app.use('/api/stocks', stockRoutes);
+
 // MongoDB connection
 mongoose
     .connect(`mongodb://localhost:27017/${dbName}`)

@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Edit } from "@mui/icons-material";
 
-export default function UserTable({ dataList, onEdit }) {
+export default function StockTable({ dataList, onEdit }) {
 
     if (!Array.isArray(dataList)) {
         return <div>No dataList available.</div>;
@@ -22,22 +22,18 @@ export default function UserTable({ dataList, onEdit }) {
             <Table>
                 <TableHead>
                     <TableRow>
-                        <TableCell>Email</TableCell>
                         <TableCell>Name</TableCell>
-                        <TableCell>Role</TableCell>
-                        <TableCell>Disabled</TableCell>
+                        <TableCell>Quantity</TableCell>
+                        <TableCell>Minimum</TableCell>
                         <TableCell>Actions</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {dataList.map((item) => (
                         <TableRow key={item._id}>
-                            <TableCell>{item.email}</TableCell>
                             <TableCell>{item.name}</TableCell>
-                            <TableCell>{item.role}</TableCell>
-                            <TableCell>
-                                {item.disabled ? "Yes" : "No"}
-                            </TableCell>
+                            <TableCell>{item.quantity}</TableCell>
+                            <TableCell>{item.minimum}</TableCell>
                             <TableCell>
                                 <Button
                                     variant="contained"

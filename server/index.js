@@ -17,6 +17,9 @@ app.use(bodyParser.json());
 const userRoutes = require('./routes/users');
 app.use('/api/users', userRoutes);
 
+const menuItemRoutes = require('./routes/menuItems');
+app.use('/api/menuItems', menuItemRoutes);
+
 // MongoDB connection
 mongoose
     .connect(`mongodb://localhost:27017/${dbName}`)

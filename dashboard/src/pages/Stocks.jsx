@@ -26,7 +26,7 @@ export default function Stocks() {
             });
     }, []);
 
-    const handleOpen = () => {
+    const handleCreate = () => {
         setDataToEdit(null);
         setOpen(true);
     };
@@ -79,7 +79,7 @@ export default function Stocks() {
                 <Button
                     variant="contained"
                     color="primary"
-                    onClick={handleOpen}
+                    onClick={handleCreate}
                 >
                     Create Stock
                 </Button>

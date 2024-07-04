@@ -25,8 +25,7 @@ export default function Users() {
         });
     }, []);
 
-    //create user
-    const handleOpen = () => {
+    const handleCreate = () => {
         setDataToEdit(null);
         setOpen(true);
     };
@@ -78,7 +77,7 @@ export default function Users() {
                 <Button
                     variant="contained"
                     color="primary"
-                    onClick={handleOpen}
+                    onClick={handleCreate}
                 >
                     Create User
                 </Button>

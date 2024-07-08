@@ -2,20 +2,42 @@ import { React, useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, Button } from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
+import ImagePreviewModal from "./ImagePreviewModal";
 
 export default function MenuTable({ dataList, onEdit, onDelete }) {
+    
+    const [previewOpen, setPreviewOpen] = useState(false);
+    const [previewImageUrl, setPreviewImageUrl] = useState("");
+
+    const handlePreviewOpen = (imageUrl) => {
+        setPreviewImageUrl(imageUrl);
+        setPreviewOpen(true);
+    };
+
+    const handlePreviewClose = () => {
+        setPreviewOpen(false);
+    };
+    
     const columns = [
         {
             field: "image",
             headerName: "Image",
             flex: 1,
-            renderCell: (params) => (
-                <img
-                    src={`http://localhost:1337/uploads/${params.value}`}
-                    alt="Table Cell Image"
-                    style={{ width: "100px", height: "auto" }}
-                />
-            ),
+            renderCell: (params) => {
+                const imageUrl = `http://localhost:1337/uploads/${params.value}`;
+                return (
+                    <img
+                        src={imageUrl}
+                        alt="Table Cell Image"
+                        style={{ 
+                            width: "100px", 
+                            height: "auto", 
+                            cursor: "pointer" 
+                        }}
+                        onClick={() => handlePreviewOpen(imageUrl)}
+                    />
+                );
+            },
         },
         { field: "name", headerName: "Name", flex: 1 },
         { field: "price", headerName: "Price", flex: 1 },
@@ -71,6 +93,11 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
                 autoPageSize
                 pagination
                 disableRowSelectionOnClick
+            />
+            <ImagePreviewModal
+                open={previewOpen}
+                onClose={handlePreviewClose}
+                imageUrl={previewImageUrl}
             />
         </Box>
     );

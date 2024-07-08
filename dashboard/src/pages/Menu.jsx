@@ -79,7 +79,6 @@ export default function Menu() {
     };
 
     const handleEdit = (item) => {
-        console.log(item);
         setDataToEdit(item);
         setOpen(true);
     };

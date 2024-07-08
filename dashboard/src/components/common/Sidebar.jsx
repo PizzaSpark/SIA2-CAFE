@@ -7,6 +7,7 @@ import {
     Logout,
     MenuBook,
     People,
+    RestaurantMenu,
     ShoppingBag,
     SpaceDashboard,
 } from "@mui/icons-material";
@@ -29,22 +30,16 @@ export default function Sidebar() {
                         label="Dashboard"
                     />
 
-                    <SidebarLink
-                        to="/users"
-                        Icon={People}
-                        label="Users"
-                    />
+                    <SidebarLink to="/users" Icon={People} label="Users" />
+
+                    <SidebarLink to="/stocks" Icon={Inventory} label="Stocks" />
+
+                    <SidebarLink to="/menu" Icon={MenuBook} label="Menu" />
 
                     <SidebarLink
-                        to="/stocks"
-                        Icon={Inventory}
-                        label="Stocks"
-                    />
-
-                    <SidebarLink
-                        to="/menu"
-                        Icon={MenuBook}
-                        label="Menu"
+                        to="/recipe"
+                        Icon={RestaurantMenu}
+                        label="Recipe"
                     />
 
                     <SidebarLink

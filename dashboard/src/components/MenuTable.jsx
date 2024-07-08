@@ -6,6 +6,8 @@ import ImagePreviewModal from "./ImagePreviewModal";
 
 export default function MenuTable({ dataList, onEdit, onDelete }) {
     
+    const { VITE_REACT_APP_API_HOST } = import.meta.env;
+
     const [previewOpen, setPreviewOpen] = useState(false);
     const [previewImageUrl, setPreviewImageUrl] = useState("");
 
@@ -24,7 +26,7 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
             headerName: "Image",
             flex: 1,
             renderCell: (params) => {
-                const imageUrl = `http://localhost:1337/uploads/${params.value}`;
+                const imageUrl = `${VITE_REACT_APP_API_HOST}/uploads/${params.value}`;
                 return (
                     <img
                         src={imageUrl}

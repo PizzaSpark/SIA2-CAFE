@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors"); //
 const path = require("path"); //
+const fs = require('fs');
 
 // Server configuration
 const port = 1337;
@@ -12,9 +13,15 @@ const dbName = "siacafe-database";
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // to access uploads folder in api
+
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
 
 // Routes
+app.use('/uploads', express.static(uploadsDir)); // to access uploads folder in api
+
 const userRoutes = require('./routes/users');
 app.use('/api/users', userRoutes);
 

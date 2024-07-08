@@ -25,11 +25,14 @@ app.use('/uploads', express.static(uploadsDir)); // to access uploads folder in 
 const userRoutes = require('./routes/users');
 app.use('/api/users', userRoutes);
 
+const stockRoutes = require('./routes/stocks');
+app.use('/api/stocks', stockRoutes);
+
 const menuItemRoutes = require('./routes/menuItems');
 app.use('/api/menuItems', menuItemRoutes);
 
-const stockRoutes = require('./routes/stocks');
-app.use('/api/stocks', stockRoutes);
+const recipeRoutes = require('./routes/recipes');
+app.use('/api/recipes', recipeRoutes);
 
 // MongoDB connection
 mongoose

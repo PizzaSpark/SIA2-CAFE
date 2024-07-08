@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const collectionName = "menus";
+const collectionName = "menuitems";
 const requiredUniqueString = { type: String, required: true, unique: true };
 const requiredString = { type: String, required: true };
 const requiredBoolean = { type: Boolean, default: false };

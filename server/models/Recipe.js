@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const collectionName = "menuitemstock";
+const collectionName = "recipe";
 const requiredNumber = { type: Number, default: 0 };
 const referencedMenuItem = { type: mongoose.Schema.Types.ObjectId, ref: 'MenuItem', required: true };
 const referencedStockItem = { type: mongoose.Schema.Types.ObjectId, ref: 'Stock', required: true };

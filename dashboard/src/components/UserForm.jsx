@@ -28,12 +28,6 @@ export default function UserForm({ open, onClose, dataToEdit, onSubmit }) {
         }
     }, [dataToEdit]);
 
-    useEffect(() => {
-        if (!open) {
-            setFormData(initialFormData);
-        }
-    }, [open]);
-
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData((prev) => ({

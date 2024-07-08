@@ -26,13 +26,7 @@ export default function MenuForm({ open, onClose, dataToEdit, onSubmit }) {
         } else {
             setFormData(initialFormData);
         }
-    }, [dataToEdit]);
-
-    useEffect(() => {
-        if (!open) {
-            setFormData(initialFormData);
-        }
-    }, [open]);
+    }, [dataToEdit, open]);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;

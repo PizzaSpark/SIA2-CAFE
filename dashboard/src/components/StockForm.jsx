@@ -26,12 +26,6 @@ export default function StockForm({ open, onClose, dataToEdit, onSubmit }) {
         }
     }, [dataToEdit]);
 
-    useEffect(() => {
-        if (!open) {
-            setFormData(initialFormData);
-        }
-    }, [open]);
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({

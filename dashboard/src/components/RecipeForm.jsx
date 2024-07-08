@@ -47,8 +47,10 @@ export default function RecipeForm({
     const availableStocks = useMemo(() => {
         if (!formData.menuItem) return stocks;
         const usedStocks = usedStocksMap[formData.menuItem] || new Set();
-        return stocks.filter(stock => !usedStocks.has(stock._id));
-    }, [formData.menuItem, stocks, usedStocksMap]);
+        return stocks.filter(stock => 
+            !usedStocks.has(stock._id) || (dataToEdit && dataToEdit.stock === stock._id)
+        );
+    }, [formData.menuItem, stocks, usedStocksMap, dataToEdit]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -57,8 +59,8 @@ export default function RecipeForm({
             [name]: value,
         }));
 
-        // Reset stock when menu item changes
-        if (name === 'menuItem') {
+        // Reset stock when menu item changes, but only if we're not editing
+        if (name === 'menuItem' && !dataToEdit) {
             setFormData((prev) => ({
                 ...prev,
                 stock: '',
@@ -89,7 +91,7 @@ export default function RecipeForm({
                 }}
             >
                 <Typography variant="h6" component="h2">
-                    Recipe Form
+                    {dataToEdit ? "Edit Recipe" : "Add Recipe"}
                 </Typography>
                 <form onSubmit={handleSubmit}>
                     <TextField

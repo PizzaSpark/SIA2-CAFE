@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { React, useState, useEffect } from "react";
 
-export default function UserForm({ open, onClose, onSubmit, dataToEdit }) {
+export default function UserForm({ open, onClose, dataToEdit, onSubmit }) {
     const initialFormData = {
         email: "",
         password: "",
@@ -120,12 +120,6 @@ export default function UserForm({ open, onClose, onSubmit, dataToEdit }) {
                     <Button type="submit" variant="contained" color="primary">
                         {dataToEdit ? "Update" : "Submit"}
                     </Button>
-
-                    {dataToEdit && (
-                        <Button variant="outlined" color="primary">
-                            Delete
-                        </Button>
-                    )}
                 </form>
             </Box>
         </Modal>

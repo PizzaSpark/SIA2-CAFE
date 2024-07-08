@@ -1,78 +1,60 @@
 import { React, useState } from "react";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Paper,
-    Button,
-    TablePagination, // Import TablePagination
-} from "@mui/material";
-import { Edit } from "@mui/icons-material";
+import { Box, Button } from "@mui/material";
+import { Delete, Edit } from "@mui/icons-material";
+import { DataGrid } from "@mui/x-data-grid";
 
-export default function StockTable({ dataList, onEdit }) {
-    // State for pagination
-    const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(5);
-
-    // Handle change page
-    const handleChangePage = (event, newPage) => {
-        setPage(newPage);
-    };
-
-    // Handle change rows per page
-    const handleChangeRowsPerPage = (event) => {
-        setRowsPerPage(parseInt(event.target.value, 10));
-        setPage(0); // Reset page to 0 when rows per page changes
-    };
-
-    if (!Array.isArray(dataList)) {
-        return <div>No dataList available.</div>;
-    }
+export default function StockTable({ dataList, onEdit, onDelete }) {
+    const columns = [
+        { field: "name", headerName: "Name", flex: 1 },
+        { field: "quantity", headerName: "Quantity", flex: 1 },
+        { field: "minimum", headerName: "Minimum", flex: 1 },
+        {
+            field: "createdAt",
+            headerName: "Created At",
+            flex: 1,
+            renderCell: (params) => new Date(params.value).toLocaleDateString(),
+        },
+        {
+            field: "updatedAt",
+            headerName: "Updated On",
+            flex: 1,
+            renderCell: (params) => new Date(params.value).toLocaleDateString(),
+        },
+        {
+            field: "actions",
+            headerName: "Actions",
+            flex: 1,
+            renderCell: (params) => (
+                <>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => onEdit(params.row)}
+                    >
+                        <Edit />
+                    </Button>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => onDelete(params.row._id)}
+                    >
+                        <Delete />
+                    </Button>
+                </>
+            ),
+        },
+    ];
 
     return (
-        <TableContainer component={Paper}>
-            <Table>
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Quantity</TableCell>
-                        <TableCell>Minimum</TableCell>
-                        <TableCell>Actions</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {dataList
-                        .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                        .map((item) => (
-                            <TableRow key={item._id}>
-                                <TableCell>{item.name}</TableCell>
-                                <TableCell>{item.quantity}</TableCell>
-                                <TableCell>{item.minimum}</TableCell>
-                                <TableCell>
-                                    <Button
-                                        variant="contained"
-                                        color="primary"
-                                        onClick={() => onEdit(item)}
-                                    >
-                                        <Edit />
-                                    </Button>
-                                </TableCell>
-                            </TableRow>
-                        ))}
-                </TableBody>
-            </Table>
-            <TablePagination
-                rowsPerPageOptions={[5, 10, 25]}
-                component="div"
-                count={dataList.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
+        <Box sx={{ flex: 1 }}>
+            <DataGrid
+                rows={dataList}
+                columns={columns}
+                getRowId={(row) => row._id}
+                autoPageSize
+                pagination
+                disableRowSelectionOnClick
             />
-        </TableContainer>
+        </Box>
     );
 }

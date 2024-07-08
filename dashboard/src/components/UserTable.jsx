@@ -1,13 +1,9 @@
 import { React, useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, Button } from "@mui/material";
-import EditIcon from "@mui/icons-material/Edit";
+import { Edit, Delete } from "@mui/icons-material";
 
-export default function UserTable({ dataList, onEdit }) {
-    if (!Array.isArray(dataList)) {
-        return <div>No dataList available.</div>;
-    }
-
+export default function UserTable({ dataList, onEdit, onDelete }) {
     const columns = [
         { field: "email", headerName: "Email", flex: 1 },
         { field: "name", headerName: "Name", flex: 1 },
@@ -16,7 +12,7 @@ export default function UserTable({ dataList, onEdit }) {
             field: "disabled",
             headerName: "Disabled",
             flex: 1,
-            renderCell: (params) => (params.value ? "Yes" : "No"),
+            renderCell: (params) => (params.value ? "✔" : "✖"),
         },
         {
             field: "createdAt",
@@ -35,13 +31,22 @@ export default function UserTable({ dataList, onEdit }) {
             headerName: "Actions",
             flex: 1,
             renderCell: (params) => (
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => onEdit(params.row)}
-                >
-                    <EditIcon />
-                </Button>
+                <>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => onEdit(params.row)}
+                    >
+                        <Edit />
+                    </Button>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => onDelete(params.row._id)}
+                    >
+                        <Delete />
+                    </Button>
+                </>
             ),
         },
     ];
@@ -55,7 +60,6 @@ export default function UserTable({ dataList, onEdit }) {
                 autoPageSize
                 pagination
                 disableRowSelectionOnClick
-                checkboxSelection
             />
         </Box>
     );

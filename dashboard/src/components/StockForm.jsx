@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { React, useState, useEffect } from "react";
 
-export default function StockForm({ open, onClose, onSubmit, dataToEdit }) {
+export default function StockForm({ open, onClose, dataToEdit, onSubmit }) {
     const initialFormData = {
         name: "",
         quantity: 0,
@@ -98,12 +98,6 @@ export default function StockForm({ open, onClose, onSubmit, dataToEdit }) {
                     <Button type="submit" variant="contained" color="primary">
                         {dataToEdit ? "Update" : "Submit"}
                     </Button>
-
-                    {dataToEdit && (
-                        <Button variant="outlined" color="primary">
-                            Delete
-                        </Button>
-                    )}
                 </form>
             </Box>
         </Modal>

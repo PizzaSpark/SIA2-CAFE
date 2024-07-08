@@ -70,6 +70,21 @@ export default function Stocks() {
         setOpen(true);
     };
 
+    const handleDelete = (id) => {
+        if (window.confirm("Are you sure you want to delete this stock?")) {
+            axios
+                .delete(`${VITE_REACT_APP_API_HOST}/api/${resourceName}/${id}`)
+                .then((response) => {
+                    setDataList((prevDataList) =>
+                        prevDataList.filter((item) => item._id !== id)
+                    );
+                })
+                .catch((error) => {
+                    console.error("Failed to delete user:", error);
+                });
+        }
+    };
+
     return (
         <div className="page">
             <Sidebar />
@@ -83,12 +98,12 @@ export default function Stocks() {
                 >
                     Create Stock
                 </Button>
-                <StockTable dataList={dataList} onEdit={handleEdit} />
+                <StockTable dataList={dataList} onEdit={handleEdit} onDelete={handleDelete} />
                 <StockForm
                     open={open}
                     onClose={handleClose}
-                    onSubmit={handleSubmit}
                     dataToEdit={dataToEdit}
+                    onSubmit={handleSubmit}
                 />
             </div>
         </div>

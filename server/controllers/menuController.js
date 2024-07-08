@@ -68,7 +68,7 @@ exports.updateMenuItem = async (req, res) => {
 
 exports.deleteMenuItem = async (req, res) => {
     try {
-        const dataObject = await dataModel.findById(req.params.id);
+        const dataObject = await dataModel.findByIdAndDelete(req.params.id);
 
         if (!dataObject) {
             return res.status(404).json({ error: "Data not found" });
@@ -82,7 +82,6 @@ exports.deleteMenuItem = async (req, res) => {
             }
         }
 
-        await dataObject.remove();
         res.status(200).json({ message: "Data deleted" });
     } catch (error) {
         res.status(400).json({ error: error.message });

@@ -5,7 +5,18 @@ import { Edit, Delete } from "@mui/icons-material";
 
 export default function MenuTable({ dataList, onEdit, onDelete }) {
     const columns = [
-        { field: "image", headerName: "Image", flex: 1 },
+        {
+            field: "image",
+            headerName: "Image",
+            flex: 1,
+            renderCell: (params) => (
+                <img
+                    src={`http://localhost:1337/uploads/${params.value}`}
+                    alt="Table Cell Image"
+                    style={{ width: "100px", height: "auto" }}
+                />
+            ),
+        },
         { field: "name", headerName: "Name", flex: 1 },
         { field: "price", headerName: "Price", flex: 1 },
         {

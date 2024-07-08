@@ -12,6 +12,7 @@ const dbName = "siacafe-database";
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // to access uploads folder in api
 
 // Routes
 const userRoutes = require('./routes/users');

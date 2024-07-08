@@ -4,6 +4,7 @@ import axios from "axios";
 import Sidebar from "../components/common/Sidebar";
 import { Button } from "@mui/material";
 import MenuTable from "../components/MenuTable";
+import MenuForm from "../components/MenuForm";
 
 export default function Menu() {
     const navigate = useNavigate();
@@ -38,7 +39,10 @@ export default function Menu() {
             axios
                 .put(
                     `${VITE_REACT_APP_API_HOST}/api/${resourceName}/${dataToEdit._id}`,
-                    formData
+                    formData,
+                    {
+                        headers: { "Content-Type": "multipart/form-data" },
+                    }
                 )
                 .then((response) => {
                     setDataList((prevDataList) =>
@@ -56,7 +60,10 @@ export default function Menu() {
             axios
                 .post(
                     `${VITE_REACT_APP_API_HOST}/api/${resourceName}`,
-                    formData
+                    formData,
+                    {
+                        headers: { "Content-Type": "multipart/form-data" },
+                    }
                 )
                 .then((response) => {
                     setDataList((prevDataList) => [
@@ -109,6 +116,13 @@ export default function Menu() {
                     dataList={dataList}
                     onEdit={handleEdit}
                     onDelete={handleDelete}
+                />
+
+                <MenuForm
+                    open={open}
+                    onClose={handleClose}
+                    dataToEdit={dataToEdit}
+                    onSubmit={handleSubmit}
                 />
             </div>
         </div>

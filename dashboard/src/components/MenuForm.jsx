@@ -50,6 +50,11 @@ export default function MenuForm({ open, onClose, dataToEdit, onSubmit }) {
         for (const key in formData) {
             formDataObj.append(key, formData[key]);
         }
+
+        if (dataToEdit && !formData.image) {
+            formDataObj.delete('image');
+        }
+
         onSubmit(formDataObj);
         setFormData(initialFormData);
         onClose();
@@ -80,6 +85,7 @@ export default function MenuForm({ open, onClose, dataToEdit, onSubmit }) {
                         onChange={handleFileChange}
                         inputProps={{ accept: "image/*" }}
                         fullWidth
+                        required={!dataToEdit}
                     />
                     <TextField
                         margin="normal"

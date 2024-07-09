@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/Sidebar.css";
 import { useNavigate, NavLink } from "react-router-dom";
 import {
+    AddShoppingCart,
     FormatListBulleted,
     Inventory,
     Logout,
@@ -45,13 +46,19 @@ export default function Sidebar() {
                     <SidebarLink
                         to="/order"
                         Icon={ShoppingBag}
-                        label="Order Here"
+                        label="Cafe POS"
                     />
 
                     <SidebarLink
                         to="/auditlog"
                         Icon={FormatListBulleted}
                         label="Audit Log"
+                    />
+
+<SidebarLink
+                        to="/savemore"
+                        Icon={AddShoppingCart}
+                        label="Savemore"
                     />
 
                     <SidebarLink

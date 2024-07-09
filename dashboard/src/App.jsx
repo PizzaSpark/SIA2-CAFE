@@ -9,6 +9,7 @@ import Recipe from "./pages/Recipe";
 import Order from "./pages/Order";
 import AuditLog from "./pages/AuditLog";
 import Stocks from "./pages/Stocks";
+import Savemore from "./pages/Savemore";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/menu" Component={Menu} />
                 <Route path="/recipe" Component={Recipe} />
                 <Route path="/order" Component={Order} />
+                <Route path="/savemore" Component={Savemore} />
                 <Route path="/auditlog" Component={AuditLog} />
 
                 {/* <Route Component={NotFound} /> */}

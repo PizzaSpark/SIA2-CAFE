@@ -15,8 +15,10 @@ const ImagePreviewModal = ({ open, onClose, imageUrl }) => {
       <Box
         sx={{
           position: 'relative',
-          width: 'calc(90vw - 40px)',  // Subtract padding from width
-          height: 'calc(90vh - 40px)', // Subtract padding from height
+          width: '80vw',  // Fixed width
+          height: '80vh', // Fixed height
+          maxWidth: '800px', // Optional maximum width
+          maxHeight: '600px', // Optional maximum height
           bgcolor: 'background.paper',
           boxShadow: 24,
           overflow: 'hidden',

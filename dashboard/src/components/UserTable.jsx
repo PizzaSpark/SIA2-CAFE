@@ -9,8 +9,8 @@ export default function UserTable({ dataList, onEdit, onDelete }) {
         { field: "name", headerName: "Name", flex: 1 },
         { field: "role", headerName: "Role", flex: 1 },
         {
-            field: "disabled",
-            headerName: "Disabled",
+            field: "isActive",
+            headerName: "Is Active",
             flex: 1,
             renderCell: (params) => (params.value ? "✔" : "✖"),
         },

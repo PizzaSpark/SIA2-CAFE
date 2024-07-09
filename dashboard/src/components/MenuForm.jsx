@@ -16,7 +16,7 @@ export default function MenuForm({ open, onClose, dataToEdit, onSubmit }) {
         name: "",
         price: "",
         image: null,
-        disabled: false,
+        isActive: true,
     };
     const [formData, setFormData] = useState(initialFormData);
 
@@ -106,12 +106,12 @@ export default function MenuForm({ open, onClose, dataToEdit, onSubmit }) {
                     <FormControlLabel
                         control={
                             <Checkbox
-                                checked={formData.disabled}
+                                checked={formData.isActive}
                                 onChange={handleChange}
-                                name="disabled"
+                                name="isActive"
                             />
                         }
-                        label="Disabled"
+                        label="Is Active"
                     />
                     <Button type="submit" variant="contained" color="primary">
                         {dataToEdit ? "Update" : "Submit"}

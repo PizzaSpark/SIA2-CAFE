@@ -44,8 +44,8 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
         { field: "name", headerName: "Name", flex: 1 },
         { field: "price", headerName: "Price", flex: 1 },
         {
-            field: "disabled",
-            headerName: "Disabled",
+            field: "isActive",
+            headerName: "Is Active",
             flex: 1,
             renderCell: (params) => (params.value ? "✔" : "✖"),
         },

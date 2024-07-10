@@ -1,7 +1,7 @@
 import React from 'react';
 import { Paper, Typography, List, ListItem, ListItemText, Divider, Button, Box } from '@mui/material';
 
-export default function OrderSummary({ items, total }) {
+export default function OrderSummary({ items, total, onPlaceOrder }) {
     return (
         <Paper elevation={3} sx={{ 
             padding: 2, 
@@ -35,6 +35,7 @@ export default function OrderSummary({ items, total }) {
                     color="primary"
                     fullWidth
                     disabled={items.length === 0}
+                    onClick={onPlaceOrder}
                 >
                     Place Order
                 </Button>

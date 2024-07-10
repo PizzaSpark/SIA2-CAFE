@@ -5,6 +5,7 @@ import Sidebar from "../components/common/Sidebar";
 import ProductsContainer from "../components/common/ProductsContainer";
 import OrderSummary from "../components/OrderSummary";
 import { Box } from "@mui/material";
+import OrderConfirmation from "../components/OrderConfirmation";
 
 export default function Order() {
     const navigate = useNavigate();
@@ -56,6 +57,17 @@ export default function Order() {
         );
     };
 
+    const handlePlaceOrder = () => {
+        setOpen(true);
+    };
+
+    const handleConfirmOrder = () => {
+        setOpen(false);
+    };
+
+    const handleClose = () => setOpen(false);
+
+
     return (
         <div className="page" style={{ display: "flex" }}>
             <Sidebar />
@@ -89,9 +101,17 @@ export default function Order() {
                         <OrderSummary
                             items={dataList.filter((item) => item.quantity > 0)}
                             total={calculateTotal()}
+                            onPlaceOrder={handlePlaceOrder}
                         />
                     </Box>
                 </Box>
+                <OrderConfirmation
+                    open={open}
+                    onClose={handleClose}
+                    onConfirm={handleConfirmOrder}
+                    items={dataList.filter((item) => item.quantity > 0)}
+                    total={calculateTotal()}
+                />
             </div>
         </div>
     );

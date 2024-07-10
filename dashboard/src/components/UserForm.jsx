@@ -17,6 +17,8 @@ export default function UserForm({ open, onClose, dataToEdit, onSubmit }) {
         name: "",
         role: "",
         isActive: true,
+        bankName: "",
+        bankNo: "",
     };
     const [formData, setFormData] = useState(initialFormData);
 
@@ -101,6 +103,26 @@ export default function UserForm({ open, onClose, dataToEdit, onSubmit }) {
                         <MenuItem value="Owner">Owner</MenuItem>
                         <MenuItem value="Staff">Staff</MenuItem>
                     </TextField>
+                    <TextField
+                        margin="normal"
+                        fullWidth
+                        select
+                        label="Bank Name"
+                        name="bankName"
+                        value={formData.bankName}
+                        onChange={handleChange}
+                    >
+                        <MenuItem value="UnionBank">UnionBank</MenuItem>
+                        <MenuItem value="Metrobank">Metrobank</MenuItem>
+                    </TextField>
+                    <TextField
+                        margin="normal"
+                        fullWidth
+                        label="Bank No."
+                        name="bankNo"
+                        value={formData.bankNo}
+                        onChange={handleChange}
+                    />
                     <FormControlLabel
                         control={
                             <Checkbox

@@ -13,7 +13,7 @@ const DataModel = new mongoose.Schema({
     role: defaultRole,
     isActive: requiredBoolean,
     bankName: requiredString,
-    bankNumber: requiredString
+    bankNo: requiredString
 }, { versionKey: false, timestamps: true });
 
 module.exports = mongoose.model(collectionName, DataModel);

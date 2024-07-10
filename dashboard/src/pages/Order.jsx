@@ -50,38 +50,47 @@ export default function Order() {
     };
 
     const calculateTotal = () => {
-        return dataList.reduce((total, item) => total + (item.price * item.quantity), 0);
+        return dataList.reduce(
+            (total, item) => total + item.price * item.quantity,
+            0
+        );
     };
 
     return (
-        <div className="page" style={{ display: 'flex' }}>
+        <div className="page" style={{ display: "flex" }}>
             <Sidebar />
-            <div className="page-content" style={{ flex: 1, display: 'flex', flexDirection: 'row' }}>
-                <Box sx={{ 
-                    width: '75%', 
-                    padding: 3, 
-                    display: 'flex', 
-                    flexDirection: 'column'
-                }}>
-                    <h1>Order</h1>
-                    <ProductsContainer
-                        dataList={dataList}
-                        handleAdd={handleAdd}
-                        handleRemove={handleRemove}
-                        host={VITE_REACT_APP_API_HOST}
-                    />
-                </Box>
-                <Box sx={{ 
-                    width: '25%', 
-                    backgroundColor: '#f5f5f5', 
-                    padding: 3,
-                    display: 'flex',
-                    flexDirection: 'column'
-                }}>
-                    <OrderSummary 
-                        items={dataList.filter(item => item.quantity > 0)}
-                        total={calculateTotal()}
-                    />
+            <div className="page-content">
+                <Box sx={{ flex: 1, display: "flex", flexDirection: "row" }}>
+                    <Box
+                        sx={{
+                            width: "75%",
+                            padding: 3,
+                            display: "flex",
+                            flexDirection: "column",
+                        }}
+                    >
+                        <h1>Order</h1>
+                        <ProductsContainer
+                            dataList={dataList}
+                            handleAdd={handleAdd}
+                            handleRemove={handleRemove}
+                            host={VITE_REACT_APP_API_HOST}
+                        />
+                    </Box>
+                    <Box
+                        sx={{
+                            width: "25%",
+                            backgroundColor: "#f5f5f5",
+                            padding: 3,
+                            display: "flex",
+                            flexDirection: "column",
+                        }}
+                    >
+                        <OrderSummary
+                            items={dataList.filter((item) => item.quantity > 0)}
+                            total={calculateTotal()}
+                        />
+                    </Box>
                 </Box>
             </div>
         </div>

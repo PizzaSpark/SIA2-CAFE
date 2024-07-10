@@ -45,11 +45,11 @@ export default function ProductsContainer({
                                 onClick={() => handlePreviewOpen(imageUrl)}
                             />
                             <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                                <CardContent sx={{ flexGrow: 1, py: 1 }}>
-                                    <Typography variant="subtitle1" component="div">
+                                <CardContent sx={{ flexGrow: 1, py: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                                <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'bold' }}>
                                         {product.name}
                                     </Typography>
-                                    <Typography variant="body2" color="text.secondary">
+                                    <Typography variant="body2" color="text.secondary" sx={{ fontSize: '1rem' }}>
                                         ₱{product.price}
                                     </Typography>
                                 </CardContent>

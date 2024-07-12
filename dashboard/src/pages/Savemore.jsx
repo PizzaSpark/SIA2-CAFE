@@ -66,32 +66,20 @@ export default function Savemore() {
     };
 
     const handleConfirmOrder = async () => {
-        const bankNo = JSON.parse(localStorage.getItem("bankNo")); //json parse para mawala yung quotation ng string
-        const totalAmount = calculateTotal();
 
-        const res = await axios.post(
-            `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
-            {
-                debitAccount: bankNo,
-                creditAccount: "000000007", //credit yung bank account ni camille
-                amount: totalAmount,
-            },
-            {
-                headers: {
-                    Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}`,
-                },
-            }
-        );
+        const orderedItems = dataList.filter(item => item.quantity > 0);
+        const postData = orderedItems.map(({ name, quantity }) => ({
+            name,
+            quantity
+          }));
+        console.log(postData);
+        const response = await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/bulk`, postData);
 
-        console.log(res);
 
-        if (!res.data.success) {
-            alert(res.data.message);
-            onConfirm(); // Call the original onConfirm prop function
+        if (response.status !== 201) {
+            alert("Not successful");
         }
 
-        setReferenceId(res.data.reference);
-        setSuccessDialogOpen(true);
         // Reset the cart
         setDataList((prevList) =>
             prevList.map((item) => ({ ...item, quantity: 0 }))

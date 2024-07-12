@@ -1,4 +1,5 @@
 const dataModel = require("../models/Stock");
+const mongoose = require("mongoose");
 
 exports.createStock = async (req, res) => {
     try {
@@ -7,6 +8,22 @@ exports.createStock = async (req, res) => {
         res.status(201).json(savedData);
     } catch (error) {
         res.status(400).json({ message: error.message });
+    }
+};
+
+// Create multiple stock items
+exports.createStocks = async (req, res) => {
+    const session = await mongoose.startSession();
+    session.startTransaction();
+    try {
+        const dataObjects = await dataModel.insertMany(req.body, { session });
+        await session.commitTransaction();
+        res.status(201).json(dataObjects);
+    } catch (error) {
+        await session.abortTransaction();
+        res.status(400).json({ message: error.message });
+    } finally {
+        session.endSession();
     }
 };
 

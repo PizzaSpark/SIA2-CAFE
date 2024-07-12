@@ -75,7 +75,7 @@ exports.loginUser = async (req, res) => {
 
         // Respond with user data (omit sensitive information)
         // Here you might also generate a token or session
-        const { password, ...dataObjectWithoutPassword } = dataObject.toObject();
+        const { password, createdAt, updatedAt, ...dataObjectWithoutPassword } = dataObject.toObject();
         res.json(dataObjectWithoutPassword);
     } catch (error) {
         res.status(500).json({ message: error.message });

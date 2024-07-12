@@ -34,7 +34,7 @@ export default function Login() {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent default form submission behavior
+        e.preventDefault();
 
         try {
             const response = await axios.post(
@@ -42,18 +42,21 @@ export default function Login() {
                 formData
             );
 
-            // Assuming the response includes a token you need to store
-            localStorage.setItem("userToken", response.data.token);
+            for (const key in response.data) {
+                if (response.data.hasOwnProperty(key)) {
+                    localStorage.setItem(
+                        key,
+                        JSON.stringify(response.data[key])
+                    );
+                }
+            }
 
-            // Redirect the user
-            navigate("/dashboard"); // Adjust the path as needed
+            navigate("/dashboard");
         } catch (error) {
-            // Handle error (e.g., showing an error message)
             console.error(
                 "Login failed",
                 error.response ? error.response.data : error
             );
-            // Optionally, update the state to show an error message
         }
     };
 

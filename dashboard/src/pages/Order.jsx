@@ -13,7 +13,7 @@ export default function Order() {
     const { VITE_REACT_APP_API_HOST, VITE_REACT_APP_UNIONBANK_TOKEN } =
         import.meta.env;
     const resourceName = "menuItems";
-    const [open, setOpen] = useState(false);
+    const [openConfirmation, setOpenConfirmation] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
     const [referenceId, setReferenceId] = useState('');
@@ -62,7 +62,7 @@ export default function Order() {
     };
 
     const handlePlaceOrder = () => {
-        setOpen(true);
+        setOpenConfirmation(true);
     };
 
     const handleConfirmOrder = async () => {
@@ -96,10 +96,10 @@ export default function Order() {
         setDataList((prevList) =>
             prevList.map((item) => ({ ...item, quantity: 0 }))
         );
-        setOpen(false);
+        setOpenConfirmation(false);
     };
 
-    const handleClose = () => setOpen(false);
+    const handleClose = () => setOpenConfirmation(false);
 
     const handleSuccessDialogClose = () => {
         setSuccessDialogOpen(false);
@@ -143,7 +143,7 @@ export default function Order() {
                     </Box>
                 </Box>
                 <OrderConfirmation
-                    open={open}
+                    open={openConfirmation}
                     onClose={handleClose}
                     onConfirm={handleConfirmOrder}
                     items={dataList.filter((item) => item.quantity > 0)}

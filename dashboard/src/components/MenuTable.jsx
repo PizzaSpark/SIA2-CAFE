@@ -53,13 +53,13 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
             field: "createdAt",
             headerName: "Created At",
             flex: 1,
-            renderCell: (params) => new Date(params.value).toLocaleDateString(),
+            renderCell: (params) => new Date(params.value).toLocaleString(),
         },
         {
             field: "updatedAt",
             headerName: "Updated On",
             flex: 1,
-            renderCell: (params) => new Date(params.value).toLocaleDateString(),
+            renderCell: (params) => new Date(params.value).toLocaleString(),
         },
         {
             field: "actions",

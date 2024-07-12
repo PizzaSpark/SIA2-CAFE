@@ -11,9 +11,9 @@ const DataModel = new mongoose.Schema({
     password: requiredString,
     name: requiredString,
     role: defaultRole,
-    isActive: requiredBoolean,
     bankName: requiredString,
-    bankNo: requiredString
+    bankNo: requiredString,
+    isActive: requiredBoolean,
 }, { versionKey: false, timestamps: true });
 
 module.exports = mongoose.model(collectionName, DataModel);

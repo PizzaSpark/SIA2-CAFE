@@ -8,6 +8,8 @@ export default function UserTable({ dataList, onEdit, onDelete }) {
         { field: "email", headerName: "Email", flex: 1 },
         { field: "name", headerName: "Name", flex: 1 },
         { field: "role", headerName: "Role", flex: 1 },
+        { field: "bankName", headerName: "Bank Name", flex: 1 },
+        { field: "bankNo", headerName: "Bank No.", flex: 1 },
         {
             field: "isActive",
             headerName: "Is Active",
@@ -18,13 +20,13 @@ export default function UserTable({ dataList, onEdit, onDelete }) {
             field: "createdAt",
             headerName: "Created At",
             flex: 1,
-            renderCell: (params) => new Date(params.value).toLocaleDateString(),
+            renderCell: (params) => new Date(params.value).toLocaleString(),
         },
         {
             field: "updatedAt",
             headerName: "Updated On",
             flex: 1,
-            renderCell: (params) => new Date(params.value).toLocaleDateString(),
+            renderCell: (params) => new Date(params.value).toLocaleString(),
         },
         {
             field: "actions",

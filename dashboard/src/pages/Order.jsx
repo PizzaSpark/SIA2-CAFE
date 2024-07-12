@@ -4,7 +4,7 @@ import axios from "axios";
 import Sidebar from "../components/common/Sidebar";
 import ProductsContainer from "../components/common/ProductsContainer";
 import OrderSummary from "../components/OrderSummary";
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
+import { Box } from "@mui/material";
 import OrderConfirmation from "../components/OrderConfirmation";
 import SuccessDialog from "../components/SuccessDialog";
 

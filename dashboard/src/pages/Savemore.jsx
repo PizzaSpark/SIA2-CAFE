@@ -16,11 +16,10 @@ export default function Savemore() {
     const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
     const [referenceId, setReferenceId] = useState('');
-    const SavemoreImages = "http://192.168.10.25:3004";
+    const savemoreHost = "http://192.168.10.25:3004";
     useEffect(() => {
         axios
-            .get(`http://192.168.10.25:3004/getallproducts`)
-            // .get(`http://192.168.10.25:1337/api/savemore`)
+            .get(`${savemoreHost}/getallproducts`)
             .then((response) => {
                 const initializedData = response.data.data.map((item) => ({
                     ...item,
@@ -66,49 +65,73 @@ export default function Savemore() {
     };
 
     const handleConfirmOrder = async () => {
-
-        const bankNo = JSON.parse(localStorage.getItem("bankNo"));
-        const totalAmount = calculateTotal();
-
-        const res = await axios.post(
-            `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
-            {
-                debitAccount: bankNo,
-                creditAccount: "1000000007",
-                amount: totalAmount,
-            },
-            {
-                headers: {
-                    Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}`,
+        try {
+            const bankNo = JSON.parse(localStorage.getItem("bankNo"));
+            const totalAmount = calculateTotal();
+    
+            // Union Bank transaction
+            const res = await axios.post(
+                `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
+                {
+                    debitAccount: bankNo,
+                    creditAccount: "000000007",
+                    amount: totalAmount,
                 },
+                {
+                    headers: {
+                        Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}`,
+                    },
+                }
+            );
+    
+            if (!res.data.success) {
+                alert(res.data.message);
+                return;
             }
-        );
-
-        if (!res.data.success) {
-            alert(res.data.message);
-            onConfirm(); // Call the original onConfirm prop function
+    
+            setReferenceId(res.data.reference);
+            setSuccessDialogOpen(true);
+    
+            // Prepare ordered items for stock update and sales details
+            const orderedItems = dataList.filter(item => item.quantity > 0);
+            
+            // Stock update
+            const stockUpdateData = orderedItems.map(({ name, quantity }) => ({
+                name,
+                quantity
+            }));
+            const stockResponse = await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/bulk`, stockUpdateData);
+    
+            if (!stockResponse.data.success) {
+                alert(stockResponse.data.message);
+            }
+    
+            // Sales details report
+            const currentDate = new Date().toISOString();
+            for (const item of orderedItems) {
+                const salesDetailData = {
+                    product: item.name,
+                    quantity: item.quantity,
+                    price: item.price,
+                    date: currentDate
+                };
+                
+                try {
+                    const salesResponse = await axios.post(`${savemoreHost}/api/salesdetails`, salesDetailData);
+                } catch (error) {
+                    console.error(`Error updating sales details for ${item.name}:`, error);
+                }
+            }
+    
+            // Reset the cart
+            setDataList((prevList) =>
+                prevList.map((item) => ({ ...item, quantity: 0 }))
+            );
+            setOpenConfirmation(false);
+        } catch (error) {
+            console.error("Error in handleConfirmOrder:", error);
+            alert("An error occurred while processing your order. Please try again.");
         }
-
-        setReferenceId(res.data.reference);
-        setSuccessDialogOpen(true);
-
-        const orderedItems = dataList.filter(item => item.quantity > 0);
-        const postData = orderedItems.map(({ name, quantity }) => ({
-            name,
-            quantity
-          }));
-        const response = await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/bulk`, postData);
-
-
-        if (!response.data.success) {
-            alert(response.data.message);
-        };
-
-        // Reset the cart
-        setDataList((prevList) =>
-            prevList.map((item) => ({ ...item, quantity: 0 }))
-        );
-        setOpenConfirmation(false);
     };
 
     const handleClose = () => setOpenConfirmation(false);
@@ -135,8 +158,7 @@ export default function Savemore() {
                             dataList={dataList}
                             handleAdd={handleAdd}
                             handleRemove={handleRemove}
-                            // host={VITE_REACT_APP_API_HOST}
-                            host={SavemoreImages}
+                            host={savemoreHost}
                         />
                     </Box>
                     <Box

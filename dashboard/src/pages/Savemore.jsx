@@ -16,13 +16,13 @@ export default function Savemore() {
     const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
     const [referenceId, setReferenceId] = useState('');
-
+    const SavemoreImages = "http://192.168.10.25:3004";
     useEffect(() => {
         axios
-            // .get(`http://192.168.10.25:3004/getallproducts`)
-            .get(`http://192.168.10.25:1337/api/savemore`)
+            .get(`http://192.168.10.25:3004/getallproducts`)
+            // .get(`http://192.168.10.25:1337/api/savemore`)
             .then((response) => {
-                const initializedData = response.data.map((item) => ({
+                const initializedData = response.data.data.map((item) => ({
                     ...item,
                     quantity: 0,
                 }));
@@ -67,18 +67,42 @@ export default function Savemore() {
 
     const handleConfirmOrder = async () => {
 
+        const bankNo = JSON.parse(localStorage.getItem("bankNo"));
+        const totalAmount = calculateTotal();
+
+        const res = await axios.post(
+            `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
+            {
+                debitAccount: bankNo,
+                creditAccount: "1000000007",
+                amount: totalAmount,
+            },
+            {
+                headers: {
+                    Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}`,
+                },
+            }
+        );
+
+        if (!res.data.success) {
+            alert(res.data.message);
+            onConfirm(); // Call the original onConfirm prop function
+        }
+
+        setReferenceId(res.data.reference);
+        setSuccessDialogOpen(true);
+
         const orderedItems = dataList.filter(item => item.quantity > 0);
         const postData = orderedItems.map(({ name, quantity }) => ({
             name,
             quantity
           }));
-        console.log(postData);
         const response = await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/bulk`, postData);
 
 
-        if (response.status !== 201) {
-            alert("Not successful");
-        }
+        if (!response.data.success) {
+            alert(response.data.message);
+        };
 
         // Reset the cart
         setDataList((prevList) =>
@@ -111,7 +135,8 @@ export default function Savemore() {
                             dataList={dataList}
                             handleAdd={handleAdd}
                             handleRemove={handleRemove}
-                            host={VITE_REACT_APP_API_HOST}
+                            // host={VITE_REACT_APP_API_HOST}
+                            host={SavemoreImages}
                         />
                     </Box>
                     <Box

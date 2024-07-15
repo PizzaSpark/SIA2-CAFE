@@ -66,14 +66,14 @@ export default function Order() {
     };
 
     const handleConfirmOrder = async () => {
-        const bankNo = JSON.parse(localStorage.getItem("bankNo")); //json parse para mawala yung quotation ng string
+        const bankNo = JSON.parse(localStorage.getItem("bankNo"));
         const totalAmount = calculateTotal();
 
         const res = await axios.post(
             `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
             {
                 debitAccount: bankNo,
-                creditAccount: "000000019",
+                creditAccount: "00000019",
                 amount: totalAmount,
             },
             {
@@ -88,6 +88,7 @@ export default function Order() {
         if (!res.data.success) {
             alert(res.data.message);
             onConfirm(); // Call the original onConfirm prop function
+            return;
         }
 
         setReferenceId(res.data.reference);

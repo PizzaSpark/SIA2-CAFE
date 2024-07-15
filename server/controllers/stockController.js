@@ -13,17 +13,38 @@ exports.createStock = async (req, res) => {
 
 // Create multiple stock items
 exports.createStocks = async (req, res) => {
-    const session = await mongoose.startSession();
-    session.startTransaction();
     try {
-        const dataObjects = await dataModel.insertMany(req.body, { session });
-        await session.commitTransaction();
-        res.status(201).json(dataObjects);
+        const bulkOps = req.body.map(item => ({
+            updateOne: {
+                filter: { name: item.name },  // Assuming 'name' is the unique identifier
+                update: {
+                    $inc: { quantity: item.quantity },  // Add the new quantity to the existing one
+                    $set: {  // Set other fields
+                        description: item.description,
+                        price: item.price,
+                        // Add other fields as needed, but exclude 'quantity'
+                    }
+                },
+                upsert: true
+            }
+        }));
+
+        const result = await dataModel.bulkWrite(bulkOps);
+        
+        res.status(200).json({
+            success: true,
+            message: "Stocks created or updated successfully",
+            matchedCount: result.matchedCount,
+            modifiedCount: result.modifiedCount,
+            upsertedCount: result.upsertedCount
+        });
     } catch (error) {
-        await session.abortTransaction();
-        res.status(400).json({ message: error.message });
-    } finally {
-        session.endSession();
+        console.error("Error in createStocks:", error);
+        res.status(400).json({
+            success: false,
+            message: "Failed to create or update stocks",
+            error: error.message
+        });
     }
 };
 

@@ -11,8 +11,6 @@ const DataModel = new mongoose.Schema({
     password: requiredString,
     name: requiredString,
     role: defaultRole,
-    bankName: requiredString,
-    bankNo: requiredString,
     isActive: requiredBoolean,
 }, { versionKey: false, timestamps: true });
 

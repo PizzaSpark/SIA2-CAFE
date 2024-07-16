@@ -8,8 +8,6 @@ export default function UserTable({ dataList, onEdit, onDelete }) {
         { field: "email", headerName: "Email", flex: 1 },
         { field: "name", headerName: "Name", flex: 1 },
         { field: "role", headerName: "Role", flex: 1 },
-        { field: "bankName", headerName: "Bank Name", flex: 1 },
-        { field: "bankNo", headerName: "Bank No.", flex: 1 },
         {
             field: "isActive",
             headerName: "Is Active",

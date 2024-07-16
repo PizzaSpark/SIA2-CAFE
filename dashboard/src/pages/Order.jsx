@@ -7,12 +7,13 @@ import OrderSummary from "../components/common/OrderSummary";
 import { Box } from "@mui/material";
 import OrderConfirmation from "../components/common/OrderConfirmation";
 import SuccessDialog from "../components/common/SuccessDialog";
+import PaymentDialog from "../components/common/PaymentDialog";
 
 export default function Order() {
     const navigate = useNavigate();
-    const { VITE_REACT_APP_API_HOST, VITE_REACT_APP_UNIONBANK_TOKEN } =
-        import.meta.env;
+    const { VITE_REACT_APP_API_HOST, VITE_REACT_APP_UNIONBANK_TOKEN } = import.meta.env;
     const [openConfirmation, setOpenConfirmation] = useState(false);
+    const [openPaymentDialog, setOpenPaymentDialog] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
     const [referenceId, setReferenceId] = useState('');
@@ -108,15 +109,19 @@ export default function Order() {
         setOpenConfirmation(true);
     };
 
-    const handleConfirmOrder = async () => {
-        const bankNo = JSON.parse(localStorage.getItem("bankNo"));
+    const handleOrderConfirm = () => {
+        setOpenConfirmation(false);
+        setOpenPaymentDialog(true);
+    };
+
+    const handlePaymentConfirm = async (bankCredentials) => {
         const totalAmount = calculateTotal();
 
         try {
             const res = await axios.post(
                 `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
                 {
-                    debitAccount: bankNo,
+                    debitAccount: bankCredentials,
                     creditAccount: "000000019",
                     amount: totalAmount,
                 },
@@ -151,11 +156,12 @@ export default function Order() {
 
             setReferenceId(res.data.reference);
             setSuccessDialogOpen(true);
+            setOpenPaymentDialog(false);
+
             // Reset the cart
             setDataList((prevList) =>
                 prevList.map((item) => ({ ...item, quantity: 0 }))
             );
-            setOpenConfirmation(false);
 
             // Update local stock state
             setStocks(prevStocks => {
@@ -173,10 +179,8 @@ export default function Order() {
     };
 
     const handleClose = () => setOpenConfirmation(false);
-
-    const handleSuccessDialogClose = () => {
-        setSuccessDialogOpen(false);
-    };
+    const handlePaymentDialogClose = () => setOpenPaymentDialog(false);
+    const handleSuccessDialogClose = () => setSuccessDialogOpen(false);
 
     return (
         <div className="page" style={{ display: "flex" }}>
@@ -218,9 +222,16 @@ export default function Order() {
                 <OrderConfirmation
                     open={openConfirmation}
                     onClose={handleClose}
-                    onConfirm={handleConfirmOrder}
+                    onConfirm={handleOrderConfirm}
                     items={dataList.filter((item) => item.quantity > 0)}
                     total={calculateTotal()}
+                />
+                <PaymentDialog
+                    open={openPaymentDialog}
+                    onClose={handlePaymentDialogClose}
+                    onConfirm={handlePaymentConfirm}
+                    amount={calculateTotal()}
+                    recipient="Store Account"
                 />
                 <SuccessDialog
                     open={successDialogOpen}

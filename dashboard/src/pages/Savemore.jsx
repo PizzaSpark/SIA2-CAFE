@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Sidebar from "../components/common/Sidebar";
 import ProductsContainer from "../components/common/ProductsContainer";
-import OrderSummary from "../components/OrderSummary";
+import OrderSummary from "../components/common/OrderSummary";
 import { Box } from "@mui/material";
-import OrderConfirmation from "../components/OrderConfirmation";
-import SuccessDialog from "../components/SuccessDialog";
+import OrderConfirmation from "../components/common/OrderConfirmation";
+import SuccessDialog from "../components/common/SuccessDialog";
 
 export default function Savemore() {
     const navigate = useNavigate();

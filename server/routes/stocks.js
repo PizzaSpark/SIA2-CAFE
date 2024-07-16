@@ -7,6 +7,7 @@ router.post('/bulk', controller.createStocks);
 router.get('/', controller.getStocks);
 router.get('/:id', controller.getStock);
 router.put('/:id', controller.updateStock);
+router.post('/update-multiple', controller.updateStocks);
 router.delete('/:id', controller.deleteStock);
 
 module.exports = router;

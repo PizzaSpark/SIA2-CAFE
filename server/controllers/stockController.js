@@ -83,6 +83,34 @@ exports.updateStock = async (req, res) => {
     }
 };
 
+exports.updateStocks = async (req, res) => {
+    try {
+        const updates = req.body;
+        const bulkOps = Object.entries(updates).map(([stockId, quantity]) => ({
+            updateOne: {
+                filter: { _id: new mongoose.Types.ObjectId(stockId) },
+                update: { $inc: { quantity: -quantity } }
+            }
+        }));
+
+        const result = await dataModel.bulkWrite(bulkOps);
+
+        res.status(200).json({
+            success: true,
+            message: "Stocks updated successfully",
+            matchedCount: result.matchedCount,
+            modifiedCount: result.modifiedCount
+        });
+    } catch (error) {
+        console.error("Error in updateStocks:", error);
+        res.status(400).json({
+            success: false,
+            message: "Failed to update stocks",
+            error: error.message
+        });
+    }
+};
+
 exports.deleteStock = async (req, res) => {
     try {
         const deletedObject = await dataModel.findByIdAndDelete(req.params.id);

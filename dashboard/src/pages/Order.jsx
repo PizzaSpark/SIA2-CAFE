@@ -12,26 +12,45 @@ export default function Order() {
     const navigate = useNavigate();
     const { VITE_REACT_APP_API_HOST, VITE_REACT_APP_UNIONBANK_TOKEN } =
         import.meta.env;
-    const resourceName = "menuItems";
     const [openConfirmation, setOpenConfirmation] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
     const [referenceId, setReferenceId] = useState('');
+    const [recipes, setRecipes] = useState({});
+    const [stocks, setStocks] = useState({});
 
     useEffect(() => {
-        axios
-            .get(`${VITE_REACT_APP_API_HOST}/api/${resourceName}`)
-            .then((response) => {
-                const initializedData = response.data.map((item) => ({
-                    ...item,
-                    quantity: 0,
-                }));
-                setDataList(initializedData);
-            })
-            .catch((error) => {
-                console.error("Error fetching dataList:", error);
-                setDataList([]);
+        Promise.all([
+            axios.get(`${VITE_REACT_APP_API_HOST}/api/menuItems`),
+            axios.get(`${VITE_REACT_APP_API_HOST}/api/recipes`),
+            axios.get(`${VITE_REACT_APP_API_HOST}/api/stocks`)
+        ]).then(([menuItemsResponse, recipesResponse, stocksResponse]) => {
+            const initializedData = menuItemsResponse.data.map((item) => ({
+                ...item,
+                quantity: 0,
+            }));
+            setDataList(initializedData);
+
+            const recipesMap = {};
+            recipesResponse.data.forEach(recipe => {
+                if (!recipesMap[recipe.menuItem]) {
+                    recipesMap[recipe.menuItem] = [];
+                }
+                recipesMap[recipe.menuItem].push({
+                    stockId: recipe.stock,
+                    quantity: recipe.quantity
+                });
             });
+            setRecipes(recipesMap);
+
+            const stocksMap = {};
+            stocksResponse.data.forEach(stock => {
+                stocksMap[stock._id] = stock.quantity;
+            });
+            setStocks(stocksMap);
+        }).catch((error) => {
+            console.error("Error fetching data:", error);
+        });
     }, []);
 
     const handleAdd = (product) => {
@@ -62,6 +81,30 @@ export default function Order() {
     };
 
     const handlePlaceOrder = () => {
+        const orderItems = dataList.filter(item => item.quantity > 0);
+        let canFulfillOrder = true;
+        const stockUpdates = {};
+
+        orderItems.forEach(item => {
+            const recipe = recipes[item._id];
+            if (recipe) {
+                recipe.forEach(ingredient => {
+                    const requiredQuantity = ingredient.quantity * item.quantity;
+                    const availableQuantity = stocks[ingredient.stockId] - (stockUpdates[ingredient.stockId] || 0);
+                    if (availableQuantity < requiredQuantity) {
+                        canFulfillOrder = false;
+                    } else {
+                        stockUpdates[ingredient.stockId] = (stockUpdates[ingredient.stockId] || 0) + requiredQuantity;
+                    }
+                });
+            }
+        });
+
+        if (!canFulfillOrder) {
+            alert("Not enough stock to fulfill the order.");
+            return;
+        }
+
         setOpenConfirmation(true);
     };
 
@@ -69,35 +112,64 @@ export default function Order() {
         const bankNo = JSON.parse(localStorage.getItem("bankNo"));
         const totalAmount = calculateTotal();
 
-        const res = await axios.post(
-            `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
-            {
-                debitAccount: bankNo,
-                creditAccount: "00000019",
-                amount: totalAmount,
-            },
-            {
-                headers: {
-                    Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}`,
+        try {
+            const res = await axios.post(
+                `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
+                {
+                    debitAccount: bankNo,
+                    creditAccount: "000000019",
+                    amount: totalAmount,
                 },
+                {
+                    headers: {
+                        Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}`,
+                    },
+                }
+            );
+
+            if (!res.data.success) {
+                alert(res.data.message);
+                return;
             }
-        );
 
-        console.log(res);
+            // Update stocks
+            const orderItems = dataList.filter(item => item.quantity > 0);
+            const stockUpdates = {};
 
-        if (!res.data.success) {
-            alert(res.data.message);
-            onConfirm(); // Call the original onConfirm prop function
-            return;
+            orderItems.forEach(item => {
+                const recipe = recipes[item._id];
+                if (recipe) {
+                    recipe.forEach(ingredient => {
+                        const requiredQuantity = ingredient.quantity * item.quantity;
+                        stockUpdates[ingredient.stockId] = (stockUpdates[ingredient.stockId] || 0) + requiredQuantity;
+                    });
+                }
+            });
+
+            // Send stock updates to the server
+            await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/update-multiple`, stockUpdates);
+
+            setReferenceId(res.data.reference);
+            setSuccessDialogOpen(true);
+            // Reset the cart
+            setDataList((prevList) =>
+                prevList.map((item) => ({ ...item, quantity: 0 }))
+            );
+            setOpenConfirmation(false);
+
+            // Update local stock state
+            setStocks(prevStocks => {
+                const newStocks = { ...prevStocks };
+                Object.entries(stockUpdates).forEach(([stockId, quantity]) => {
+                    newStocks[stockId] -= quantity;
+                });
+                return newStocks;
+            });
+
+        } catch (error) {
+            console.error("Error processing order:", error);
+            alert("An error occurred while processing your order.");
         }
-
-        setReferenceId(res.data.reference);
-        setSuccessDialogOpen(true);
-        // Reset the cart
-        setDataList((prevList) =>
-            prevList.map((item) => ({ ...item, quantity: 0 }))
-        );
-        setOpenConfirmation(false);
     };
 
     const handleClose = () => setOpenConfirmation(false);

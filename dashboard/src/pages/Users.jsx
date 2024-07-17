@@ -5,6 +5,7 @@ import Sidebar from "../components/common/Sidebar";
 import { Button } from "@mui/material";
 import UserTable from "../components/UserTable";
 import UserForm from "../components/UserForm";
+import { useRoleCheck } from "../hooks/useRoleCheck";
 
 export default function Users() {
     const navigate = useNavigate();
@@ -13,6 +14,8 @@ export default function Users() {
     const [open, setOpen] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [dataToEdit, setDataToEdit] = useState(null);
+
+    useRoleCheck();
 
     useEffect(() => {
         axios

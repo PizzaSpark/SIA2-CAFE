@@ -5,6 +5,7 @@ import Sidebar from "../components/common/Sidebar";
 import { Button } from "@mui/material";
 import RecipeTable from "../components/RecipeTable";
 import RecipeForm from "../components/RecipeForm";
+import { useRoleCheck } from "../hooks/useRoleCheck";
 
 export default function Recipe() {
     const navigate = useNavigate();
@@ -16,6 +17,8 @@ export default function Recipe() {
 
     const [menuItems, setMenuItems] = useState([]);
     const [stocks, setStocks] = useState([]);
+
+    useRoleCheck();
 
     useEffect(() => {
         axios

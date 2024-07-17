@@ -8,6 +8,7 @@ import { Box } from "@mui/material";
 import OrderConfirmation from "../components/common/OrderConfirmation";
 import SuccessDialog from "../components/common/SuccessDialog";
 import PaymentDialog from "../components/common/PaymentDialog";
+import { useRoleCheck } from "../hooks/useRoleCheck";
 
 export default function Order() {
     const navigate = useNavigate();
@@ -19,6 +20,8 @@ export default function Order() {
     const [referenceId, setReferenceId] = useState('');
     const [recipes, setRecipes] = useState({});
     const [stocks, setStocks] = useState({});
+
+    useRoleCheck();
 
     useEffect(() => {
         Promise.all([

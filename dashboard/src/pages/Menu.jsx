@@ -5,6 +5,7 @@ import Sidebar from "../components/common/Sidebar";
 import { Button } from "@mui/material";
 import MenuTable from "../components/MenuTable";
 import MenuForm from "../components/MenuForm";
+import { useRoleCheck } from "../hooks/useRoleCheck";
 
 export default function Menu() {
     const navigate = useNavigate();
@@ -13,6 +14,8 @@ export default function Menu() {
     const [open, setOpen] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [dataToEdit, setDataToEdit] = useState(null);
+
+    useRoleCheck();
 
     useEffect(() => {
         axios

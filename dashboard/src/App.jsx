@@ -10,6 +10,8 @@ import Order from "./pages/Order";
 import AuditLog from "./pages/AuditLog";
 import Stocks from "./pages/Stocks";
 import Savemore from "./pages/Savemore";
+import NotFound from "./pages/NotFound";
+import Forbidden from "./pages/Forbidden";
 
 function App() {
 
@@ -26,7 +28,8 @@ function App() {
                 <Route path="/savemore" Component={Savemore} />
                 <Route path="/auditlog" Component={AuditLog} />
 
-                {/* <Route Component={NotFound} /> */}
+                <Route path="/forbidden" Component={Forbidden} />
+                <Route path="*" Component={NotFound} />
             </Routes>
         </BrowserRouter>
     );

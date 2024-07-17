@@ -8,6 +8,7 @@ import { Box } from "@mui/material";
 import OrderConfirmation from "../components/common/OrderConfirmation";
 import SuccessDialog from "../components/common/SuccessDialog";
 import PaymentDialog from "../components/common/PaymentDialog";
+import { useRoleCheck } from "../hooks/useRoleCheck";
 
 export default function Savemore() {
     const navigate = useNavigate();
@@ -20,6 +21,8 @@ export default function Savemore() {
     const [referenceId, setReferenceId] = useState('');
     const savemoreHost = "http://192.168.10.25:3004";
     
+    useRoleCheck();
+
     useEffect(() => {
         axios
             .get(`${savemoreHost}/getallproducts`)

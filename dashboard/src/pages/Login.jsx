@@ -53,10 +53,8 @@ export default function Login() {
 
             for (const key in response.data) {
                 if (response.data.hasOwnProperty(key)) {
-                    localStorage.setItem(
-                        key,
-                        JSON.stringify(response.data[key])
-                    );
+                    localStorage.setItem(key, response.data[key]);
+
                 }
             }
 

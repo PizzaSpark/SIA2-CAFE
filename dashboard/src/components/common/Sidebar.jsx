@@ -12,6 +12,7 @@ import {
     ShoppingBag,
     SpaceDashboard,
 } from "@mui/icons-material";
+import CafeReyesImage from "../../assets/CafeReyes.png";
 
 export default function Sidebar() {
     const navigate = useNavigate();
@@ -24,7 +25,17 @@ export default function Sidebar() {
     return (
         <div className="sidebar-container">
             <div className="sidebar">
-                <h1>Cafe</h1>
+            <div style={{ width: "50%", margin: "0 auto 16px" }}>
+                    <img
+                        src={CafeReyesImage}
+                        alt="Forbidden Access"
+                        style={{
+                            width: "100%",
+                            height: "auto",
+                            borderRadius: "8px",
+                        }}
+                    />
+                </div>
                 <div className="sidebar-items">
                     <SidebarLink
                         to="/dashboard"

@@ -22,10 +22,28 @@ export default function Sidebar() {
         navigate("/");
     };
 
+    // Retrieve the user's role from localStorage
+    const userRole = localStorage.getItem("role");
+
+    // Define the access control for each route
+    const accessControl = {
+        '/dashboard': ['Admin', 'Owner', 'Staff', 'Customer'],
+        '/users': ['Admin', 'Owner'],
+        '/stocks': ['Admin', 'Owner'],
+        '/menu': ['Admin', 'Owner'],
+        '/recipe': ['Admin', 'Owner'],
+        '/order': ['Admin', 'Owner', 'Staff', 'Customer'],
+        '/savemore': ['Admin', 'Owner'],
+        '/auditlog': ['Admin', 'Owner', 'Staff'],
+    };
+
+    // Check if the user's role is allowed for a given route
+    const isAllowed = (route) => accessControl[route]?.includes(userRole);
+
     return (
         <div className="sidebar-container">
             <div className="sidebar">
-            <div style={{ width: "50%", margin: "0 auto 16px" }}>
+                <div style={{ width: "50%", margin: "0 auto 16px" }}>
                     <img
                         src={CafeReyesImage}
                         alt="Forbidden Access"
@@ -37,48 +55,15 @@ export default function Sidebar() {
                     />
                 </div>
                 <div className="sidebar-items">
-                    <SidebarLink
-                        to="/dashboard"
-                        Icon={SpaceDashboard}
-                        label="Dashboard"
-                    />
-
-                    <SidebarLink to="/users" Icon={People} label="Users" />
-
-                    <SidebarLink to="/stocks" Icon={Inventory} label="Stocks" />
-
-                    <SidebarLink to="/menu" Icon={MenuBook} label="Menu" />
-
-                    <SidebarLink
-                        to="/recipe"
-                        Icon={RestaurantMenu}
-                        label="Recipe"
-                    />
-
-                    <SidebarLink
-                        to="/order"
-                        Icon={ShoppingBag}
-                        label="Cafe POS"
-                    />
-
-                    <SidebarLink
-                        to="/auditlog"
-                        Icon={FormatListBulleted}
-                        label="Audit Log"
-                    />
-
-                    <SidebarLink
-                        to="/savemore"
-                        Icon={AddShoppingCart}
-                        label="Savemore"
-                    />
-
-                    <SidebarLink
-                        to="/"
-                        Icon={Logout}
-                        label="Logout"
-                        onClick={handleLogout}
-                    />
+                    {isAllowed('/dashboard') && <SidebarLink to="/dashboard" Icon={SpaceDashboard} label="Dashboard" />}
+                    {isAllowed('/users') && <SidebarLink to="/users" Icon={People} label="Users" />}
+                    {isAllowed('/stocks') && <SidebarLink to="/stocks" Icon={Inventory} label="Stocks" />}
+                    {isAllowed('/menu') && <SidebarLink to="/menu" Icon={MenuBook} label="Menu" />}
+                    {isAllowed('/recipe') && <SidebarLink to="/recipe" Icon={RestaurantMenu} label="Recipe" />}
+                    {isAllowed('/order') && <SidebarLink to="/order" Icon={ShoppingBag} label="Cafe POS" />}
+                    {isAllowed('/auditlog') && <SidebarLink to="/auditlog" Icon={FormatListBulleted} label="Audit Log" />}
+                    {isAllowed('/savemore') && <SidebarLink to="/savemore" Icon={AddShoppingCart} label="Savemore" />}
+                    <SidebarLink to="/" Icon={Logout} label="Logout" onClick={handleLogout} />
                 </div>
             </div>
         </div>

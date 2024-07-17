@@ -12,7 +12,7 @@ import {
     ShoppingBag,
     SpaceDashboard,
 } from "@mui/icons-material";
-import CafeReyesImage from "../../assets/CafeReyes.png";
+import CafeReyesImage from "../../assets/CafeReyes.svg";
 
 export default function Sidebar() {
     const navigate = useNavigate();

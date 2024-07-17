@@ -18,6 +18,16 @@ export default function Sidebar() {
     const navigate = useNavigate();
 
     const handleLogout = () => {
+
+        axios.post(
+            `${VITE_REACT_APP_API_HOST}/api/audits`,
+            {
+                action: "USER LOGOUT",
+                user: localStorage.getItem("_id"),
+                details: `User signed out`
+            }
+        );
+
         localStorage.clear();
         navigate("/");
     };

@@ -50,17 +50,34 @@ export default function Stocks() {
                         )
                     );
                     setOpen(false);
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "UPDATED STOCK ITEM",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully updated item with ID: ${dataToEdit._id}`
+                        }
+                    );
                 })
                 .catch((error) => {
                     console.error("Error updating user:", error);
                 });
         } else {
-            // Add new user
             axios
                 .post(`${VITE_REACT_APP_API_HOST}/api/${resourceName}`, formData)
                 .then((response) => {
                     setDataList((prevDataList) => [...prevDataList, response.data]);
                     setOpen(false);
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "ADDED STOCK ITEM",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully added new item with ID: ${response.data._id}`
+                        }
+                    );
                 })
                 .catch((error) => {
                     console.error("Error adding user:", error);
@@ -80,6 +97,15 @@ export default function Stocks() {
                 .then((response) => {
                     setDataList((prevDataList) =>
                         prevDataList.filter((item) => item._id !== id)
+                    );
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "DELETED STOCK",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully deleted item with ID: ${id}`
+                        }
                     );
                 })
                 .catch((error) => {

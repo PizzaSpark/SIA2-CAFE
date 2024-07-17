@@ -139,6 +139,15 @@ export default function Savemore() {
                 prevList.map((item) => ({ ...item, quantity: 0 }))
             );
             setOpenConfirmation(false);
+
+            axios.post(
+                `${VITE_REACT_APP_API_HOST}/api/audits`,
+                {
+                    action: "SUCCESSFUL CAFE ORDER",
+                    user: localStorage.getItem("_id"),
+                    details: `Successfully ordered with reference ID: ${referenceId}`
+                }
+            );
         } catch (error) {
             console.error("Error in handleConfirmOrder:", error);
             alert("An error occurred while processing your order. Please try again.");

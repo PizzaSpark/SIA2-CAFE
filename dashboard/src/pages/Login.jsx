@@ -58,12 +58,23 @@ export default function Login() {
                 }
             }
 
+            await axios.post(
+                `${VITE_REACT_APP_API_HOST}/api/audits`,
+                {
+                    action: "USER LOGIN",
+                    user: localStorage.getItem("_id"),
+                    details: "User signed in"
+                }
+            );
+
             navigate("/dashboard");
         } catch (error) {
             console.error(
                 "Login failed",
                 error.response ? error.response.data : error
             );
+
+            alert(error.response.data.message);
         }
     };
 

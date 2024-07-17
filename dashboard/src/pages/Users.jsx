@@ -51,6 +51,15 @@ export default function Users() {
                         )
                     );
                     setOpen(false);
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "UPDATED USER",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully updated user with ID: ${dataToEdit._id}`
+                        }
+                    );
                 })
                 .catch((error) => {
                     console.error("Error updating user:", error);
@@ -68,6 +77,15 @@ export default function Users() {
                         response.data,
                     ]);
                     setOpen(false);
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "ADDED USER",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully added new item with ID: ${response.data._id}`
+                        }
+                    );
                 })
                 .catch((error) => {
                     console.error("Error adding user:", error);
@@ -87,6 +105,15 @@ export default function Users() {
                 .then((response) => {
                     setDataList((prevDataList) =>
                         prevDataList.filter((item) => item._id !== id)
+                    );
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "DELETED USER",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully deleted item with ID: ${id}`
+                        }
                     );
                 })
                 .catch((error) => {

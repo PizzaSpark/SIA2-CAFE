@@ -73,6 +73,15 @@ export default function Recipe() {
                         )
                     );
                     setOpen(false);
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "UPDATED RECIPE",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully updated recipe with ID: ${dataToEdit._id}`
+                        }
+                    );
                 })
                 .catch((error) => {
                     console.error("Error updating user:", error);
@@ -90,6 +99,15 @@ export default function Recipe() {
                         response.data,
                     ]);
                     setOpen(false);
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "ADDED RECIPE",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully added new item with ID: ${response.data._id}`
+                        }
+                    );
                 })
                 .catch((error) => {
                     console.error("Error adding user:", error);
@@ -109,6 +127,15 @@ export default function Recipe() {
                 .then((response) => {
                     setDataList((prevDataList) =>
                         prevDataList.filter((item) => item._id !== id)
+                    );
+
+                    axios.post(
+                        `${VITE_REACT_APP_API_HOST}/api/audits`,
+                        {
+                            action: "DELETED RECIPE",
+                            user: localStorage.getItem("_id"),
+                            details: `Successfully deleted item with ID: ${id}`
+                        }
                     );
                 })
                 .catch((error) => {

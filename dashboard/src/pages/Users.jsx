@@ -6,6 +6,7 @@ import { Button } from "@mui/material";
 import UserTable from "../components/UserTable";
 import UserForm from "../components/UserForm";
 import { useRoleCheck } from "../hooks/useRoleCheck";
+import PasswordResetDialog from "../components/PasswordResetDialog";
 
 export default function Users() {
     const navigate = useNavigate();
@@ -14,6 +15,8 @@ export default function Users() {
     const [open, setOpen] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [dataToEdit, setDataToEdit] = useState(null);
+    const [passwordResetOpen, setPasswordResetOpen] = useState(false);
+    const [selectedUserId, setSelectedUserId] = useState(null);
 
     useRoleCheck();
 
@@ -122,6 +125,40 @@ export default function Users() {
         }
     };
 
+    const handlePasswordResetClick = (id) => {
+        setSelectedUserId(id);
+        setPasswordResetOpen(true);
+    };
+
+    const handlePasswordResetClose = () => {
+        setPasswordResetOpen(false);
+        setSelectedUserId(null);
+    };
+
+    const handlePasswordResetSubmit = (newPassword) => {
+        axios
+            .post(`${VITE_REACT_APP_API_HOST}/api/${resourceName}/${selectedUserId}/reset-password`, { newPassword })
+            .then((response) => {
+                alert("Password reset successful.");
+                
+                axios.post(
+                    `${VITE_REACT_APP_API_HOST}/api/audits`,
+                    {
+                        action: "RESET PASSWORD",
+                        user: localStorage.getItem("_id"),
+                        details: `Successfully reset password for user with ID: ${selectedUserId}`
+                    }
+                );
+            })
+            .catch((error) => {
+                console.error("Failed to reset password:", error);
+                alert("Failed to reset password. Please try again.");
+            })
+            .finally(() => {
+                handlePasswordResetClose();
+            });
+    };
+
     return (
         <div className="page">
             <Sidebar />
@@ -139,12 +176,18 @@ export default function Users() {
                     dataList={dataList}
                     onEdit={handleEdit}
                     onDelete={handleDelete}
+                    onPasswordReset={handlePasswordResetClick}
                 />
                 <UserForm
                     open={open}
                     onClose={handleClose}
                     dataToEdit={dataToEdit}
                     onSubmit={handleSubmit}
+                />
+                <PasswordResetDialog
+                    open={passwordResetOpen}
+                    onClose={handlePasswordResetClose}
+                    onSubmit={handlePasswordResetSubmit}
                 />
             </div>
         </div>

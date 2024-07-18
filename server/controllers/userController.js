@@ -118,3 +118,28 @@ exports.signup = async (req, res) => {
     }
 };
 
+exports.resetPassword = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { newPassword } = req.body;
+
+        // Find the user
+        const user = await dataModel.findById(id);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Hash the new password
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+        // Update the user's password
+        user.password = hashedPassword;
+        await user.save();
+
+        res.json({ message: "Password reset successfully" });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+

@@ -1,11 +1,10 @@
 import { React, useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Tooltip } from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
 import ImagePreviewModal from "./common/ImagePreviewModal";
 
 export default function MenuTable({ dataList, onEdit, onDelete }) {
-    
     const { VITE_REACT_APP_API_HOST } = import.meta.env;
 
     const [previewOpen, setPreviewOpen] = useState(false);
@@ -19,7 +18,7 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
     const handlePreviewClose = () => {
         setPreviewOpen(false);
     };
-    
+
     const columns = [
         {
             field: "image",
@@ -31,10 +30,10 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
                     <img
                         src={imageUrl}
                         alt="Table Cell Image"
-                        style={{ 
-                            width: "100px", 
-                            height: "auto", 
-                            cursor: "pointer" 
+                        style={{
+                            width: "100px",
+                            height: "auto",
+                            cursor: "pointer",
                         }}
                         onClick={() => handlePreviewOpen(imageUrl)}
                     />
@@ -47,29 +46,33 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
             field: "isActive",
             headerName: "Is Active",
             flex: 1,
-            renderCell: (params) => (<div
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    height: '100%'
-                }}
-            >
+            renderCell: (params) => (
                 <div
                     style={{
-                        backgroundColor: params.value ? '#4caf50' : '#f44336',
-                        color: 'white',
-                        width: '24px',
-                        height: '24px',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        fontWeight: 'bold'
+                        display: "flex",
+                        alignItems: "center",
+                        height: "100%",
                     }}
                 >
-                    {params.value ? '✓' : '✘'}
+                    <div
+                        style={{
+                            backgroundColor: params.value
+                                ? "#4caf50"
+                                : "#f44336",
+                            color: "white",
+                            width: "24px",
+                            height: "24px",
+                            borderRadius: "50%",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            fontWeight: "bold",
+                        }}
+                    >
+                        {params.value ? "✓" : "✘"}
+                    </div>
                 </div>
-            </div>),
+            ),
         },
         {
             field: "createdAt",
@@ -86,24 +89,39 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
         {
             field: "actions",
             headerName: "Actions",
+            headerAlign: 'center',
             flex: 1,
             renderCell: (params) => (
-                <>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={() => onEdit(params.row)}
-                    >
-                        <Edit />
-                    </Button>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={() => onDelete(params.row._id)}
-                    >
-                        <Delete />
-                    </Button>
-                </>
+                <Box
+                    sx={{
+                        display: "flex",
+                        gap: 1,
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: "100%",
+                        height: "100%",
+                    }}
+                >
+                    <Tooltip title="Edit Menu">
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={() => onEdit(params.row)}
+                        >
+                            <Edit />
+                        </Button>
+                    </Tooltip>
+
+                    <Tooltip title="Delete Menu">
+                        <Button
+                            variant="contained"
+                            color="error"
+                            onClick={() => onDelete(params.row._id)}
+                        >
+                            <Delete />
+                        </Button>
+                    </Tooltip>
+                </Box>
             ),
         },
     ];

@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Tooltip } from "@mui/material";
 import { Delete, Edit } from "@mui/icons-material";
 import { DataGrid } from "@mui/x-data-grid";
 
@@ -45,9 +45,20 @@ export default function RecipeTable({
         {
             field: "actions",
             headerName: "Actions",
+            headerAlign: 'center',
             flex: 1,
             renderCell: (params) => (
-                <>
+                <Box
+                    sx={{
+                        display: "flex",
+                        gap: 1,
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: "100%",
+                        height: "100%",
+                    }}
+                >
+                    <Tooltip title="Edit Recipe">
                     <Button
                         variant="contained"
                         color="primary"
@@ -55,14 +66,20 @@ export default function RecipeTable({
                     >
                         <Edit />
                     </Button>
+                    </Tooltip>
+                    
+                    <Tooltip title="Delete Recipe">
                     <Button
                         variant="contained"
-                        color="primary"
+                        color="error"
                         onClick={() => onDelete(params.row._id)}
                     >
                         <Delete />
                     </Button>
-                </>
+                    </Tooltip>
+
+                    
+                </Box>
             ),
         },
     ];

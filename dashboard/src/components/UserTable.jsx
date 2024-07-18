@@ -60,6 +60,7 @@ export default function UserTable({
         {
             field: "actions",
             headerName: "Actions",
+            headerAlign: 'center',
             flex: 1,
             renderCell: (params) => (
                 <Box

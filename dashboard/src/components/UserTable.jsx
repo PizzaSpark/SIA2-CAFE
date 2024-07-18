@@ -12,7 +12,29 @@ export default function UserTable({ dataList, onEdit, onDelete }) {
             field: "isActive",
             headerName: "Is Active",
             flex: 1,
-            renderCell: (params) => (params.value ? "✔" : "✖"),
+            renderCell: (params) => (<div
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    height: '100%'
+                }}
+            >
+                <div
+                    style={{
+                        backgroundColor: params.value ? '#4caf50' : '#f44336',
+                        color: 'white',
+                        width: '24px',
+                        height: '24px',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        fontWeight: 'bold'
+                    }}
+                >
+                    {params.value ? '✓' : '✘'}
+                </div>
+            </div>),
         },
         {
             field: "createdAt",

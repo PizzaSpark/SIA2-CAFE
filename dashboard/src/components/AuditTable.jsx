@@ -24,6 +24,12 @@ export default function AuditTable({ dataList }) {
                 autoPageSize
                 pagination
                 disableRowSelectionOnClick
+                sortModel={[
+                    {
+                        field: 'createdAt',
+                        sort: 'desc', // Sort by descending order to show the newest first
+                    },
+                ]}
             />
         </Box>
     );

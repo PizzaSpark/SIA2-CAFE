@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import {
@@ -197,6 +197,7 @@ export default function Login() {
                         variant="contained"
                         sx={{
                             mt: 3,
+                            mb: 2,
                             backgroundColor: "#6F4E37",
                             "&:hover": {
                                 backgroundColor: "#8B4513",
@@ -205,21 +206,13 @@ export default function Login() {
                     >
                         Sign In
                     </Button>
+                    <Box sx={{ textAlign: 'center' }}>
+                        <Link to="/signup" style={{ color: "#6F4E37", textDecoration: 'none' }}>
+                            Don't have an account? Sign up
+                        </Link>
+                    </Box>
 
-                    <Button
-                        fullWidth
-                        variant="outlined"
-                        sx={{
-                            mt: 1,
-                            borderColor: "#8B4513",
-                            color: "#8B4513",
-                            "&:hover": {
-                                borderColor: "#8B4513",
-                            },
-                        }}
-                    >
-                        Sign Up
-                    </Button>
+
                 </form>
             </Paper>
         </Box>

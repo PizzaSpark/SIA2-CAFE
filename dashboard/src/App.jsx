@@ -12,6 +12,7 @@ import Stocks from "./pages/Stocks";
 import Savemore from "./pages/Savemore";
 import NotFound from "./pages/NotFound";
 import Forbidden from "./pages/Forbidden";
+import Signup from "./pages/Signup";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" Component={Login} />
+                <Route path="/signup" Component={Signup} />
                 <Route path="/dashboard" Component={Dashboard} />
                 <Route path="/users" Component={Users} />
                 <Route path="/stocks" Component={Stocks} />

@@ -17,21 +17,28 @@ import CafeReyesImage from "../../assets/CafeReyes.svg";
 export default function Sidebar() {
     const navigate = useNavigate();
 
-    const handleLogout = () => {
-
-        axios.post(
-            `${VITE_REACT_APP_API_HOST}/api/audits`,
-            {
-                action: "USER LOGOUT",
-                user: localStorage.getItem("_id"),
-                details: `User signed out`
-            }
-        );
-
-        localStorage.clear();
-        navigate("/");
+    const handleLogout = async () => {
+        try {
+            const userId = localStorage.getItem("_id");
+            
+            // Create audit log
+            await axios.post(
+                `${VITE_REACT_APP_API_HOST}/api/audits`,
+                {
+                    action: "USER LOGOUT",
+                    user: userId,
+                    details: `User signed out`
+                }
+            );
+        } catch (error) {
+            console.error("Failed to create audit log:", error);
+        } finally {
+            // Clear localStorage and navigate regardless of audit log success
+            localStorage.clear();
+            navigate("/", { replace: true });
+        }
     };
-
+    
     // Retrieve the user's role from localStorage
     const userRole = localStorage.getItem("role");
 

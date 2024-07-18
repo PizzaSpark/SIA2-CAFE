@@ -29,7 +29,8 @@ export default function Order() {
             axios.get(`${VITE_REACT_APP_API_HOST}/api/recipes`),
             axios.get(`${VITE_REACT_APP_API_HOST}/api/stocks`)
         ]).then(([menuItemsResponse, recipesResponse, stocksResponse]) => {
-            const initializedData = menuItemsResponse.data.map((item) => ({
+            const activeMenuItems = menuItemsResponse.data.filter(item => item.isActive);
+            const initializedData = activeMenuItems.map((item) => ({
                 ...item,
                 quantity: 0,
             }));

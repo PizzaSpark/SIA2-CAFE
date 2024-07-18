@@ -1,4 +1,5 @@
 const dataModel = require("../models/User");
+const bcrypt = require('bcryptjs');
 
 exports.createUser = async (req, res) => {
     try {
@@ -64,10 +65,13 @@ exports.loginUser = async (req, res) => {
             return res.status(404).json({ message: "User not found" });
         }
 
-        // Compare the provided password with the stored hashed password
-        // const isMatch = await bcrypt.compare(req.body.password, dataObject.password);
+        // Check if the user is disabled
+        if (!dataObject.isActive) {
+            return res.status(403).json({ message: "User is disabled" });
+        }
 
-        const isMatch = req.body.password == dataObject.password;
+        // Compare the provided password with the stored hashed password
+        const isMatch = await bcrypt.compare(req.body.password, dataObject.password);
 
         if (!isMatch) {
             return res.status(400).json({ message: "Invalid credentials" });
@@ -79,6 +83,38 @@ exports.loginUser = async (req, res) => {
         res.json(dataObjectWithoutPassword);
     } catch (error) {
         res.status(500).json({ message: error.message });
+    }
+};
+
+exports.signup = async (req, res) => {
+    try {
+        const { name, email, password: requestBodyPassword } = req.body;
+
+        // Check if user already exists
+        const existingUser = await dataModel.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: "User already exists with this email" });
+        }
+
+        // Hash the password
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(requestBodyPassword, salt);
+
+        // Create new user
+        const newUser = new dataModel({
+            name,
+            email,
+            password: hashedPassword
+        });
+
+        const savedUser = await newUser.save();
+
+        // Remove password from the response
+        const { password: savedUserPassword, createdAt, updatedAt, ...userWithoutPassword } = savedUser.toObject();
+
+        res.status(201).json(userWithoutPassword);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
     }
 };
 

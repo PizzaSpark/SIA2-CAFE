@@ -72,15 +72,18 @@ export default function UserForm({ open, onClose, dataToEdit, onSubmit }) {
                         value={formData.email}
                         onChange={handleChange}
                     />
-                    <TextField
-                        margin="normal"
-                        fullWidth
-                        label="Password"
-                        name="password"
-                        type="password"
-                        value={formData.password}
-                        onChange={handleChange}
-                    />
+                    {!dataToEdit && (
+                        <TextField
+                            margin="normal"
+                            fullWidth
+                            label="Password"
+                            name="password"
+                            type="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                        />
+                    )}
+
                     <TextField
                         margin="normal"
                         fullWidth

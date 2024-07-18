@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, Button } from "@mui/material";
-import { Edit, Delete } from "@mui/icons-material";
+import { Edit, Delete, LockReset } from "@mui/icons-material";
 
 export default function UserTable({ dataList, onEdit, onDelete }) {
     const columns = [
@@ -67,6 +67,12 @@ export default function UserTable({ dataList, onEdit, onDelete }) {
                         onClick={() => onDelete(params.row._id)}
                     >
                         <Delete />
+                    </Button>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                    >
+                        <LockReset />
                     </Button>
                 </>
             ),

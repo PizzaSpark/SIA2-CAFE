@@ -13,6 +13,7 @@ import {
     SpaceDashboard,
 } from "@mui/icons-material";
 import CafeReyesImage from "../../assets/CafeReyes.svg";
+import axios from "axios"
 
 export default function Sidebar() {
     const navigate = useNavigate();

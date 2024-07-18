@@ -18,6 +18,7 @@ export const useRoleCheck = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [isLoading, setIsLoading] = useState(true);
+  const { VITE_REACT_APP_API_HOST } = import.meta.env;
 
   useEffect(() => {
     const checkUserAccess = async () => {
@@ -28,9 +29,8 @@ export const useRoleCheck = () => {
           return;
         }
 
-        const response = await axios.get(`/api/users/${userId}`);
+        const response = await axios.get(`${VITE_REACT_APP_API_HOST}/api/users/${userId}`);
         const { role, isActive } = response.data;
-        console.log(response.data);
         if (!isActive) {
           alert(
             "Your account has been disabled. Please contact an administrator."

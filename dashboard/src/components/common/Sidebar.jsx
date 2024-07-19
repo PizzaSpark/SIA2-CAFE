@@ -1,6 +1,6 @@
-import React from "react";
-import "../../styles/Sidebar.css";
+import React, { useEffect, useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
+import axios from "axios";
 import {
     AddShoppingCart,
     FormatListBulleted,
@@ -12,11 +12,28 @@ import {
     ShoppingBag,
     SpaceDashboard,
 } from "@mui/icons-material";
+import { pageAccessRules } from '../../config/pageAccessRules';
 import CafeReyesImage from "../../assets/CafeReyes.svg";
-import axios from "axios"
+import "../../styles/Sidebar.css";
 
 export default function Sidebar() {
     const navigate = useNavigate();
+    const [userRole, setUserRole] = useState(null);
+    const { VITE_REACT_APP_API_HOST } = import.meta.env;
+
+    useEffect(() => {
+        const fetchUserRole = async () => {
+            try {
+                const userId = localStorage.getItem("_id");
+                const response = await axios.get(`${VITE_REACT_APP_API_HOST}/api/users/${userId}`);
+                setUserRole(response.data.role);
+            } catch (error) {
+                console.error("Failed to fetch user role:", error);
+            }
+        };
+
+        fetchUserRole();
+    }, [VITE_REACT_APP_API_HOST]);
 
     const handleLogout = async () => {
         try {
@@ -39,24 +56,9 @@ export default function Sidebar() {
             navigate("/", { replace: true });
         }
     };
-    
-    // Retrieve the user's role from localStorage
-    const userRole = localStorage.getItem("role");
-
-    // Define the access control for each route
-    const accessControl = {
-        '/dashboard': ['Admin', 'Owner', 'Staff', 'Customer'],
-        '/users': ['Admin', 'Owner'],
-        '/stocks': ['Admin', 'Owner'],
-        '/menu': ['Admin', 'Owner'],
-        '/recipe': ['Admin', 'Owner'],
-        '/order': ['Admin', 'Owner', 'Staff', 'Customer'],
-        '/savemore': ['Admin', 'Owner'],
-        '/auditlog': ['Admin', 'Owner', 'Staff'],
-    };
 
     // Check if the user's role is allowed for a given route
-    const isAllowed = (route) => accessControl[route]?.includes(userRole);
+    const isAllowed = (route) => pageAccessRules[route]?.includes(userRole);
 
     return (
         <div className="sidebar-container">
@@ -64,7 +66,7 @@ export default function Sidebar() {
                 <div style={{ width: "50%", margin: "0 auto 16px" }}>
                     <img
                         src={CafeReyesImage}
-                        alt="Forbidden Access"
+                        alt="Cafe Reyes Logo"
                         style={{
                             width: "100%",
                             height: "auto",

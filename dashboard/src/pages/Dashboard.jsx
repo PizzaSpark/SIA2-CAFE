@@ -112,7 +112,7 @@ export default function Dashboard() {
                                         <ListItem key={index} divider={index !== salesStats.topSellers.length - 1}>
                                             <ListItemText
                                                 primary={item._id}
-                                                secondary={`Quantity: ${item.totalQuantity}, Total Sales: $${item.totalSales.toFixed(2)}`}
+                                                secondary={`Quantity: ${item.totalQuantity}, Total Sales: ${formatPrice(item.totalSales)}`}
                                             />
                                         </ListItem>
                                     ))}

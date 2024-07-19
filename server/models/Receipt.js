@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 
-const collectionName = "transactions";
-const requiredUniqueString = { type: String, required: true, unique: true };
-const requiredString = { type: String, required: true, default: "test" };
+const collectionName = "receipts";
+const requiredString = { type: String, required: true };
 const requiredNumber = { type: Number, required: true };
 const forItems = [
     {

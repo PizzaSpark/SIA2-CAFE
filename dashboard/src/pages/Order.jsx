@@ -178,6 +178,13 @@ export default function Order() {
             setSuccessDialogOpen(true);
             setOpenPaymentDialog(false);
 
+            // Create a receipt
+            await axios.post(`${VITE_REACT_APP_API_HOST}/api/receipts`, {
+                total: totalAmount,
+                items: orderItems,
+                buyer: localStorage.getItem("_id"),
+            });
+
             // Reset the cart
             setDataList((prevList) =>
                 prevList.map((item) => ({ ...item, quantity: 0 }))

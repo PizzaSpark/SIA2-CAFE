@@ -4,6 +4,7 @@ const controller = require('../controllers/receiptController');
 
 router.post('/', controller.createReceipt);
 router.get('/', controller.getReceipts);
+router.get('/stats', controller.getSalesStats);
 router.get('/:id', controller.getReceipt);
 router.put('/:id', controller.updateReceipt);
 router.delete('/:id', controller.deleteReceipt);

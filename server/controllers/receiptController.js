@@ -56,3 +56,58 @@ exports.deleteReceipt = async (req, res) => {
     }
 };
 
+exports.getSalesStats = async (req, res) => {
+    try {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const weekAgo = new Date(today);
+        weekAgo.setDate(weekAgo.getDate() - 7);
+
+        // Top 5 sellers (items)
+        const topSellers = await dataModel.aggregate([
+            { $unwind: "$items" },
+            { 
+                $group: { 
+                    _id: "$items.name", 
+                    totalQuantity: { $sum: "$items.quantity" },
+                    totalSales: { $sum: { $multiply: ["$items.quantity", "$items.price"] } }
+                } 
+            },
+            { $sort: { totalSales: -1 } },
+            { $limit: 5 }
+        ]);
+
+        // Receipt count and total income for today
+        const todayStats = await dataModel.aggregate([
+            { $match: { createdAt: { $gte: today } } },
+            { 
+                $group: { 
+                    _id: null, 
+                    count: { $sum: 1 }, 
+                    totalIncome: { $sum: "$total" } 
+                } 
+            }
+        ]);
+
+        // Receipt count and total income for the week
+        const weekStats = await dataModel.aggregate([
+            { $match: { createdAt: { $gte: weekAgo } } },
+            { 
+                $group: { 
+                    _id: null, 
+                    count: { $sum: 1 }, 
+                    totalIncome: { $sum: "$total" } 
+                } 
+            }
+        ]);
+
+        res.json({
+            topSellers,
+            today: todayStats[0] || { count: 0, totalIncome: 0 },
+            week: weekStats[0] || { count: 0, totalIncome: 0 }
+        });
+    } catch (error) {
+        console.error("Error in getSalesStats:", error);
+        res.status(500).json({ message: "Error fetching sales stats", error: error.message });
+    }
+};

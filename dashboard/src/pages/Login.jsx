@@ -51,12 +51,7 @@ export default function Login() {
                 formData
             );
 
-            for (const key in response.data) {
-                if (response.data.hasOwnProperty(key)) {
-                    localStorage.setItem(key, response.data[key]);
-
-                }
-            }
+            localStorage.setItem("_id", response.data._id);
 
             await axios.post(
                 `${VITE_REACT_APP_API_HOST}/api/audits`,

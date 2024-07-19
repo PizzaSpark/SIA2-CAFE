@@ -199,10 +199,10 @@ export default function Order() {
                 return newStocks;
             });
 
-            axios.post(`${VITE_REACT_APP_API_HOST}/api/audits`, {
+            await axios.post(`${VITE_REACT_APP_API_HOST}/api/audits`, {
                 action: "SUCCESSFUL CAFE ORDER",
                 user: localStorage.getItem("_id"),
-                details: `Successfully ordered with reference ID: ${referenceId}`,
+                details: `Successfully ordered with reference ID: ${res.data.reference}`,
             });
         } catch (error) {
             console.error("Error processing order:", error);

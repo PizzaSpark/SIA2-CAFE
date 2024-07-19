@@ -34,6 +34,13 @@ export default function Login() {
         setShowPassword((prev) => !prev);
     };
 
+    useEffect(() => {
+        const _id = localStorage.getItem('_id');
+        if (_id) {
+          navigate('/dashboard');
+        }
+      }, []);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({

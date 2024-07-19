@@ -54,6 +54,13 @@ export default function Dashboard() {
         );
     }
 
+    const formatPrice = (price) => {
+        return new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "PHP",
+        }).format(price);
+    };
+
     return (
         <div className="page">
             <Sidebar />
@@ -65,7 +72,7 @@ export default function Dashboard() {
                         <Card>
                             <CardContent>
                                 <Typography variant="h6" gutterBottom>Today's Sales</Typography>
-                                <Typography variant="h4">${salesStats?.today.totalIncome.toFixed(2)}</Typography>
+                                <Typography variant="h4">{formatPrice(salesStats?.today.totalIncome)}</Typography>
                                 <Typography variant="body2" color="textSecondary">
                                     {salesStats?.today.count} receipts
                                 </Typography>
@@ -76,7 +83,7 @@ export default function Dashboard() {
                         <Card>
                             <CardContent>
                                 <Typography variant="h6" gutterBottom>This Week's Sales</Typography>
-                                <Typography variant="h4">${salesStats?.week.totalIncome.toFixed(2)}</Typography>
+                                <Typography variant="h4">{formatPrice(salesStats?.week.totalIncome)}</Typography>
                                 <Typography variant="body2" color="textSecondary">
                                     {salesStats?.week.count} receipts
                                 </Typography>

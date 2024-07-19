@@ -122,3 +122,14 @@ exports.deleteStock = async (req, res) => {
     }
 };
 
+exports.getLowStocks = async (req, res) => {
+    try {
+        const lowStocks = await dataModel.find({ 
+            $expr: { $lt: ["$quantity", "$minimum"] } 
+        });
+        res.json(lowStocks);
+    } catch (error) {
+        console.error("Error in getLowStocks:", error);
+        res.status(500).json({ message: "Error fetching low stocks", error: error.message });
+    }
+};

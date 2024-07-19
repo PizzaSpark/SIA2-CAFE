@@ -5,6 +5,7 @@ const controller = require('../controllers/stockController');
 router.post('/', controller.createStock);
 router.post('/bulk', controller.createStocks);
 router.get('/', controller.getStocks);
+router.get('/low-stocks', controller.getLowStocks);
 router.get('/:id', controller.getStock);
 router.put('/:id', controller.updateStock);
 router.post('/update-multiple', controller.updateStocks);

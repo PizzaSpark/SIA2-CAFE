@@ -218,6 +218,7 @@ export default function Order() {
                             padding: 3,
                             display: "flex",
                             flexDirection: "column",
+                            maxHeight: "calc(100vh - 100px)",
                         }}
                     >
                         <h1>Order</h1>

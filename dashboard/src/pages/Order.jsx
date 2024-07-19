@@ -12,12 +12,13 @@ import { useRoleCheck } from "../hooks/useRoleCheck";
 
 export default function Order() {
     const navigate = useNavigate();
-    const { VITE_REACT_APP_API_HOST, VITE_REACT_APP_UNIONBANK_TOKEN } = import.meta.env;
+    const { VITE_REACT_APP_API_HOST, VITE_REACT_APP_UNIONBANK_TOKEN } =
+        import.meta.env;
     const [openConfirmation, setOpenConfirmation] = useState(false);
     const [openPaymentDialog, setOpenPaymentDialog] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
-    const [referenceId, setReferenceId] = useState('');
+    const [referenceId, setReferenceId] = useState("");
     const [recipes, setRecipes] = useState({});
     const [stocks, setStocks] = useState({});
 
@@ -27,35 +28,39 @@ export default function Order() {
         Promise.all([
             axios.get(`${VITE_REACT_APP_API_HOST}/api/menuItems`),
             axios.get(`${VITE_REACT_APP_API_HOST}/api/recipes`),
-            axios.get(`${VITE_REACT_APP_API_HOST}/api/stocks`)
-        ]).then(([menuItemsResponse, recipesResponse, stocksResponse]) => {
-            const activeMenuItems = menuItemsResponse.data.filter(item => item.isActive);
-            const initializedData = activeMenuItems.map((item) => ({
-                ...item,
-                quantity: 0,
-            }));
-            setDataList(initializedData);
+            axios.get(`${VITE_REACT_APP_API_HOST}/api/stocks`),
+        ])
+            .then(([menuItemsResponse, recipesResponse, stocksResponse]) => {
+                const activeMenuItems = menuItemsResponse.data.filter(
+                    (item) => item.isActive
+                );
+                const initializedData = activeMenuItems.map((item) => ({
+                    ...item,
+                    quantity: 0,
+                }));
+                setDataList(initializedData);
 
-            const recipesMap = {};
-            recipesResponse.data.forEach(recipe => {
-                if (!recipesMap[recipe.menuItem]) {
-                    recipesMap[recipe.menuItem] = [];
-                }
-                recipesMap[recipe.menuItem].push({
-                    stockId: recipe.stock,
-                    quantity: recipe.quantity
+                const recipesMap = {};
+                recipesResponse.data.forEach((recipe) => {
+                    if (!recipesMap[recipe.menuItem]) {
+                        recipesMap[recipe.menuItem] = [];
+                    }
+                    recipesMap[recipe.menuItem].push({
+                        stockId: recipe.stock,
+                        quantity: recipe.quantity,
+                    });
                 });
-            });
-            setRecipes(recipesMap);
+                setRecipes(recipesMap);
 
-            const stocksMap = {};
-            stocksResponse.data.forEach(stock => {
-                stocksMap[stock._id] = stock.quantity;
+                const stocksMap = {};
+                stocksResponse.data.forEach((stock) => {
+                    stocksMap[stock._id] = stock.quantity;
+                });
+                setStocks(stocksMap);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
             });
-            setStocks(stocksMap);
-        }).catch((error) => {
-            console.error("Error fetching data:", error);
-        });
     }, []);
 
     const handleAdd = (product) => {
@@ -86,20 +91,25 @@ export default function Order() {
     };
 
     const handlePlaceOrder = () => {
-        const orderItems = dataList.filter(item => item.quantity > 0);
+        const orderItems = dataList.filter((item) => item.quantity > 0);
         let canFulfillOrder = true;
         const stockUpdates = {};
 
-        orderItems.forEach(item => {
+        orderItems.forEach((item) => {
             const recipe = recipes[item._id];
             if (recipe) {
-                recipe.forEach(ingredient => {
-                    const requiredQuantity = ingredient.quantity * item.quantity;
-                    const availableQuantity = stocks[ingredient.stockId] - (stockUpdates[ingredient.stockId] || 0);
+                recipe.forEach((ingredient) => {
+                    const requiredQuantity =
+                        ingredient.quantity * item.quantity;
+                    const availableQuantity =
+                        stocks[ingredient.stockId] -
+                        (stockUpdates[ingredient.stockId] || 0);
                     if (availableQuantity < requiredQuantity) {
                         canFulfillOrder = false;
                     } else {
-                        stockUpdates[ingredient.stockId] = (stockUpdates[ingredient.stockId] || 0) + requiredQuantity;
+                        stockUpdates[ingredient.stockId] =
+                            (stockUpdates[ingredient.stockId] || 0) +
+                            requiredQuantity;
                     }
                 });
             }
@@ -142,21 +152,27 @@ export default function Order() {
             }
 
             // Update stocks
-            const orderItems = dataList.filter(item => item.quantity > 0);
+            const orderItems = dataList.filter((item) => item.quantity > 0);
             const stockUpdates = {};
 
-            orderItems.forEach(item => {
+            orderItems.forEach((item) => {
                 const recipe = recipes[item._id];
                 if (recipe) {
-                    recipe.forEach(ingredient => {
-                        const requiredQuantity = ingredient.quantity * item.quantity;
-                        stockUpdates[ingredient.stockId] = (stockUpdates[ingredient.stockId] || 0) + requiredQuantity;
+                    recipe.forEach((ingredient) => {
+                        const requiredQuantity =
+                            ingredient.quantity * item.quantity;
+                        stockUpdates[ingredient.stockId] =
+                            (stockUpdates[ingredient.stockId] || 0) +
+                            requiredQuantity;
                     });
                 }
             });
 
             // Send stock updates to the server
-            await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/update-multiple`, stockUpdates);
+            await axios.post(
+                `${VITE_REACT_APP_API_HOST}/api/stocks/update-multiple`,
+                stockUpdates
+            );
 
             setReferenceId(res.data.reference);
             setSuccessDialogOpen(true);
@@ -168,7 +184,7 @@ export default function Order() {
             );
 
             // Update local stock state
-            setStocks(prevStocks => {
+            setStocks((prevStocks) => {
                 const newStocks = { ...prevStocks };
                 Object.entries(stockUpdates).forEach(([stockId, quantity]) => {
                     newStocks[stockId] -= quantity;
@@ -176,15 +192,11 @@ export default function Order() {
                 return newStocks;
             });
 
-            axios.post(
-                `${VITE_REACT_APP_API_HOST}/api/audits`,
-                {
-                    action: "SUCCESSFUL CAFE ORDER",
-                    user: localStorage.getItem("_id"),
-                    details: `Successfully ordered with reference ID: ${referenceId}`
-                }
-            );
-
+            axios.post(`${VITE_REACT_APP_API_HOST}/api/audits`, {
+                action: "SUCCESSFUL CAFE ORDER",
+                user: localStorage.getItem("_id"),
+                details: `Successfully ordered with reference ID: ${referenceId}`,
+            });
         } catch (error) {
             console.error("Error processing order:", error);
             alert("An error occurred while processing your order.");
@@ -209,12 +221,18 @@ export default function Order() {
                         }}
                     >
                         <h1>Order</h1>
-                        <ProductsContainer
-                            dataList={dataList}
-                            handleAdd={handleAdd}
-                            handleRemove={handleRemove}
-                            host={VITE_REACT_APP_API_HOST}
-                        />
+                        <Box
+                            sx={{
+                                overflowY: "auto",
+                            }}
+                        >
+                            <ProductsContainer
+                                dataList={dataList}
+                                handleAdd={handleAdd}
+                                handleRemove={handleRemove}
+                                host={VITE_REACT_APP_API_HOST}
+                            />
+                        </Box>
                     </Box>
                     <Box
                         sx={{

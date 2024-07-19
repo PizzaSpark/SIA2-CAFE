@@ -18,9 +18,9 @@ export default function Savemore() {
     const [openPaymentDialog, setOpenPaymentDialog] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
-    const [referenceId, setReferenceId] = useState('');
+    const [referenceId, setReferenceId] = useState("");
     const savemoreHost = "http://192.168.10.25:3004";
-    
+
     useRoleCheck();
 
     useEffect(() => {
@@ -104,14 +104,17 @@ export default function Savemore() {
             setOpenPaymentDialog(false);
 
             // Prepare ordered items for stock update and sales details
-            const orderedItems = dataList.filter(item => item.quantity > 0);
+            const orderedItems = dataList.filter((item) => item.quantity > 0);
 
             // Stock update
             const stockUpdateData = orderedItems.map(({ name, quantity }) => ({
                 name,
-                quantity
+                quantity,
             }));
-            const stockResponse = await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/bulk`, stockUpdateData);
+            const stockResponse = await axios.post(
+                `${VITE_REACT_APP_API_HOST}/api/stocks/bulk`,
+                stockUpdateData
+            );
 
             if (!stockResponse.data.success) {
                 alert(stockResponse.data.message);
@@ -124,13 +127,19 @@ export default function Savemore() {
                     product: item.name,
                     quantity: item.quantity,
                     price: item.price,
-                    date: currentDate
+                    date: currentDate,
                 };
 
                 try {
-                    const salesResponse = await axios.post(`${savemoreHost}/api/salesdetails`, salesDetailData);
+                    const salesResponse = await axios.post(
+                        `${savemoreHost}/api/salesdetails`,
+                        salesDetailData
+                    );
                 } catch (error) {
-                    console.error(`Error updating sales details for ${item.name}:`, error);
+                    console.error(
+                        `Error updating sales details for ${item.name}:`,
+                        error
+                    );
                 }
             }
 
@@ -140,17 +149,16 @@ export default function Savemore() {
             );
             setOpenConfirmation(false);
 
-            axios.post(
-                `${VITE_REACT_APP_API_HOST}/api/audits`,
-                {
-                    action: "SUCCESSFUL CAFE ORDER",
-                    user: localStorage.getItem("_id"),
-                    details: `Successfully ordered with reference ID: ${referenceId}`
-                }
-            );
+            axios.post(`${VITE_REACT_APP_API_HOST}/api/audits`, {
+                action: "SUCCESSFUL CAFE ORDER",
+                user: localStorage.getItem("_id"),
+                details: `Successfully ordered with reference ID: ${referenceId}`,
+            });
         } catch (error) {
             console.error("Error in handleConfirmOrder:", error);
-            alert("An error occurred while processing your order. Please try again.");
+            alert(
+                "An error occurred while processing your order. Please try again."
+            );
         }
     };
 
@@ -169,15 +177,22 @@ export default function Savemore() {
                             padding: 3,
                             display: "flex",
                             flexDirection: "column",
+                            maxHeight: "calc(100vh - 100px)",
                         }}
                     >
                         <h1>Online Savemore</h1>
-                        <ProductsContainer
-                            dataList={dataList}
-                            handleAdd={handleAdd}
-                            handleRemove={handleRemove}
-                            host={savemoreHost}
-                        />
+                        <Box
+                            sx={{
+                                overflowY: "auto",
+                            }}
+                        >
+                            <ProductsContainer
+                                dataList={dataList}
+                                handleAdd={handleAdd}
+                                handleRemove={handleRemove}
+                                host={savemoreHost}
+                            />
+                        </Box>
                     </Box>
                     <Box
                         sx={{

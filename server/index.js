@@ -37,6 +37,9 @@ app.use('/api/recipes', recipeRoutes);
 const auditRoutes = require('./routes/audits');
 app.use('/api/audits', auditRoutes);
 
+const receiptRoutes = require('./routes/receipts');
+app.use('/api/receipts', receiptRoutes);
+
 // MongoDB connection
 mongoose
     .connect(`mongodb://localhost:27017/${dbName}`)

@@ -8,4 +8,7 @@ router.get('/:id', controller.getReceipt);
 router.put('/:id', controller.updateReceipt);
 router.delete('/:id', controller.deleteReceipt);
 
+router.get('/stats', controller.getSalesStats);
+router.get('/top', controller.getTopSellers);
+
 module.exports = router;

@@ -2,101 +2,179 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import axios from "axios";
 import {
-    AddShoppingCart,
-    FormatListBulleted,
-    Inventory,
-    Logout,
-    MenuBook,
+    Box,
+    List,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+    Typography,
+    IconButton,
+} from "@mui/material";
+import {
+    Dashboard,
     People,
-    RestaurantMenu,
-    ShoppingBag,
-    SpaceDashboard,
+    Inventory,
+    MenuBook,
+    Restaurant,
+    ShoppingCart,
+    ListAlt,
+    Receipt,
+    Logout,
 } from "@mui/icons-material";
-import { pageAccessRules } from '../../config/pageAccessRules';
+import { pageAccessRules } from "../../config/pageAccessRules";
 import CafeReyesImage from "../../assets/CafeReyes.svg";
-import "../../styles/Sidebar.css";
+
+const menuItems = [
+    { name: "Dashboard", icon: Dashboard, route: "/dashboard" },
+    { name: "Users", icon: People, route: "/users" },
+    { name: "Stocks", icon: Inventory, route: "/stocks" },
+    { name: "Menu", icon: MenuBook, route: "/menu" },
+    { name: "Recipe", icon: Restaurant, route: "/recipe" },
+    { name: "Order", icon: ShoppingCart, route: "/order" },
+    { name: "Savemore", icon: ListAlt, route: "/savemore" },
+    { name: "Auditlog", icon: Receipt, route: "/auditlog" },
+];
 
 export default function Sidebar() {
     const navigate = useNavigate();
-    const [userRole, setUserRole] = useState(null);
+    const [userRole, setUserRole] = useState("");
+    const [userName, setUserName] = useState("");
     const { VITE_REACT_APP_API_HOST } = import.meta.env;
 
     useEffect(() => {
-        const fetchUserRole = async () => {
+        const fetchUserData = async () => {
             try {
                 const userId = localStorage.getItem("_id");
-                const response = await axios.get(`${VITE_REACT_APP_API_HOST}/api/users/${userId}`);
+                const response = await axios.get(
+                    `${VITE_REACT_APP_API_HOST}/api/users/${userId}`
+                );
                 setUserRole(response.data.role);
+                setUserName(response.data.name);
             } catch (error) {
-                console.error("Failed to fetch user role:", error);
+                console.error("Failed to fetch user data:", error);
             }
         };
 
-        fetchUserRole();
+        fetchUserData();
     }, [VITE_REACT_APP_API_HOST]);
 
     const handleLogout = async () => {
         try {
             const userId = localStorage.getItem("_id");
-            
-            // Create audit log
-            await axios.post(
-                `${VITE_REACT_APP_API_HOST}/api/audits`,
-                {
-                    action: "USER LOGOUT",
-                    user: userId,
-                    details: `User signed out`
-                }
-            );
+            await axios.post(`${VITE_REACT_APP_API_HOST}/api/audits`, {
+                action: "USER LOGOUT",
+                user: userId,
+                details: `User signed out`,
+            });
         } catch (error) {
             console.error("Failed to create audit log:", error);
         } finally {
-            // Clear localStorage and navigate regardless of audit log success
             localStorage.clear();
             navigate("/", { replace: true });
         }
     };
 
-    // Check if the user's role is allowed for a given route
     const isAllowed = (route) => pageAccessRules[route]?.includes(userRole);
 
     return (
-        <div className="sidebar-container">
-            <div className="sidebar">
-                <div style={{ width: "50%", margin: "0 auto 16px" }}>
-                    <img
-                        src={CafeReyesImage}
-                        alt="Cafe Reyes Logo"
-                        style={{
-                            width: "100%",
-                            height: "auto",
-                            borderRadius: "8px",
-                        }}
-                    />
-                </div>
-                <div className="sidebar-items">
-                    {isAllowed('/dashboard') && <SidebarLink to="/dashboard" Icon={SpaceDashboard} label="Dashboard" />}
-                    {isAllowed('/users') && <SidebarLink to="/users" Icon={People} label="Users" />}
-                    {isAllowed('/stocks') && <SidebarLink to="/stocks" Icon={Inventory} label="Stocks" />}
-                    {isAllowed('/menu') && <SidebarLink to="/menu" Icon={MenuBook} label="Menu" />}
-                    {isAllowed('/recipe') && <SidebarLink to="/recipe" Icon={RestaurantMenu} label="Recipe" />}
-                    {isAllowed('/order') && <SidebarLink to="/order" Icon={ShoppingBag} label="Cafe POS" />}
-                    {isAllowed('/auditlog') && <SidebarLink to="/auditlog" Icon={FormatListBulleted} label="Audit Log" />}
-                    {isAllowed('/savemore') && <SidebarLink to="/savemore" Icon={AddShoppingCart} label="Savemore" />}
-                    <SidebarLink to="/" Icon={Logout} label="Logout" onClick={handleLogout} />
-                </div>
-            </div>
-        </div>
-    );
-}
-
-function SidebarLink({ to, label, Icon, onClick }) {
-    return (
-        <NavLink to={to} onClick={onClick}>
-            <div className="tilecontent">
-                <Icon />
-                <p>{label}</p>
-            </div>
-        </NavLink>
+        <Box
+            sx={{
+                width: 280,
+                height: "100vh",
+                bgcolor: "#F8F0F0",
+                display: "flex",
+                flexDirection: "column",
+                borderTopRightRadius: 30,
+                borderBottomRightRadius: 30,
+                overflow: "hidden",
+            }}
+        >
+            <Box
+                sx={{
+                    p: 2,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
+            >
+                <img
+                    src={CafeReyesImage}
+                    alt="Cafe Reyes Logo"
+                    style={{ width: "80%", height: "auto" }}
+                />
+            </Box>
+            <List sx={{ flex: 1, py: 0 }}>
+                {menuItems.map(
+                    (item) =>
+                        isAllowed(item.route) && (
+                            <ListItem
+                                key={item.name}
+                                component={NavLink}
+                                to={item.route}
+                                sx={{
+                                    color: "#644F4F",
+                                    transition: "all 0.3s",
+                                    "&.active": {
+                                        bgcolor: "#F2D5D5",
+                                        color: "#3E2929",
+                                        "& .MuiListItemIcon-root": {
+                                            color: "#3E2929",
+                                        },
+                                        borderRight: "4px solid #B17A7A",
+                                    },
+                                    "&:hover:not(.active)": {
+                                        bgcolor: "#FCE8E8",
+                                        color: "#4A3636",
+                                        "& .MuiListItemIcon-root": {
+                                            color: "#4A3636",
+                                        },
+                                        paddingLeft: "24px",
+                                    },
+                                }}
+                            >
+                                <ListItemIcon
+                                    sx={{ color: "inherit", minWidth: 40 }}
+                                >
+                                    <item.icon />
+                                </ListItemIcon>
+                                <ListItemText primary={item.name} />
+                            </ListItem>
+                        )
+                )}
+            </List>
+            <Box
+                sx={{
+                    p: 2,
+                    borderTop: "1px solid #E0D0D0",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                }}
+            >
+                <Box>
+                    <Typography
+                        variant="subtitle2"
+                        sx={{ color: "#3E2929", fontWeight: "bold" }}
+                    >
+                        {userName}
+                    </Typography>
+                    <Typography variant="caption" sx={{ color: "#644F4F" }}>
+                        {userRole}
+                    </Typography>
+                </Box>
+                <IconButton
+                    onClick={handleLogout}
+                    sx={{
+                        color: "#644F4F",
+                        "&:hover": {
+                            bgcolor: "#FCE8E8",
+                            color: "#4A3636",
+                        },
+                    }}
+                >
+                    <Logout />
+                </IconButton>
+            </Box>
+        </Box>
     );
 }

@@ -35,11 +35,27 @@ export default function Login() {
     };
 
     useEffect(() => {
-        const _id = localStorage.getItem('_id');
-        if (_id) {
-          navigate('/dashboard');
-        }
-      }, []);
+        const checkUserAuth = async () => {
+            const _id = localStorage.getItem('_id');
+            if (_id) {
+                try {
+                    const response = await axios.get(
+                        `${VITE_REACT_APP_API_HOST}/api/users/${_id}`
+                    );
+                    const role = response.data.role;
+                    if (role === 'Customer') {
+                        navigate('/order');
+                    } else {
+                        navigate('/dashboard');
+                    }
+                } catch (error) {
+                    console.error("Error checking user auth:", error);
+                    localStorage.removeItem('_id');
+                }
+            }
+        };
+        checkUserAuth();
+    }, [navigate, VITE_REACT_APP_API_HOST]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -64,12 +80,16 @@ export default function Login() {
                 `${VITE_REACT_APP_API_HOST}/api/audits`,
                 {
                     action: "USER LOGIN",
-                    user: localStorage.getItem("_id"),
+                    user: response.data._id,
                     details: "User signed in"
                 }
             );
 
-            navigate("/dashboard");
+            if (response.data.role === 'Customer') {
+                navigate("/order");
+            } else {
+                navigate("/dashboard");
+            }
         } catch (error) {
             console.error(
                 "Login failed",

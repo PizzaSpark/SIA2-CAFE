@@ -1,5 +1,5 @@
 export const pageAccessRules = {
-    '/dashboard': ['Admin', 'Owner', 'Staff', 'Customer'],
+    '/dashboard': ['Admin', 'Owner', 'Staff'],
     '/users': ['Admin', 'Owner'],
     '/stocks': ['Admin', 'Owner'],
     '/menu': ['Admin', 'Owner'],

@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Sidebar from "../components/common/Sidebar";
@@ -10,7 +10,7 @@ import ProjectForm from "../components/ProjectForm";
 export default function Projects() {
     const navigate = useNavigate();
     const { VITE_REACT_APP_API_HOST } = import.meta.env;
-    const resourceName = "projects";
+    const resourceName = 'projects';
     const [open, setOpen] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [dataToEdit, setDataToEdit] = useState(null);
@@ -21,16 +21,15 @@ export default function Projects() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const projectsResponse = await axios.get(
-                    `${VITE_REACT_APP_API_HOST}/api/${resourceName}`
-                );
-                setDataList(projectsResponse.data);
-
                 const userId = localStorage.getItem("_id");
-                const userResponse = await axios.get(
-                    `${VITE_REACT_APP_API_HOST}/api/users/${userId}`
-                );
-                setUserRole(userResponse.data.role);
+                const userResponse = await axios.get(`${VITE_REACT_APP_API_HOST}/api/users/${userId}`);
+                const userRole = userResponse.data.role;
+                setUserRole(userRole);
+
+                // Fetch projects based on user role
+                const projectsEndpoint = userRole === 'Admin' ? `${resourceName}/admin` : resourceName;
+                const projectsResponse = await axios.get(`${VITE_REACT_APP_API_HOST}/api/${projectsEndpoint}`);
+                setDataList(projectsResponse.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
                 setDataList([]);
@@ -63,23 +62,17 @@ export default function Projects() {
                     setOpen(false);
                 })
                 .catch((error) => {
-                    console.error("Error updating user:", error);
+                    console.error("Error updating project:", error);
                 });
         } else {
             axios
-                .post(
-                    `${VITE_REACT_APP_API_HOST}/api/${resourceName}`,
-                    formData
-                )
+                .post(`${VITE_REACT_APP_API_HOST}/api/${resourceName}`, formData)
                 .then((response) => {
-                    setDataList((prevDataList) => [
-                        ...prevDataList,
-                        response.data,
-                    ]);
+                    setDataList((prevDataList) => [...prevDataList, response.data]);
                     setOpen(false);
                 })
                 .catch((error) => {
-                    console.error("Error adding user:", error);
+                    console.error("Error adding project:", error);
                 });
         }
     };
@@ -110,7 +103,7 @@ export default function Projects() {
             <div className="page-content">
                 <h1>Project List</h1>
 
-                {userRole && userRole !== "Customer" && (
+                {userRole && userRole !== 'Customer' && (
                     <Button
                         variant="contained"
                         color="primary"
@@ -119,8 +112,8 @@ export default function Projects() {
                         Add Project
                     </Button>
                 )}
-                <ProjectsContainer
-                    dataList={dataList}
+                <ProjectsContainer 
+                    dataList={dataList} 
                     host={VITE_REACT_APP_API_HOST}
                     userRole={userRole}
                     onEdit={handleEdit}

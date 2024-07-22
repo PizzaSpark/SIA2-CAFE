@@ -25,6 +25,15 @@ exports.getAllProjects = async (req, res) => {
     }
 };
 
+exports.getAllActiveProjects = async (req, res) => {
+    try {
+        const dataObject = await dataModel.find({ isActive: true });
+        res.json(dataObject);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
 // Get a single item
 exports.getProject = async (req, res) => {
     try {

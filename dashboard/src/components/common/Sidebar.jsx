@@ -9,6 +9,7 @@ import {
     ListItemText,
     Typography,
     IconButton,
+    Tooltip,
 } from "@mui/material";
 import {
     Dashboard,
@@ -153,14 +154,19 @@ export default function Sidebar() {
             >
                 <Box>
                     <Typography
-                        variant="subtitle2"
-                        sx={{ color: "#3E2929", fontWeight: "bold" }}
+                        variant="caption"
+                        sx={{ color: "#644F4F", display: "block" }}
                     >
-                        {userName}
+                        Welcome back,
                     </Typography>
-                    <Typography variant="caption" sx={{ color: "#644F4F" }}>
-                        {userRole}
-                    </Typography>
+                    <Tooltip title={`Role: ${userRole}`} placement="top">
+                        <Typography
+                            variant="subtitle2"
+                            sx={{ color: "#3E2929", fontWeight: "bold", cursor: "help" }}
+                        >
+                            {userName}
+                        </Typography>
+                    </Tooltip>
                 </Box>
                 <IconButton
                     onClick={handleLogout}

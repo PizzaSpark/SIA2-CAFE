@@ -48,7 +48,7 @@ export const useRoleCheck = () => {
           } else {
             alert("An error occurred. Please try again later.");
           }
-          navigate("/login", { replace: true });
+          navigate("/", { replace: true });
           localStorage.clear();
         } finally {
           setIsLoading(false);

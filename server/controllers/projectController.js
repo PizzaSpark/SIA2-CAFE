@@ -18,7 +18,21 @@ exports.addProject = async (req, res) => {
 
 exports.getAllProjects = async (req, res) => {
     try {
-        const dataObject = await dataModel.find().sort({ name: 1 });
+        const dataObject = await dataModel.aggregate([
+            {
+                $addFields: {
+                    lowerCaseName: { $toLower: "$name" }
+                }
+            },
+            {
+                $sort: { lowerCaseName: 1 }
+            },
+            {
+                $project: {
+                    lowerCaseName: 0 // Optionally remove the temporary field from the output
+                }
+            }
+        ]);
         res.json(dataObject);
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -27,7 +41,24 @@ exports.getAllProjects = async (req, res) => {
 
 exports.getAllActiveProjects = async (req, res) => {
     try {
-        const dataObject = await dataModel.find({ isActive: true }).sort({ name: 1 });
+        const dataObject = await dataModel.aggregate([
+            {
+                $match: { isActive: true }
+            },
+            {
+                $addFields: {
+                    lowerCaseName: { $toLower: "$name" }
+                }
+            },
+            {
+                $sort: { lowerCaseName: 1 }
+            },
+            {
+                $project: {
+                    lowerCaseName: 0 // Optionally remove the temporary field from the output
+                }
+            }
+        ]);
         res.json(dataObject);
     } catch (error) {
         res.status(400).json({ message: error.message });

@@ -18,7 +18,7 @@ exports.addProject = async (req, res) => {
 
 exports.getAllProjects = async (req, res) => {
     try {
-        const dataObject = await dataModel.find();
+        const dataObject = await dataModel.find().sort({ name: 1 });
         res.json(dataObject);
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -27,7 +27,7 @@ exports.getAllProjects = async (req, res) => {
 
 exports.getAllActiveProjects = async (req, res) => {
     try {
-        const dataObject = await dataModel.find({ isActive: true });
+        const dataObject = await dataModel.find({ isActive: true }).sort({ name: 1 });
         res.json(dataObject);
     } catch (error) {
         res.status(400).json({ message: error.message });

@@ -33,7 +33,7 @@ const menuItems = [
     { name: "Recipe", icon: Restaurant, route: "/recipe" },
     { name: "Order", icon: ShoppingCart, route: "/order" },
     { name: "Savemore", icon: ListAlt, route: "/savemore" },
-    { name: "Auditlog", icon: Receipt, route: "/auditlog" },
+    { name: "Audit Log", icon: Receipt, route: "/auditlog" },
 ];
 
 export default function Sidebar() {

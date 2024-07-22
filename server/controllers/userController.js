@@ -1,9 +1,25 @@
 const dataModel = require("../models/User");
 const bcrypt = require('bcryptjs');
+const saltRounds = 10; // You can adjust the salt rounds as needed
 
 exports.createUser = async (req, res) => {
     try {
-        const dataObject = new dataModel(req.body);
+
+        // Check if the email already exists
+        const existingUser = await dataModel.findOne({ email: req.body.email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'Email already exists' });
+        }
+
+        // Hash the password
+        const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
+
+        // Create a new user with the hashed password
+        const dataObject = new dataModel({
+            ...req.body,
+            password: hashedPassword,
+        });
+
         const savedData = await dataObject.save();
         res.status(201).json(savedData);
     } catch (error) {
@@ -33,6 +49,20 @@ exports.getUser = async (req, res) => {
 
 exports.updateUser = async (req, res) => {
     try {
+        // Retrieve the current user data
+        const currentUser = await dataModel.findById(req.params.id);
+        if (!currentUser) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Check if the email has been changed and if it's already in use
+        if (req.body.email && req.body.email !== currentUser.email) {
+            const emailExists = await dataModel.findOne({ email: req.body.email });
+            if (emailExists) {
+                return res.status(400).json({ message: "Email is already in use" });
+            }
+        }
+
         const updatedObject = await dataModel.findByIdAndUpdate(
             req.params.id,
             req.body,
@@ -97,8 +127,7 @@ exports.signup = async (req, res) => {
         }
 
         // Hash the password
-        const salt = await bcrypt.genSalt(10);
-        const hashedPassword = await bcrypt.hash(requestBodyPassword, salt);
+        const hashedPassword = await bcrypt.hash(requestBodyPassword, saltRounds);
 
         // Create new user
         const newUser = new dataModel({

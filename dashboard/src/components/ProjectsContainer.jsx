@@ -19,15 +19,10 @@ export default function ProjectsContainer({ dataList, host, userRole, onEdit, on
         }
     };
 
-    // Sort the dataList alphabetically by item.name
-    const sortedDataList = [...dataList].sort((a, b) => 
-        a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
-    );
-
     return (
         <Box 
             sx={{ 
-                height: 'calc(100vh - 200px)', // Adjust this value based on your layout
+                height: 'calc(100vh - 200px)',
                 overflowY: 'auto',
                 padding: 2,
                 '&::-webkit-scrollbar': {
@@ -44,7 +39,7 @@ export default function ProjectsContainer({ dataList, host, userRole, onEdit, on
             }}
         >
             <Grid container spacing={3}>
-                {sortedDataList.map((item) => {
+                {dataList.map((item) => {
                     const imageUrl = `${host}/uploads/${item.image}`;
                     return (
                         <Grid item xs={12} sm={6} md={4} lg={3} key={item._id}>

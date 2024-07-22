@@ -13,6 +13,7 @@ import Savemore from "./pages/Savemore";
 import NotFound from "./pages/NotFound";
 import Forbidden from "./pages/Forbidden";
 import Signup from "./pages/Signup";
+import Projects from "./pages/Projects";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/order" Component={Order} />
                 <Route path="/savemore" Component={Savemore} />
                 <Route path="/auditlog" Component={AuditLog} />
+                <Route path="/projects" Component={Projects} />
 
                 <Route path="/forbidden" Component={Forbidden} />
                 <Route path="*" Component={NotFound} />

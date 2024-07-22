@@ -7,4 +7,5 @@ export const pageAccessRules = {
     '/order': ['Admin', 'Owner', 'Staff', 'Customer'],
     '/savemore': ['Admin', 'Owner'],
     '/auditlog': ['Admin', 'Owner', 'Staff'],
+    '/projects': ['Admin', 'Owner', 'Staff', 'Customer'],
   };

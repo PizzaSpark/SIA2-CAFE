@@ -34,6 +34,7 @@ const menuItems = [
     { name: "Order", icon: ShoppingCart, route: "/order" },
     { name: "Savemore", icon: ListAlt, route: "/savemore" },
     { name: "Audit Log", icon: Receipt, route: "/auditlog" },
+    { name: "Project List", icon: ListAlt, route: "/projects" },
 ];
 
 export default function Sidebar() {

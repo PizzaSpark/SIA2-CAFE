@@ -1,5 +1,5 @@
 import { React } from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box, Button, Tooltip } from "@mui/material";
 import { Edit, Delete, LockReset } from "@mui/icons-material";
 
@@ -114,6 +114,12 @@ export default function UserTable({
                 autoPageSize
                 pagination
                 disableRowSelectionOnClick
+                slots={{ toolbar: GridToolbar }}
+                slotProps={{
+                    toolbar: {
+                        showQuickFilter: true,
+                    },
+                }}
             />
         </Box>
     );

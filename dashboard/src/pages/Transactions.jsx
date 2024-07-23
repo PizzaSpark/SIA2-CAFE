@@ -15,6 +15,7 @@ export default function Transactions() {
     const [userRole, setUserRole] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const userId = localStorage.getItem("_id");
+    const [users, setUsers] = useState([]);
 
     useRoleCheck();
 
@@ -53,6 +54,17 @@ export default function Transactions() {
                 console.error("Error fetching dataList:", error);
                 setDataList([]);
             });
+
+            axios
+            .get(`${VITE_REACT_APP_API_HOST}/api/users`)
+            .then((response) => {
+                setUsers(response.data);
+            })
+            .catch((error) => {
+                console.error("Error fetching dataList:", error);
+                setUsers([]);
+            });
+
     };
 
     const handleSwitchChange = (event) => {
@@ -87,7 +99,7 @@ export default function Transactions() {
                         />
                     )}
                 </Box>
-                <TransactionsTable dataList={dataList} />
+                <TransactionsTable dataList={dataList} users={users} />
             </div>
         </div>
     );

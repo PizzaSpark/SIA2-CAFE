@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box, Button, Tooltip } from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
 import ImagePreviewModal from "./common/ImagePreviewModal";
@@ -135,6 +135,12 @@ export default function MenuTable({ dataList, onEdit, onDelete }) {
                 autoPageSize
                 pagination
                 disableRowSelectionOnClick
+                slots={{ toolbar: GridToolbar }}
+                slotProps={{
+                    toolbar: {
+                        showQuickFilter: true,
+                    },
+                }}
             />
             <ImagePreviewModal
                 open={previewOpen}

@@ -1,5 +1,5 @@
 import React from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
 
 export default function AuditTable({ dataList }) {
@@ -30,6 +30,12 @@ export default function AuditTable({ dataList }) {
                         sort: 'desc', // Sort by descending order to show the newest first
                     },
                 ]}
+                slots={{ toolbar: GridToolbar }}
+                slotProps={{
+                    toolbar: {
+                        showQuickFilter: true,
+                    },
+                }}
             />
         </Box>
     );

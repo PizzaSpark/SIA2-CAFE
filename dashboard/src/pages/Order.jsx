@@ -1,119 +1,91 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Box } from "@mui/material";
 import Sidebar from "../components/common/Sidebar";
 import ProductsContainer from "../components/common/ProductsContainer";
 import OrderSummary from "../components/common/OrderSummary";
-import { Box } from "@mui/material";
 import OrderConfirmation from "../components/common/OrderConfirmation";
 import SuccessDialog from "../components/common/SuccessDialog";
 import PaymentDialog from "../components/common/PaymentDialog";
 import { useRoleCheck } from "../hooks/useRoleCheck";
 
+const { VITE_REACT_APP_API_HOST, VITE_REACT_APP_UNIONBANK_TOKEN } = import.meta.env;
+
 export default function Order() {
     const navigate = useNavigate();
-    const { VITE_REACT_APP_API_HOST, VITE_REACT_APP_UNIONBANK_TOKEN } =
-        import.meta.env;
+    useRoleCheck();
+
     const [openConfirmation, setOpenConfirmation] = useState(false);
     const [openPaymentDialog, setOpenPaymentDialog] = useState(false);
-    const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
     const [referenceId, setReferenceId] = useState("");
     const [transactionId, setTransactionId] = useState("");
+    const [bankInfo, setBankInfo] = useState(null);
+
+    const [menuItems, setMenuItems] = useState([]);
     const [recipes, setRecipes] = useState({});
     const [stocks, setStocks] = useState({});
 
-    useRoleCheck();
-
     useEffect(() => {
-        Promise.all([
-            axios.get(`${VITE_REACT_APP_API_HOST}/api/menuItems`),
-            axios.get(`${VITE_REACT_APP_API_HOST}/api/recipes`),
-            axios.get(`${VITE_REACT_APP_API_HOST}/api/stocks`),
-        ])
-            .then(([menuItemsResponse, recipesResponse, stocksResponse]) => {
-                const activeMenuItems = menuItemsResponse.data.filter(
-                    (item) => item.isActive
-                );
-                const initializedData = activeMenuItems.map((item) => ({
-                    ...item,
-                    quantity: 0,
-                }));
-                setDataList(initializedData);
+        const fetchData = async () => {
+            try {
+                const [menuItemsResponse, recipesResponse, stocksResponse] = await Promise.all([
+                    axios.get(`${VITE_REACT_APP_API_HOST}/api/menuItems`),
+                    axios.get(`${VITE_REACT_APP_API_HOST}/api/recipes`),
+                    axios.get(`${VITE_REACT_APP_API_HOST}/api/stocks`)
+                ]);
 
-                const recipesMap = {};
-                recipesResponse.data.forEach((recipe) => {
-                    if (!recipesMap[recipe.menuItem]) {
-                        recipesMap[recipe.menuItem] = [];
-                    }
-                    recipesMap[recipe.menuItem].push({
-                        stockId: recipe.stock,
-                        quantity: recipe.quantity,
-                    });
-                });
+                const activeMenuItems = menuItemsResponse.data
+                    .filter(item => item.isActive)
+                    .map(item => ({ ...item, quantity: 0 }));
+                setMenuItems(activeMenuItems);
+
+                const recipesMap = recipesResponse.data.reduce((acc, recipe) => {
+                    if (!acc[recipe.menuItem]) acc[recipe.menuItem] = [];
+                    acc[recipe.menuItem].push({ stockId: recipe.stock, quantity: recipe.quantity });
+                    return acc;
+                }, {});
                 setRecipes(recipesMap);
 
-                const stocksMap = {};
-                stocksResponse.data.forEach((stock) => {
-                    stocksMap[stock._id] = stock.quantity;
-                });
+                const stocksMap = stocksResponse.data.reduce((acc, stock) => {
+                    acc[stock._id] = stock.quantity;
+                    return acc;
+                }, {});
                 setStocks(stocksMap);
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error("Error fetching data:", error);
-            });
+            }
+        };
+
+        fetchData();
     }, []);
 
-    const handleAdd = (product) => {
-        setDataList((prevList) =>
-            prevList.map((item) =>
-                item._id === product._id
-                    ? { ...item, quantity: (item.quantity || 0) + 1 }
+    const handleQuantityChange = useCallback((productId, change) => {
+        setMenuItems(prevItems => 
+            prevItems.map(item => 
+                item._id === productId 
+                    ? { ...item, quantity: Math.max(0, item.quantity + change) }
                     : item
             )
         );
-    };
+    }, []);
 
-    const handleRemove = (product) => {
-        setDataList((prevList) =>
-            prevList.map((item) =>
-                item._id === product._id && item.quantity > 0
-                    ? { ...item, quantity: item.quantity - 1 }
-                    : item
-            )
-        );
-    };
+    const calculateTotal = useMemo(() => 
+        menuItems.reduce((total, item) => total + item.price * item.quantity, 0),
+    [menuItems]);
 
-    const calculateTotal = () => {
-        return dataList.reduce(
-            (total, item) => total + item.price * item.quantity,
-            0
-        );
-    };
+    const orderItems = useMemo(() => 
+        menuItems.filter(item => item.quantity > 0),
+    [menuItems]);
 
     const handlePlaceOrder = () => {
-        const orderItems = dataList.filter((item) => item.quantity > 0);
-        let canFulfillOrder = true;
-        const stockUpdates = {};
-
-        orderItems.forEach((item) => {
+        const canFulfillOrder = orderItems.every(item => {
             const recipe = recipes[item._id];
-            if (recipe) {
-                recipe.forEach((ingredient) => {
-                    const requiredQuantity =
-                        ingredient.quantity * item.quantity;
-                    const availableQuantity =
-                        stocks[ingredient.stockId] -
-                        (stockUpdates[ingredient.stockId] || 0);
-                    if (availableQuantity < requiredQuantity) {
-                        canFulfillOrder = false;
-                    } else {
-                        stockUpdates[ingredient.stockId] =
-                            (stockUpdates[ingredient.stockId] || 0) +
-                            requiredQuantity;
-                    }
-                });
-            }
+            return recipe?.every(ingredient => {
+                const requiredQuantity = ingredient.quantity * item.quantity;
+                return stocks[ingredient.stockId] >= requiredQuantity;
+            });
         });
 
         if (!canFulfillOrder) {
@@ -130,20 +102,16 @@ export default function Order() {
     };
 
     const handlePaymentConfirm = async (bankCredentials) => {
-        const totalAmount = calculateTotal();
-
         try {
             const res = await axios.post(
                 `http://192.168.10.14:3001/api/unionbank/transfertransaction`,
                 {
                     debitAccount: bankCredentials,
                     creditAccount: "000000019",
-                    amount: totalAmount,
+                    amount: calculateTotal,
                 },
                 {
-                    headers: {
-                        Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}`,
-                    },
+                    headers: { Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}` },
                 }
             );
 
@@ -152,54 +120,35 @@ export default function Order() {
                 return;
             }
 
-            // Update stocks
-            const orderItems = dataList.filter((item) => item.quantity > 0);
-            const stockUpdates = {};
-
-            orderItems.forEach((item) => {
-                const recipe = recipes[item._id];
-                if (recipe) {
-                    recipe.forEach((ingredient) => {
-                        const requiredQuantity =
-                            ingredient.quantity * item.quantity;
-                        stockUpdates[ingredient.stockId] =
-                            (stockUpdates[ingredient.stockId] || 0) +
-                            requiredQuantity;
-                    });
-                }
+            setBankInfo({
+                name: "UnionBank",
+                referenceId: res.data.reference,
             });
 
-            // Send stock updates to the server
-            await axios.post(
-                `${VITE_REACT_APP_API_HOST}/api/stocks/update-multiple`,
-                stockUpdates
-            );
+            const stockUpdates = orderItems.reduce((updates, item) => {
+                const recipe = recipes[item._id];
+                recipe?.forEach(ingredient => {
+                    const requiredQuantity = ingredient.quantity * item.quantity;
+                    updates[ingredient.stockId] = (updates[ingredient.stockId] || 0) + requiredQuantity;
+                });
+                return updates;
+            }, {});
 
-            // Create a receipt
+            await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/update-multiple`, stockUpdates);
+
             const receiptRes = await axios.post(`${VITE_REACT_APP_API_HOST}/api/receipts`, {
-                bank: [
-                    {
-                        name: "UnionBank",
-                        referenceId: res.data.reference,
-                    },
-                ],
-                total: totalAmount,
+                bank: bankInfo,
+                total: calculateTotal,
                 items: orderItems,
                 buyer: localStorage.getItem("_id"),
             });
 
-            setReferenceId(res.data.reference);
             setTransactionId(receiptRes.data._id);
             setSuccessDialogOpen(true);
             setOpenPaymentDialog(false);
 
-            // Reset the cart
-            setDataList((prevList) =>
-                prevList.map((item) => ({ ...item, quantity: 0 }))
-            );
-
-            // Update local stock state
-            setStocks((prevStocks) => {
+            setMenuItems(prevItems => prevItems.map(item => ({ ...item, quantity: 0 })));
+            setStocks(prevStocks => {
                 const newStocks = { ...prevStocks };
                 Object.entries(stockUpdates).forEach(([stockId, quantity]) => {
                     newStocks[stockId] -= quantity;
@@ -218,73 +167,49 @@ export default function Order() {
         }
     };
 
-    const handleClose = () => setOpenConfirmation(false);
-    const handlePaymentDialogClose = () => setOpenPaymentDialog(false);
-    const handleSuccessDialogClose = () => setSuccessDialogOpen(false);
-
     return (
         <div className="page" style={{ display: "flex" }}>
             <Sidebar />
             <div className="page-content">
                 <Box sx={{ flex: 1, display: "flex", flexDirection: "row" }}>
-                    <Box
-                        sx={{
-                            width: "75%",
-                            padding: 3,
-                            display: "flex",
-                            flexDirection: "column",
-                            maxHeight: "calc(100vh - 100px)",
-                        }}
-                    >
+                    <Box sx={{ width: "75%", padding: 3, display: "flex", flexDirection: "column", maxHeight: "calc(100vh - 100px)" }}>
                         <h1>Order</h1>
-                        <Box
-                            sx={{
-                                overflowY: "auto",
-                            }}
-                        >
+                        <Box sx={{ overflowY: "auto" }}>
                             <ProductsContainer
-                                dataList={dataList}
-                                handleAdd={handleAdd}
-                                handleRemove={handleRemove}
+                                dataList={menuItems}
+                                handleAdd={(product) => handleQuantityChange(product._id, 1)}
+                                handleRemove={(product) => handleQuantityChange(product._id, -1)}
                                 host={VITE_REACT_APP_API_HOST}
                             />
                         </Box>
                     </Box>
-                    <Box
-                        sx={{
-                            width: "25%",
-                            backgroundColor: "#f5f5f5",
-                            padding: 3,
-                            display: "flex",
-                            flexDirection: "column",
-                        }}
-                    >
+                    <Box sx={{ width: "25%", backgroundColor: "#f5f5f5", padding: 3, display: "flex", flexDirection: "column" }}>
                         <OrderSummary
-                            items={dataList.filter((item) => item.quantity > 0)}
-                            total={calculateTotal()}
+                            items={orderItems}
+                            total={calculateTotal}
                             onPlaceOrder={handlePlaceOrder}
                         />
                     </Box>
                 </Box>
                 <OrderConfirmation
                     open={openConfirmation}
-                    onClose={handleClose}
+                    onClose={() => setOpenConfirmation(false)}
                     onConfirm={handleOrderConfirm}
-                    items={dataList.filter((item) => item.quantity > 0)}
-                    total={calculateTotal()}
+                    items={orderItems}
+                    total={calculateTotal}
                 />
                 <PaymentDialog
                     open={openPaymentDialog}
-                    onClose={handlePaymentDialogClose}
+                    onClose={() => setOpenPaymentDialog(false)}
                     onConfirm={handlePaymentConfirm}
-                    amount={calculateTotal()}
+                    amount={calculateTotal}
                     recipient="Store Account"
                 />
                 <SuccessDialog
                     open={successDialogOpen}
-                    onClose={handleSuccessDialogClose}
-                    referenceId={referenceId}
+                    onClose={() => setSuccessDialogOpen(false)}
                     transactionId={transactionId}
+                    bankInfo={bankInfo}
                 />
             </div>
         </div>

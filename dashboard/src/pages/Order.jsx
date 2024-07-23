@@ -212,12 +212,6 @@ export default function Order() {
         return res.data;
     };
 
-    const updateStocks = async () => {
-        const stockUpdates = calculateStockUpdates();
-        await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/update-multiple`, stockUpdates);
-        updateLocalStocks(stockUpdates);
-    };
-
     const calculateStockUpdates = () => 
         orderItems.reduce((updates, item) => {
             const recipe = recipes[item._id];

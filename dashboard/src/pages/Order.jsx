@@ -145,7 +145,13 @@ export default function Order() {
                 referenceId: paymentResponse.reference,
             };
 
-            await updateStocks();
+            const stockUpdateResult = await updateStocksWithLocking();
+            if (!stockUpdateResult.success) {
+                alert(stockUpdateResult.message);
+                // Reverse the payment here if possible
+                return;
+            }
+
             const receiptResponse = await createReceipt(newBankInfo);
 
             setOrderData(prev => ({
@@ -160,6 +166,32 @@ export default function Order() {
         } catch (error) {
             console.error("Error processing order:", error);
             alert("An error occurred while processing your order.");
+        }
+    };
+
+    const updateStocksWithLocking = async () => {
+        const stockUpdates = calculateStockUpdates();
+        try {
+            const response = await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/update-with-locking`, {
+                updates: stockUpdates,
+                currentStocks: stocks  // Send current stock versions
+            });
+            
+            if (response.data.success) {
+                updateLocalStocks(stockUpdates);
+                return { success: true };
+            } else {
+                return { 
+                    success: false, 
+                    message: "Stock levels have changed. Please review your order and try again." 
+                };
+            }
+        } catch (error) {
+            console.error("Error updating stocks:", error);
+            return { 
+                success: false, 
+                message: error.response.data.message 
+            };
         }
     };
 

@@ -83,6 +83,46 @@ exports.updateStock = async (req, res) => {
     }
 };
 
+exports.updateStocksWithLocking = async (req, res) => {
+    try {
+        const { updates, currentStocks } = req.body;
+        
+        for (const [stockId, quantity] of Object.entries(updates)) {
+            const stock = await dataModel.findById(stockId);
+            
+            // Check if the stock version matches
+            if (!stock || stock.quantity !== currentStocks[stockId].quantity) {
+                return res.status(409).json({ 
+                    success: false, 
+                    message: "Stock levels have changed. Please order again", 
+                    stockId: stockId 
+                });
+            }
+            
+            // Ensure stock doesn't go negative
+            if (stock.quantity < quantity) {
+                return res.status(400).json({ 
+                    success: false, 
+                    message: "Insufficient stock", 
+                    stockId: stockId 
+                });
+            }
+            
+            stock.quantity -= quantity;
+            await stock.save();
+        }
+
+        res.status(200).json({ success: true, message: "Stocks updated successfully" });
+    } catch (error) {
+        console.error("Error in updateStocksWithLocking:", error);
+        res.status(500).json({ 
+            success: false, 
+            message: "An error occurred while updating stock levels", 
+            error: error.message 
+        });
+    }
+};
+
 exports.updateStocks = async (req, res) => {
     try {
         const updates = req.body;

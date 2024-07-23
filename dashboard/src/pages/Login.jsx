@@ -17,6 +17,7 @@ import {
     VisibilityOff as EyeOff,
 } from "@mui/icons-material";
 import coffeebg from "../assets/coffee-bg.png";
+import NoteCard from "../components/NoteCard"; // Import the new NoteCard component
 
 export default function Login() {
     const navigate = useNavigate();
@@ -39,7 +40,7 @@ export default function Login() {
         if (_id) {
           navigate('/dashboard');
         }
-      }, []);
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -80,6 +81,13 @@ export default function Login() {
         }
     };
 
+    const handleCopy = (account) => {
+        setFormData({
+            email: account.email,
+            password: account.password,
+        });
+    };
+
     return (
         <Box
             sx={{
@@ -93,6 +101,7 @@ export default function Login() {
                 backgroundPosition: "center",
             }}
         >
+            <NoteCard onCopy={handleCopy} />
             <Paper
                 elevation={3}
                 sx={{
@@ -213,8 +222,6 @@ export default function Login() {
                             Don't have an account? Sign up
                         </Link>
                     </Box>
-
-
                 </form>
             </Paper>
         </Box>

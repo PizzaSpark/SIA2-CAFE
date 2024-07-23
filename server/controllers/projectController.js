@@ -41,9 +41,13 @@ exports.getAllProjects = async (req, res) => {
 
 exports.getAllActiveProjects = async (req, res) => {
     try {
+        const excludeName = req.params.name;
         const dataObject = await dataModel.aggregate([
             {
-                $match: { isActive: true }
+                $match: { 
+                    isActive: true,
+                    name: { $ne: excludeName } // Exclude the item with the name from req.params.name
+                }
             },
             {
                 $addFields: {
@@ -55,7 +59,7 @@ exports.getAllActiveProjects = async (req, res) => {
             },
             {
                 $project: {
-                    lowerCaseName: 0 // Optionally remove the temporary field from the output
+                    lowerCaseName: 0 // Remove the temporary field from the output
                 }
             }
         ]);

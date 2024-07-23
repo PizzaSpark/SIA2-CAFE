@@ -4,7 +4,7 @@ const controller = require('../controllers/projectController');
 const upload = require('../middlewares/imageUpload');
 
 router.post('/', upload.single('image'), controller.addProject);
-router.get('/', controller.getAllActiveProjects);
+router.get('/:name', controller.getAllActiveProjects);
 router.get('/admin', controller.getAllProjects);
 router.get('/:id', controller.getProject);
 router.put('/:id', upload.single('image'), controller.updateProject);

@@ -27,7 +27,7 @@ export default function Projects() {
                 setUserRole(userRole);
 
                 // Fetch projects based on user role
-                const projectsEndpoint = userRole === 'Admin' ? `${resourceName}/admin` : resourceName;
+                const projectsEndpoint = userRole === 'Admin' ? `${resourceName}/admin` : `${resourceName}/CafeReyes`;
                 const projectsResponse = await axios.get(`${VITE_REACT_APP_API_HOST}/api/${projectsEndpoint}`);
                 setDataList(projectsResponse.data);
             } catch (error) {

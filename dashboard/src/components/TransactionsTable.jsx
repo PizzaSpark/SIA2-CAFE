@@ -26,12 +26,6 @@ export default function TransactionsTable({ dataList }) {
             headerName: "Created At",
             flex: 1,
             renderCell: (params) => new Date(params.value).toLocaleString(),
-        },
-        {
-            field: "updatedAt",
-            headerName: "Updated On",
-            flex: 1,
-            renderCell: (params) => new Date(params.value).toLocaleString(),
         }
     ];
 
@@ -44,6 +38,12 @@ export default function TransactionsTable({ dataList }) {
                 autoPageSize
                 pagination
                 disableRowSelectionOnClick
+                sortModel={[
+                    {
+                        field: 'createdAt',
+                        sort: 'desc',
+                    },
+                ]}
             />
         </Box>
     );

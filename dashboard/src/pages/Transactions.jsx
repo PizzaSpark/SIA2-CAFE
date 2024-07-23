@@ -11,7 +11,7 @@ export default function Transactions() {
     const { VITE_REACT_APP_API_HOST } = import.meta.env;
     const resourceName = 'receipts';
     const [dataList, setDataList] = useState([]);
-    const [showOnlyUserTransactions, setShowOnlyUserTransactions] = useState(true);
+    const [showOnlyUserTransactions, setShowOnlyUserTransactions] = useState(false);
     const [userRole, setUserRole] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const userId = localStorage.getItem("_id");

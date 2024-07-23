@@ -21,6 +21,8 @@ import {
     ListAlt,
     Receipt,
     Logout,
+    Paid,
+    Handshake,
 } from "@mui/icons-material";
 import { pageAccessRules } from "../../config/pageAccessRules";
 import CafeReyesImage from "../../assets/CafeReyes.svg";
@@ -32,10 +34,10 @@ const menuItems = [
     { name: "Menu", icon: MenuBook, route: "/menu" },
     { name: "Recipe", icon: Restaurant, route: "/recipe" },
     { name: "Order", icon: ShoppingCart, route: "/order" },
-    { name: "Savemore", icon: ListAlt, route: "/savemore" },
+    { name: "Savemore", icon: Paid, route: "/savemore" },
     { name: "Transactions", icon: ListAlt, route: "/transactions" },
     { name: "Audit Log", icon: Receipt, route: "/auditlog" },
-    { name: "Project List", icon: ListAlt, route: "/projects" },
+    { name: "Partners", icon: Handshake, route: "/partners" },
 ];
 
 export default function Sidebar() {

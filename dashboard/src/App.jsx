@@ -32,7 +32,7 @@ function App() {
                 <Route path="/savemore" Component={Savemore} />
                 <Route path="/transactions" Component={Transactions} />
                 <Route path="/auditlog" Component={AuditLog} />
-                <Route path="/projects" Component={Projects} />
+                <Route path="/partners" Component={Projects} />
 
                 <Route path="/forbidden" Component={Forbidden} />
                 <Route path="*" Component={NotFound} />

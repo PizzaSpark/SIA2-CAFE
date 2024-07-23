@@ -8,5 +8,5 @@ export const pageAccessRules = {
     '/savemore': ['Admin', 'Owner'],
     '/transactions': ['Admin', 'Owner', 'Staff', 'Customer'],
     '/auditlog': ['Admin', 'Owner', 'Staff'],
-    '/projects': ['Admin', 'Owner', 'Staff', 'Customer'],
+    '/partners': ['Admin', 'Owner', 'Staff', 'Customer'],
   };

@@ -12,6 +12,7 @@ export default function AuditLog() {
     const [open, setOpen] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [dataToEdit, setDataToEdit] = useState(null);
+    const [users, setUsers] = useState([]);
 
     useRoleCheck();
 
@@ -25,6 +26,16 @@ export default function AuditLog() {
                 console.error("Error fetching dataList:", error);
                 setDataList([]);
             });
+
+        axios
+            .get(`${VITE_REACT_APP_API_HOST}/api/users`)
+            .then((response) => {
+                setUsers(response.data);
+            })
+            .catch((error) => {
+                console.error("Error fetching dataList:", error);
+                setUsers([]);
+            });
     }, []);
 
     return (
@@ -33,9 +44,7 @@ export default function AuditLog() {
             <div className="page-content">
                 <h1>Audit Log</h1>
 
-                <AuditTable 
-                    dataList={dataList}
-                />
+                <AuditTable dataList={dataList} users={users} />
             </div>
         </div>
     );

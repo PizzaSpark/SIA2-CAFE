@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Box, Switch, FormControlLabel, Typography, CircularProgress } from "@mui/material";
+import {
+    Box,
+    Switch,
+    FormControlLabel,
+    Typography,
+    CircularProgress,
+} from "@mui/material";
 import Sidebar from "../components/common/Sidebar";
 import { useRoleCheck } from "../hooks/useRoleCheck";
 import TransactionsTable from "../components/TransactionsTable";
@@ -9,9 +15,10 @@ import TransactionsTable from "../components/TransactionsTable";
 export default function Transactions() {
     const navigate = useNavigate();
     const { VITE_REACT_APP_API_HOST } = import.meta.env;
-    const resourceName = 'receipts';
+    const resourceName = "receipts";
     const [dataList, setDataList] = useState([]);
-    const [showOnlyUserTransactions, setShowOnlyUserTransactions] = useState(false);
+    const [showOnlyUserTransactions, setShowOnlyUserTransactions] =
+        useState(false);
     const [userRole, setUserRole] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const userId = localStorage.getItem("_id");
@@ -31,7 +38,9 @@ export default function Transactions() {
 
     const fetchUserRole = async () => {
         try {
-            const response = await axios.get(`${VITE_REACT_APP_API_HOST}/api/users/${userId}`);
+            const response = await axios.get(
+                `${VITE_REACT_APP_API_HOST}/api/users/${userId}`
+            );
             setUserRole(response.data.role);
             setIsLoading(false);
         } catch (error) {
@@ -45,8 +54,10 @@ export default function Transactions() {
             .get(`${VITE_REACT_APP_API_HOST}/api/${resourceName}`)
             .then((response) => {
                 let filteredData = response.data;
-                if (showOnlyUserTransactions || userRole === 'Customer') {
-                    filteredData = filteredData.filter(transaction => transaction.buyer === userId);
+                if (showOnlyUserTransactions || userRole === "Customer") {
+                    filteredData = filteredData.filter(
+                        (transaction) => transaction.buyer === userId
+                    );
                 }
                 setDataList(filteredData);
             })
@@ -55,7 +66,7 @@ export default function Transactions() {
                 setDataList([]);
             });
 
-            axios
+        axios
             .get(`${VITE_REACT_APP_API_HOST}/api/users`)
             .then((response) => {
                 setUsers(response.data);
@@ -64,7 +75,6 @@ export default function Transactions() {
                 console.error("Error fetching dataList:", error);
                 setUsers([]);
             });
-
     };
 
     const handleSwitchChange = (event) => {
@@ -73,7 +83,14 @@ export default function Transactions() {
 
     if (isLoading) {
         return (
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100vh",
+                }}
+            >
                 <CircularProgress />
             </Box>
         );
@@ -83,9 +100,18 @@ export default function Transactions() {
         <div className="page">
             <Sidebar />
             <div className="page-content">
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                    <Typography variant="h4" component="h1">Transactions</Typography>
-                    {userRole !== 'Customer' && (
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        mb: 2,
+                    }}
+                >
+                    <Typography variant="h4" component="h1">
+                        Transactions
+                    </Typography>
+                    {userRole !== "Customer" && (
                         <FormControlLabel
                             control={
                                 <Switch

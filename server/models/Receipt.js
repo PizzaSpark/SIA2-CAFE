@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const collectionName = "receipts";
-const requiredString = { type: String, required: true };
 const requiredNumber = { type: Number, required: true };
+const referencedUser = { type: mongoose.Schema.Types.ObjectId, ref: 'users', required: true };
 const forItems = [
     {
         name: String,
@@ -15,7 +15,7 @@ const DataModel = new mongoose.Schema(
     {
         total: requiredNumber,
         items: forItems,
-        buyer: requiredString,
+        buyer: referencedUser,
     },
     { versionKey: false, timestamps: true }
 );

@@ -114,17 +114,19 @@ export default function Order() {
                     headers: { Authorization: `Bearer ${VITE_REACT_APP_UNIONBANK_TOKEN}` },
                 }
             );
-
+    
             if (!res.data.success) {
                 alert(res.data.message);
                 return;
             }
-
-            setBankInfo({
+    
+            const newBankInfo = {
                 name: "UnionBank",
                 referenceId: res.data.reference,
-            });
-
+            };
+    
+            setBankInfo(newBankInfo);
+    
             const stockUpdates = orderItems.reduce((updates, item) => {
                 const recipe = recipes[item._id];
                 recipe?.forEach(ingredient => {
@@ -133,20 +135,20 @@ export default function Order() {
                 });
                 return updates;
             }, {});
-
+    
             await axios.post(`${VITE_REACT_APP_API_HOST}/api/stocks/update-multiple`, stockUpdates);
-
+    
             const receiptRes = await axios.post(`${VITE_REACT_APP_API_HOST}/api/receipts`, {
-                bank: bankInfo,
+                bank: newBankInfo,
                 total: calculateTotal,
                 items: orderItems,
                 buyer: localStorage.getItem("_id"),
             });
-
+    
             setTransactionId(receiptRes.data._id);
             setSuccessDialogOpen(true);
             setOpenPaymentDialog(false);
-
+    
             setMenuItems(prevItems => prevItems.map(item => ({ ...item, quantity: 0 })));
             setStocks(prevStocks => {
                 const newStocks = { ...prevStocks };
@@ -155,7 +157,7 @@ export default function Order() {
                 });
                 return newStocks;
             });
-
+    
             await axios.post(`${VITE_REACT_APP_API_HOST}/api/audits`, {
                 action: "SUCCESSFUL CAFE ORDER",
                 user: localStorage.getItem("_id"),
@@ -166,6 +168,7 @@ export default function Order() {
             alert("An error occurred while processing your order.");
         }
     };
+    
 
     return (
         <div className="page" style={{ display: "flex" }}>

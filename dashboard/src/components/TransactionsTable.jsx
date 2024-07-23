@@ -12,7 +12,7 @@ export default function TransactionsTable({ dataList, users }) {
             flex: 2,
             renderCell: (params) => (
                 <Box>
-                    {params.value.map((item, index) => (
+                    {params.value.map((item) => (
                         <Typography
                             key={item._id}
                             variant="body2"
@@ -29,8 +29,8 @@ export default function TransactionsTable({ dataList, users }) {
             headerName: "Buyer",
             flex: 1,
             valueGetter: (params) => {
-                const buyer = users.find((item) => item._id === params);
-                return buyer ? buyer.name : params;
+                const buyer = users.find((user) => user._id === params);
+                return buyer ? buyer.name : "Unknown Buyer";
             },
         },
         {
@@ -38,9 +38,9 @@ export default function TransactionsTable({ dataList, users }) {
             headerName: "Bank Information",
             flex: 2,
             valueGetter: (params) => {
-                const bankInfo = params[0]; 
-                if (bankInfo) {
-                    return `${bankInfo.name} - Ref: ${bankInfo.referenceId}`;
+                const bankInfo = params;
+                if (bankInfo && bankInfo.length > 0) {
+                    return `${bankInfo[0].name} - Ref: ${bankInfo[0].referenceId}`;
                 }
                 return "No bank information";
             },

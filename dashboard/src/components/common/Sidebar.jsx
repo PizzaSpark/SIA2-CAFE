@@ -33,6 +33,7 @@ const menuItems = [
     { name: "Recipe", icon: Restaurant, route: "/recipe" },
     { name: "Order", icon: ShoppingCart, route: "/order" },
     { name: "Savemore", icon: ListAlt, route: "/savemore" },
+    { name: "Transactions", icon: ListAlt, route: "/transactions" },
     { name: "Audit Log", icon: Receipt, route: "/auditlog" },
     { name: "Project List", icon: ListAlt, route: "/projects" },
 ];

@@ -19,6 +19,7 @@ export default function Order() {
     const [dataList, setDataList] = useState([]);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
     const [referenceId, setReferenceId] = useState("");
+    const [transactionId, setTransactionId] = useState("");
     const [recipes, setRecipes] = useState({});
     const [stocks, setStocks] = useState({});
 
@@ -174,20 +175,23 @@ export default function Order() {
                 stockUpdates
             );
 
-            setReferenceId(res.data.reference);
-            setSuccessDialogOpen(true);
-            setOpenPaymentDialog(false);
-
             // Create a receipt
-            await axios.post(`${VITE_REACT_APP_API_HOST}/api/receipts`, {
-                bank: [{
-                    name: "UnionBank",
-                    referenceId: res.data.reference
-                }],
+            const receiptRes = await axios.post(`${VITE_REACT_APP_API_HOST}/api/receipts`, {
+                bank: [
+                    {
+                        name: "UnionBank",
+                        referenceId: res.data.reference,
+                    },
+                ],
                 total: totalAmount,
                 items: orderItems,
                 buyer: localStorage.getItem("_id"),
             });
+
+            setReferenceId(res.data.reference);
+            setTransactionId(receiptRes.data._id);
+            setSuccessDialogOpen(true);
+            setOpenPaymentDialog(false);
 
             // Reset the cart
             setDataList((prevList) =>
@@ -206,7 +210,7 @@ export default function Order() {
             await axios.post(`${VITE_REACT_APP_API_HOST}/api/audits`, {
                 action: "SUCCESSFUL CAFE ORDER",
                 user: localStorage.getItem("_id"),
-                details: `Successfully ordered with reference ID: ${res.data.reference}`,
+                details: `Successfully ordered with transaction ID: ${receiptRes.data._id}`,
             });
         } catch (error) {
             console.error("Error processing order:", error);
@@ -280,6 +284,7 @@ export default function Order() {
                     open={successDialogOpen}
                     onClose={handleSuccessDialogClose}
                     referenceId={referenceId}
+                    transactionId={transactionId}
                 />
             </div>
         </div>

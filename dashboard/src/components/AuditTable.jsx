@@ -15,7 +15,7 @@ export default function AuditTable({ dataList, users }) {
             },
         },
 
-        { field: "details", headerName: "Role", flex: 1 },
+        { field: "details", headerName: "Details", flex: 1 },
         {
             field: "createdAt",
             headerName: "Created At",

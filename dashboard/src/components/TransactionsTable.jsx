@@ -34,6 +34,24 @@ export default function TransactionsTable({ dataList, users }) {
             },
         },
         {
+            field: "bank",
+            headerName: "Bank Information",
+            flex: 2,
+            renderCell: (params) => (
+                <Box>
+                    {params.value && params.value.length > 0 ? (
+                        params.value.map((bankInfo, index) => (
+                            <Typography key={index} variant="body2" sx={{ mb: 0.5 }}>
+                                {bankInfo.name} - Ref: {bankInfo.referenceId}
+                            </Typography>
+                        ))
+                    ) : (
+                        <Typography variant="body2">No bank information</Typography>
+                    )}
+                </Box>
+            ),
+        },
+        {
             field: "createdAt",
             headerName: "Created At",
             flex: 1,

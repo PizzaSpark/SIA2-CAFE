@@ -180,6 +180,10 @@ export default function Order() {
 
             // Create a receipt
             await axios.post(`${VITE_REACT_APP_API_HOST}/api/receipts`, {
+                bank: [{
+                    name: "UnionBank",
+                    referenceId: res.data.reference
+                }],
                 total: totalAmount,
                 items: orderItems,
                 buyer: localStorage.getItem("_id"),

@@ -103,7 +103,7 @@ export default function Projects() {
             <div className="page-content">
                 <h1>Project List</h1>
 
-                {userRole && userRole !== 'Customer' && (
+                {userRole && userRole == 'Admin' && (
                     <Button
                         variant="contained"
                         color="primary"

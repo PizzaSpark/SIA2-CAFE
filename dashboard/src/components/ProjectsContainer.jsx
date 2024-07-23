@@ -85,7 +85,7 @@ export default function ProjectsContainer({ dataList, host, userRole, onEdit, on
                                         </Box>
                                     )}
                                 </CardContent>
-                                {userRole && userRole !== 'Customer' && (
+                                {userRole && userRole == 'Admin' && (
                                     <CardActions sx={{ justifyContent: "flex-start", px: 2, py: 1 }}>
                                         <IconButton 
                                             aria-label="edit"

@@ -1,0 +1,336 @@
+[{
+  "_id": {
+    "$oid": "668c79f1707dabc392aff331"
+  },
+  "name": "Leche Flan",
+  "quantity": 59,
+  "minimum": 12,
+  "createdAt": {
+    "$date": "2024-07-08T23:44:49.807Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:53:07.391Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "668c79f7707dabc392aff333"
+  },
+  "name": "Sago",
+  "quantity": 100,
+  "minimum": 1,
+  "createdAt": {
+    "$date": "2024-07-08T23:44:55.918Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-16T02:42:40.718Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "668c7a08707dabc392aff335"
+  },
+  "name": "Ube",
+  "quantity": 90,
+  "minimum": 1,
+  "createdAt": {
+    "$date": "2024-07-08T23:45:12.646Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:53:07.391Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "668c7a1b707dabc392aff337"
+  },
+  "name": "Sugar",
+  "quantity": 104,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-08T23:45:31.285Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:53:07.391Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6695de206000e257437750a8"
+  },
+  "name": "Flour",
+  "createdAt": {
+    "$date": "2024-07-16T02:42:40.718Z"
+  },
+  "minimum": 2,
+  "quantity": 100,
+  "updatedAt": {
+    "$date": "2024-07-23T23:58:06.483Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efaf486329bf70958e8ed"
+  },
+  "name": "Coffee Beans",
+  "quantity": 100,
+  "minimum": 2,
+  "createdAt": {
+    "$date": "2024-07-23T00:36:04.047Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:58:09.452Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efb1a86329bf70958e913"
+  },
+  "name": "Chocolate",
+  "quantity": 34,
+  "minimum": 5,
+  "createdAt": {
+    "$date": "2024-07-23T00:36:42.863Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:20:13.641Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0429188d63e06f90ea0ee"
+  },
+  "name": "Mineral Water",
+  "quantity": 46,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-23T23:53:53.108Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:45.684Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a042d588d63e06f90ea10d"
+  },
+  "name": "Tea Packets",
+  "quantity": 51,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-23T23:55:01.709Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:45.684Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0431288d63e06f90ea180"
+  },
+  "name": "Ice",
+  "quantity": 46,
+  "minimum": 20,
+  "createdAt": {
+    "$date": "2024-07-23T23:56:02.075Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:53:07.391Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0437488d63e06f90ea1b6"
+  },
+  "name": "Tomato",
+  "quantity": 55,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-23T23:57:40.075Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T03:06:22.595Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0438788d63e06f90ea1ba"
+  },
+  "name": "Lettuce",
+  "quantity": 50,
+  "minimum": 5,
+  "createdAt": {
+    "$date": "2024-07-23T23:57:59.171Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:57:59.171Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a043e988d63e06f90ea1d5"
+  },
+  "name": "Ham",
+  "quantity": 25,
+  "minimum": 3,
+  "createdAt": {
+    "$date": "2024-07-23T23:59:37.867Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:59:37.867Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a043f788d63e06f90ea1d9"
+  },
+  "name": "Bread",
+  "quantity": 30,
+  "minimum": 2,
+  "createdAt": {
+    "$date": "2024-07-23T23:59:51.092Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:59:51.092Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0441a88d63e06f90ea1dd"
+  },
+  "name": "Mayonnaise",
+  "quantity": 30,
+  "minimum": 1,
+  "createdAt": {
+    "$date": "2024-07-24T00:00:26.978Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:00:26.978Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a044f188d63e06f90ea223"
+  },
+  "name": "Egg",
+  "quantity": 100,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-24T00:04:01.508Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:04:01.508Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0450988d63e06f90ea227"
+  },
+  "name": "Bacon",
+  "quantity": 50,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-24T00:04:25.100Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:04:25.100Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0451b88d63e06f90ea22b"
+  },
+  "name": "Pancake Mix",
+  "quantity": 30,
+  "minimum": 1,
+  "createdAt": {
+    "$date": "2024-07-24T00:04:43.467Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:04:43.467Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0615a88d63e06f90ea47d"
+  },
+  "name": "Potato",
+  "quantity": 100,
+  "minimum": 20,
+  "createdAt": {
+    "$date": "2024-07-24T02:05:14.306Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:05:14.306Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0619f88d63e06f90ea4a5"
+  },
+  "name": "Tortilla Chips",
+  "quantity": 44,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-24T02:06:23.890Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:45.684Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a061af88d63e06f90ea4b7"
+  },
+  "name": "Ground Beef",
+  "quantity": 46,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-24T02:06:39.873Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:45.684Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a061bc88d63e06f90ea4bb"
+  },
+  "name": "Cheese",
+  "quantity": 56,
+  "minimum": 10,
+  "createdAt": {
+    "$date": "2024-07-24T02:06:52.016Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:45.684Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06f734a09cb6e54e6ed4f"
+  },
+  "name": "Banana",
+  "createdAt": {
+    "$date": "2024-07-24T03:05:23.035Z"
+  },
+  "minimum": 0,
+  "quantity": 3,
+  "updatedAt": {
+    "$date": "2024-07-24T03:06:22.595Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a091234a09cb6e54e6ef41"
+  },
+  "name": "SS Garlic Taiwan",
+  "createdAt": {
+    "$date": "2024-07-24T05:29:07.312Z"
+  },
+  "minimum": 0,
+  "quantity": 2,
+  "updatedAt": {
+    "$date": "2024-07-24T05:29:07.312Z"
+  }
+}]

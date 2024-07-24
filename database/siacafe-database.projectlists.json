@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "669db05278cb27964835e9b6"
+  },
+  "name": "Clickers",
+  "image": "1721610322100-Clickers.png",
+  "link": "http://192.168.10.17/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7605b01098c727db78a"
+  },
+  "name": "KFC",
+  "image": "1721612128461-kfc.png",
+  "link": "http://192.168.10.19/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db76e5b01098c727db78c"
+  },
+  "name": "LRT",
+  "image": "1721612142377-LRT-LOGO.png",
+  "link": "http://192.168.10.43:80/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7795b01098c727db78e"
+  },
+  "name": "ParaPo",
+  "image": "1721612153367-ParaPo.png",
+  "link": "http://192.168.10.37",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7825b01098c727db790"
+  },
+  "name": "SkyEase",
+  "image": "1721612162119-SkyEase.png",
+  "link": "http://192.168.10.41/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db78c5b01098c727db792"
+  },
+  "name": "INGCO",
+  "image": "1721612172776-INGCO.png",
+  "link": "http://192.168.10.29/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7975b01098c727db794"
+  },
+  "name": "MedPoint",
+  "image": "1721612183896-MedPoint.png",
+  "link": "http://192.168.10.36/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7a25b01098c727db796"
+  },
+  "name": "WNE",
+  "image": "1721612194361-WNE.png",
+  "link": "http://192.168.10.12/yacapin",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7ad5b01098c727db798"
+  },
+  "name": "UnionBank",
+  "image": "1721612205015-UnionBank.png",
+  "link": "http://192.168.10.14/unionbank",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7c95b01098c727db79a"
+  },
+  "name": "pagTurugan",
+  "image": "1721612233552-pagTurugan.png",
+  "link": "http://192.168.10.42/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7d45b01098c727db79c"
+  },
+  "name": "Oh Mart",
+  "image": "1721612244912-OHMART.jpg",
+  "link": "http://192.168.10.21",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7df5b01098c727db79e"
+  },
+  "name": "Tiago Shop",
+  "image": "1721612255865-TiagoShopLogo.png",
+  "link": "https://tiagoshop.vercel.app/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db7eb5b01098c727db7a0"
+  },
+  "name": "TX",
+  "image": "1721612267224-tx.png",
+  "link": "http://192.168.10.22",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db8015b01098c727db7a2"
+  },
+  "name": "ShoePatoes",
+  "image": "1721612289561-ShoePatoes.jpg",
+  "link": "http://192.168.10.26/",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db80e5b01098c727db7a4"
+  },
+  "name": "National Bookstore",
+  "image": "1721612302289-NationalBookStore.jpg",
+  "link": "http://192.168.10.24",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db8185b01098c727db7a6"
+  },
+  "name": "Toyota",
+  "image": "1721612312152-Toyota.png",
+  "link": "http://192.168.10.38",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db8225b01098c727db7a8"
+  },
+  "name": "Watsons",
+  "image": "1721612322546-WATSONS.png",
+  "link": "http://192.168.10.27",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669db9815b01098c727db7bd"
+  },
+  "name": "CafeReyes",
+  "image": "1721612673194-CafeReyes.png",
+  "link": "http://192.168.10.18:3000",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669dba8632086eef6401bbff"
+  },
+  "name": "Savemore",
+  "image": "1721612934182-SavemoreLogo.png",
+  "link": "http://192.168.10.25",
+  "isActive": true
+},
+{
+  "_id": {
+    "$oid": "669dbaa132086eef6401bc01"
+  },
+  "name": "Motortrade",
+  "image": "1721612961961-Motortrade.jpg",
+  "link": "http://192.168.10.23/moto",
+  "isActive": true
+}]

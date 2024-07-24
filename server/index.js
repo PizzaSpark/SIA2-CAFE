@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const cors = require("cors"); //
-const path = require("path"); //
+const cors = require("cors");
+const path = require("path");
 const fs = require('fs');
 
 // Server configuration
@@ -20,7 +20,7 @@ if (!fs.existsSync(uploadsDir)) {
 }
 
 // Routes
-app.use('/uploads', express.static(uploadsDir)); // to access uploads folder in api
+app.use('/uploads', express.static(uploadsDir));
 
 const userRoutes = require('./routes/users');
 app.use('/api/users', userRoutes);
@@ -43,10 +43,24 @@ app.use('/api/receipts', receiptRoutes);
 const projectRoutes = require('./routes/projects');
 app.use('/api/projects', projectRoutes);
 
+// Function to check if database is empty
+async function isDatabaseEmpty() {
+    const collections = await mongoose.connection.db.listCollections().toArray();
+    return collections.length === 0;
+}
+
 // MongoDB connection
 mongoose
     .connect(`mongodb://localhost:27017/${dbName}`)
-    .then(() => console.log("Database connected successfully"))
+    .then(async () => {
+        console.log("Database connected successfully");
+        const empty = await isDatabaseEmpty();
+        if (empty) {
+            console.log("Database is empty. Please restore your data using MongoDB Compass.");
+        } else {
+            console.log("Database is not empty. Proceeding with normal operation.");
+        }
+    })
     .catch((err) => console.error("Database connection error", err));
 
 app.listen(port, host, () => {

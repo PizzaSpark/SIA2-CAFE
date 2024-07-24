@@ -23,20 +23,22 @@ export default function Savemore() {
 
     useRoleCheck();
 
+    const fetchProducts = async () => {
+        try {
+            const response = await axios.get(`${savemoreHost}/getallproducts`);
+            const initializedData = response.data.data.map((item) => ({
+                ...item,
+                quantity: 0,
+            }));
+            setDataList(initializedData);
+        } catch (error) {
+            console.error("Error fetching dataList:", error);
+            setDataList([]);
+        }
+    };
+
     useEffect(() => {
-        axios
-            .get(`${savemoreHost}/getallproducts`)
-            .then((response) => {
-                const initializedData = response.data.data.map((item) => ({
-                    ...item,
-                    quantity: 0,
-                }));
-                setDataList(initializedData);
-            })
-            .catch((error) => {
-                console.error("Error fetching dataList:", error);
-                setDataList([]);
-            });
+        fetchProducts();
     }, []);
 
     const handleAdd = (product) => {
@@ -66,8 +68,23 @@ export default function Savemore() {
         );
     };
 
+    const checkStockAvailability = () => {
+        const insufficientStockItems = dataList.filter(
+            (item) => item.quantity > 0 && item.quantity > item.stock
+        );
+        
+        if (insufficientStockItems.length > 0) {
+            const itemNames = insufficientStockItems.map(item => item.name).join(', ');
+            alert(`Insufficient stock for the following items: ${itemNames}`);
+            return false;
+        }
+        return true;
+    };
+
     const handlePlaceOrder = () => {
-        setOpenConfirmation(true);
+        if (checkStockAvailability()) {
+            setOpenConfirmation(true);
+        }
     };
 
     const handleConfirmOrder = () => {
@@ -76,6 +93,10 @@ export default function Savemore() {
     };
 
     const handlePaymentConfirm = async (bankCredentials) => {
+        if (!checkStockAvailability()) {
+            return;
+        }
+
         try {
             const totalAmount = calculateTotal();
 
@@ -106,7 +127,26 @@ export default function Savemore() {
             // Prepare ordered items for stock update and sales details
             const orderedItems = dataList.filter((item) => item.quantity > 0);
 
-            // Stock update
+            // Update store's stock (deduct purchased items)
+            for (const item of orderedItems) {
+                try {
+                    const stockUpdateResponse = await axios.post(
+                        `${savemoreHost}/editproductstock`,
+                        {
+                            productId: item._id,
+                            productStock: item.stock - item.quantity
+                        }
+                    );
+                    
+                    if (!stockUpdateResponse.data.success) {
+                        console.error(`Failed to update store stock for ${item.name}`);
+                    }
+                } catch (error) {
+                    console.error(`Error updating store stock for ${item.name}:`, error);
+                }
+            }
+
+            // Update user's stock (add purchased items)
             const stockUpdateData = orderedItems.map(({ name, quantity }) => ({
                 name,
                 quantity,
@@ -143,10 +183,9 @@ export default function Savemore() {
                 }
             }
 
-            // Reset the cart
-            setDataList((prevList) =>
-                prevList.map((item) => ({ ...item, quantity: 0 }))
-            );
+            // Fetch updated product list
+            await fetchProducts();
+
             setOpenConfirmation(false);
 
             axios.post(`${VITE_REACT_APP_API_HOST}/api/audits`, {

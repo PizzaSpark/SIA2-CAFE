@@ -82,7 +82,7 @@ export default function UserTable({
                             <Edit />
                         </Button>
                     </Tooltip>
-                    <Tooltip title="Delete User">
+                    {/* <Tooltip title="Delete User">
                         <Button
                             variant="contained"
                             color="error"
@@ -90,7 +90,7 @@ export default function UserTable({
                         >
                             <Delete />
                         </Button>
-                    </Tooltip>
+                    </Tooltip> */}
                     <Tooltip title="Reset Password">
                         <Button
                             variant="contained"

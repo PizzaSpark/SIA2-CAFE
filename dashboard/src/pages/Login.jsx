@@ -121,7 +121,7 @@ export default function Login() {
                 backgroundPosition: "center",
             }}
         >
-            <NoteCard onCopy={handleCopy} />
+            {/* <NoteCard onCopy={handleCopy} /> */}
             <Paper
                 elevation={3}
                 sx={{

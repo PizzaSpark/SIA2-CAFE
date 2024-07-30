@@ -1,0 +1,1033 @@
+[{
+  "_id": {
+    "$oid": "6699c5b2a0327cff562943a3"
+  },
+  "total": 1260,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 1,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 555,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": "6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-19T01:47:30.861Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T01:47:30.861Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d27bb8bb83d7c7f112bd"
+  },
+  "total": 1110,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 555,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": "6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-19T02:42:03.774Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:42:03.774Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d293b8bb83d7c7f112d0"
+  },
+  "total": 8325,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 15,
+      "price": 555,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": "6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-19T02:42:27.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:42:27.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d32eb8bb83d7c7f112e8"
+  },
+  "total": 1110,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 555,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": "6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-19T02:45:02.517Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:45:02.517Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d399b8bb83d7c7f112fb"
+  },
+  "total": 555,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 1,
+      "price": 555,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": "6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-19T02:46:49.479Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:46:49.479Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d3ccb8bb83d7c7f1130e"
+  },
+  "total": 1110,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 555,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": "6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-19T02:47:40.022Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:47:40.022Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc7530f40e42d63bd0534"
+  },
+  "total": 600,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 4,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    }
+  ],
+  "buyer": "669dc7050f40e42d63bd04d5",
+  "createdAt": {
+    "$date": "2024-07-22T02:43:31.334Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:43:31.334Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dcfc80f40e42d63bd0628"
+  },
+  "total": 705,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 1,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "kape",
+      "quantity": 1,
+      "price": 555,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": "669dcf830f40e42d63bd05fb",
+  "createdAt": {
+    "$date": "2024-07-22T03:19:36.849Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T03:19:36.849Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669effc090ed328098981c07"
+  },
+  "total": 1400,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 1,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "Chocolate Cake",
+      "quantity": 2,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    },
+    {
+      "name": "kape",
+      "quantity": 1,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T00:56:32.016Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:56:32.016Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f06872927996f829d7d05"
+  },
+  "total": 1150,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 1,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "Chocolate Cake",
+      "quantity": 2,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T01:25:27.262Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:25:27.262Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f081d2927996f829d7e30"
+  },
+  "total": 1050,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 2,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "Chocolate Cake",
+      "quantity": 1,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    },
+    {
+      "name": "kape",
+      "quantity": 1,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T01:32:13.522Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:32:13.522Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f12392927996f829d8059"
+  },
+  "total": 1150,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 1,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "Chocolate Cake",
+      "quantity": 2,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T02:15:21.841Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:15:21.841Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1a9d2927996f829d8166"
+  },
+  "total": 1900,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 1,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "Chocolate Cake",
+      "quantity": 2,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    },
+    {
+      "name": "kape",
+      "quantity": 3,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "669f1a782927996f829d814d"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T02:51:09.868Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:51:09.868Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1ec6a155b7ce2e09db64"
+  },
+  "total": 250,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 1,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "bank": [],
+  "createdAt": {
+    "$date": "2024-07-23T03:08:54.569Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:08:54.569Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2067929c708ce2497adf"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f206753546270e401d4da",
+      "_id": {
+        "$oid": "669f2067929c708ce2497ae0"
+      }
+    }
+  ],
+  "total": 3050,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 2,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "Chocolate Cake",
+      "quantity": 4,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    },
+    {
+      "name": "kape",
+      "quantity": 3,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T03:15:51.278Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:15:51.278Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f25b8ea2f433472201325"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f25b853546270e401d5b5",
+      "_id": {
+        "$oid": "669f25b8ea2f433472201326"
+      }
+    }
+  ],
+  "total": 500,
+  "items": [
+    {
+      "name": "Chocolate Cake",
+      "quantity": 1,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T03:38:32.038Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:38:32.038Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f273cea2f433472201396"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f273d53546270e401d633",
+      "_id": {
+        "$oid": "669f273cea2f433472201397"
+      }
+    }
+  ],
+  "total": 250,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 1,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T03:45:00.565Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:45:00.565Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f27d3ea2f4334722013cd"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f27d353546270e401d645",
+      "_id": {
+        "$oid": "669f27d3ea2f4334722013ce"
+      }
+    }
+  ],
+  "total": 1000,
+  "items": [
+    {
+      "name": "Chocolate Cake",
+      "quantity": 1,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    },
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T03:47:31.082Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:47:31.082Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f28b3ea2f4334722013e7"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f28b453546270e401d66a",
+      "_id": {
+        "$oid": "669f28b3ea2f4334722013e8"
+      }
+    }
+  ],
+  "total": 500,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T03:51:15.650Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:51:15.650Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2af3ea2f433472201412"
+  },
+  "bank": null,
+  "total": 500,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T04:00:51.694Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:00:51.694Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2cc9ea2f43347220175f"
+  },
+  "bank": null,
+  "total": 500,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T04:08:41.145Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:08:41.145Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2d5eea2f4334722017e4"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f2d5f53546270e401d79e",
+      "_id": {
+        "$oid": "669f2d5eea2f4334722017e5"
+      }
+    }
+  ],
+  "total": 500,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T04:11:10.809Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:11:10.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f6d9263947939d9b83a84"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f6d9381e3f53776343946",
+      "_id": {
+        "$oid": "669f6d9263947939d9b83a85"
+      }
+    }
+  ],
+  "total": 1150,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 1,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "Chocolate Cake",
+      "quantity": 2,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T08:45:06.521Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T08:45:06.521Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f71b6b26752a92a2bf53f"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f71b781e3f5377634397e",
+      "_id": {
+        "$oid": "669f71b6b26752a92a2bf540"
+      }
+    }
+  ],
+  "total": 1500,
+  "items": [
+    {
+      "name": "Chocolate Cake",
+      "quantity": 2,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    },
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T09:02:46.740Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:02:46.740Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f7252b26752a92a2bf57b"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f725381e3f537763439a5",
+      "_id": {
+        "$oid": "669f7252b26752a92a2bf57c"
+      }
+    }
+  ],
+  "total": 500,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6699a8a02880aafe9fc7aef0"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T09:05:22.794Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:05:22.794Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f755e7213e31d15962b11"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f755f81e3f53776343a5b",
+      "_id": {
+        "$oid": "669f755e7213e31d15962b12"
+      }
+    }
+  ],
+  "total": 500,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 2,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T09:18:22.917Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:18:22.917Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f75cddf9a8b2c2a70fbfe"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "669f75ce81e3f53776343a8e",
+      "_id": {
+        "$oid": "669f75cddf9a8b2c2a70fbff"
+      }
+    }
+  ],
+  "total": 650,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 1,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    },
+    {
+      "name": "Chocolate Cake",
+      "quantity": 1,
+      "price": 500,
+      "_id": {
+        "$oid": "668c9551d85054ce2f89aad3"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T09:20:13.652Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:20:13.652Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0413488d63e06f90ea084"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "66a0413763df7904ed08f450",
+      "_id": {
+        "$oid": "66a0413488d63e06f90ea085"
+      }
+    }
+  ],
+  "total": 250,
+  "items": [
+    {
+      "name": "kape",
+      "quantity": 1,
+      "price": 250,
+      "_id": {
+        "$oid": "669731defb8bc779906e822f"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-23T23:48:04.716Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:48:04.716Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0507388d63e06f90ea37a"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "66a05075eeb8dc50ec284b39",
+      "_id": {
+        "$oid": "66a0507388d63e06f90ea37b"
+      }
+    }
+  ],
+  "total": 300,
+  "items": [
+    {
+      "name": "HaloHalo",
+      "quantity": 2,
+      "price": 150,
+      "_id": {
+        "$oid": "668c80c8aa6ef9dd19242fd3"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "createdAt": {
+    "$date": "2024-07-24T00:53:07.400Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:53:07.400Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a05f5a88d63e06f90ea45b"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "66a05f5beeb8dc50ec2869f2",
+      "_id": {
+        "$oid": "66a05f5a88d63e06f90ea45c"
+      }
+    }
+  ],
+  "total": 600,
+  "items": [
+    {
+      "name": "Tea",
+      "quantity": 3,
+      "price": 200,
+      "_id": {
+        "$oid": "66a042b888d63e06f90ea104"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "createdAt": {
+    "$date": "2024-07-24T01:56:42.081Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T01:56:42.081Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a091858d4b30f052556183"
+  },
+  "bank": [
+    {
+      "name": "UnionBank",
+      "referenceId": "66a09186cbd6c6eb337af5ed",
+      "_id": {
+        "$oid": "66a091858d4b30f052556184"
+      }
+    }
+  ],
+  "total": 500,
+  "items": [
+    {
+      "name": "Tea",
+      "quantity": 1,
+      "price": 200,
+      "_id": {
+        "$oid": "66a042b888d63e06f90ea104"
+      }
+    },
+    {
+      "name": "Nachos",
+      "quantity": 2,
+      "price": 150,
+      "_id": {
+        "$oid": "66a0618688d63e06f90ea49c"
+      }
+    }
+  ],
+  "buyer": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "createdAt": {
+    "$date": "2024-07-24T05:30:45.699Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:45.699Z"
+  }
+}]

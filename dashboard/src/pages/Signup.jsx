@@ -78,7 +78,7 @@ export default function Signup() {
                 }
             );
 
-            navigate("/dashboard");
+            navigate("/order");
         } catch (error) {
             console.error(
                 "Signup failed",

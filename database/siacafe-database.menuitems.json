@@ -1,0 +1,150 @@
+[{
+  "_id": {
+    "$oid": "668c80c8aa6ef9dd19242fd3"
+  },
+  "name": "HaloHalo",
+  "price": 150,
+  "image": "1721778566268-halo-halo1-1658258347.png",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-09T00:14:00.787Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:49:26.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "668c9551d85054ce2f89aad3"
+  },
+  "name": "Chocolate Cake",
+  "price": 500,
+  "image": "1720489297579-chocolate-cake-index-64b83bce2df26.jpg",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-09T01:41:37.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:36:14.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669731defb8bc779906e822f"
+  },
+  "name": "Coffee",
+  "price": 250,
+  "image": "1721778528335-flat-white-3402c4f.jpg",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-17T02:52:14.073Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:48:53.069Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0428188d63e06f90ea0e5"
+  },
+  "name": "Water",
+  "price": 20,
+  "image": "1721778817107-11178-Different_types_of_water_t.png",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-23T23:53:37.110Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:53:37.110Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a042b888d63e06f90ea104"
+  },
+  "name": "Tea",
+  "price": 200,
+  "image": "1721778872355-peppermint-tea-on-teacup-1417945.png",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-23T23:54:32.365Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:54:32.365Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0436a88d63e06f90ea1ad"
+  },
+  "name": "Salad",
+  "price": 100,
+  "image": "1721779050259-healthy-chopped-vegetable-salad.png",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-23T23:57:30.270Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:57:30.270Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a043dd88d63e06f90ea1cc"
+  },
+  "name": "Ham Sandwich",
+  "price": 80,
+  "image": "1721779165004-Ham_Sandwich_011-1-49227336bc074.png",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-23T23:59:25.013Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:59:25.013Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a044e188d63e06f90ea21a"
+  },
+  "name": "American Yah Breakfast",
+  "price": 300,
+  "image": "1721779425796-Bfast.png",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-24T00:03:45.799Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:03:45.799Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0614d88d63e06f90ea474"
+  },
+  "name": "Fries",
+  "price": 120,
+  "image": "1721786701442-Crispy-Fries_8.png",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-24T02:05:01.448Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:05:01.448Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0618688d63e06f90ea49c"
+  },
+  "name": "Nachos",
+  "price": 150,
+  "image": "1721786758232-__opt__aboutcom__coeus__resource.png",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2024-07-24T02:05:58.247Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:05:58.247Z"
+  }
+}]

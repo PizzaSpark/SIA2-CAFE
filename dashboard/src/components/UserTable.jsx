@@ -1,5 +1,5 @@
 import { React } from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box, Button, Tooltip } from "@mui/material";
 import { Edit, Delete, LockReset } from "@mui/icons-material";
 
@@ -82,7 +82,7 @@ export default function UserTable({
                             <Edit />
                         </Button>
                     </Tooltip>
-                    <Tooltip title="Delete User">
+                    {/* <Tooltip title="Delete User">
                         <Button
                             variant="contained"
                             color="error"
@@ -90,7 +90,7 @@ export default function UserTable({
                         >
                             <Delete />
                         </Button>
-                    </Tooltip>
+                    </Tooltip> */}
                     <Tooltip title="Reset Password">
                         <Button
                             variant="contained"
@@ -114,6 +114,12 @@ export default function UserTable({
                 autoPageSize
                 pagination
                 disableRowSelectionOnClick
+                slots={{ toolbar: GridToolbar }}
+                slotProps={{
+                    toolbar: {
+                        showQuickFilter: true,
+                    },
+                }}
             />
         </Box>
     );

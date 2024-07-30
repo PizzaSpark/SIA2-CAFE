@@ -1,0 +1,5616 @@
+[{
+  "_id": {
+    "$oid": "66973051fb8bc779906e8229"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-17T02:45:37.693Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-17T02:45:37.693Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669731defb8bc779906e8231"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669731defb8bc779906e822f",
+  "createdAt": {
+    "$date": "2024-07-17T02:52:14.119Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-17T02:52:14.119Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66973478fb8bc779906e823b"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66973478fb8bc779906e8239",
+  "createdAt": {
+    "$date": "2024-07-17T03:03:20.941Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-17T03:03:20.941Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669734ebfb8bc779906e8258"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669734ebfb8bc779906e8256",
+  "createdAt": {
+    "$date": "2024-07-17T03:05:15.292Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-17T03:05:15.292Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669734edfb8bc779906e825b"
+  },
+  "action": "DELETED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully deleted item with ID: 669734ebfb8bc779906e8256",
+  "createdAt": {
+    "$date": "2024-07-17T03:05:17.347Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-17T03:05:17.347Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669737881451c039edcdd09a"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-17T03:16:24.974Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-17T03:16:24.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66985c9e45f7d08b09632f1a"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "66985c9e45f7d08b09632f18"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-18T00:06:54.794Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:06:54.794Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66985dae0a4bccc0b4711d0d"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "66985c9e45f7d08b09632f18"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T00:11:26.533Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:11:26.533Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66985e450a4bccc0b4711d11"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T00:13:57.841Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:13:57.841Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66985ebd0a4bccc0b4711d14"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T00:15:57.663Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:15:57.663Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66985f0e0a4bccc0b4711d17"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T00:17:18.771Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:17:18.771Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66985f2a0a4bccc0b4711d1a"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T00:17:46.337Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:17:46.337Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66985f5b0a4bccc0b4711d1f"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "66985f5b0a4bccc0b4711d1d"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-18T00:18:35.083Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:18:35.083Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669860317aef60b689c9fc1d"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T00:22:09.211Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:22:09.211Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698603a7aef60b689c9fc22"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "6698603a7aef60b689c9fc20"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-18T00:22:18.877Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:22:18.877Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66986136cf73495e1ed7a655"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T00:26:30.179Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:26:30.179Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66986140cf73495e1ed7a65a"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6698603a7aef60b689c9fc20",
+  "createdAt": {
+    "$date": "2024-07-18T00:26:40.035Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:26:40.035Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66986469cf73495e1ed7a660"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T00:40:09.941Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:40:09.941Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698653bcf73495e1ed7a66e"
+  },
+  "action": "UPDATED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669731defb8bc779906e822f",
+  "createdAt": {
+    "$date": "2024-07-18T00:43:39.447Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:43:39.447Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66986548cf73495e1ed7a688"
+  },
+  "action": "UPDATED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 668c9551d85054ce2f89aad3",
+  "createdAt": {
+    "$date": "2024-07-18T00:43:52.048Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:43:52.048Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669865b8cf73495e1ed7a6a0"
+  },
+  "action": "UPDATED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669731defb8bc779906e822f",
+  "createdAt": {
+    "$date": "2024-07-18T00:45:44.974Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:45:44.974Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669867f537f55b1c21bdcc60"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-18T00:55:17.103Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:55:17.103Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698684e37f55b1c21bdcc62"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 669867f59f18cfc9a5a2a096",
+  "createdAt": {
+    "$date": "2024-07-18T00:56:46.132Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:56:46.132Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698687637f55b1c21bdcc64"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 6698684f9f18cfc9a5a2a0d6",
+  "createdAt": {
+    "$date": "2024-07-18T00:57:26.415Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T00:57:26.415Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698707af1f7752611ff7472"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "6698707af1f7752611ff7470"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-18T01:31:38.156Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:31:38.156Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698709ff1f7752611ff7475"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T01:32:15.424Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:32:15.424Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669874fef1f7752611ff7483"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669874fef1f7752611ff7481",
+  "createdAt": {
+    "$date": "2024-07-18T01:50:54.920Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:50:54.920Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698750ef1f7752611ff748b"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-18T01:51:10.247Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:51:10.247Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698751bf1f7752611ff748d"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 6698750f9f18cfc9a5a2ab61",
+  "createdAt": {
+    "$date": "2024-07-18T01:51:23.034Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:51:23.034Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698751ff1f7752611ff748f"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 6698751c9f18cfc9a5a2ab76",
+  "createdAt": {
+    "$date": "2024-07-18T01:51:27.827Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:51:27.827Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66987530f1f7752611ff7491"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 669875209f18cfc9a5a2ab89",
+  "createdAt": {
+    "$date": "2024-07-18T01:51:44.847Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:51:44.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698753ef1f7752611ff7493"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 669875319f18cfc9a5a2abb6",
+  "createdAt": {
+    "$date": "2024-07-18T01:51:58.778Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:51:58.778Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66987546f1f7752611ff7495"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 6698753f9f18cfc9a5a2abd3",
+  "createdAt": {
+    "$date": "2024-07-18T01:52:06.062Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:52:06.062Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698754af1f7752611ff7497"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 669875479f18cfc9a5a2abe6",
+  "createdAt": {
+    "$date": "2024-07-18T01:52:10.370Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:52:10.370Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698754ef1f7752611ff7499"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 6698754b9f18cfc9a5a2abf9",
+  "createdAt": {
+    "$date": "2024-07-18T01:52:14.755Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:52:14.755Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66987558f1f7752611ff749b"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 6698754f9f18cfc9a5a2ac0c",
+  "createdAt": {
+    "$date": "2024-07-18T01:52:24.285Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T01:52:24.285Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669877b2f1f7752611ff74a0"
+  },
+  "action": "DELETED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully deleted item with ID: 669874fef1f7752611ff7481",
+  "createdAt": {
+    "$date": "2024-07-18T02:02:26.039Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T02:02:26.039Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66989d3c5dfbc2c34d1acac6"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T04:42:36.579Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T04:42:36.579Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66989e7d07c95c00f9be82cc"
+  },
+  "action": "RESET PASSWORD",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully reset password for user with ID: 6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-18T04:47:57.478Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T04:47:57.478Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66989e8907c95c00f9be82cf"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T04:48:09.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T04:48:09.748Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66989ea007c95c00f9be82d5"
+  },
+  "action": "RESET PASSWORD",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully reset password for user with ID: 6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-18T04:48:32.518Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T04:48:32.518Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a39e1894a6faa127851b"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:09:50.602Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:09:50.602Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a3c31894a6faa127851e"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:10:27.185Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:10:27.185Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a3e41894a6faa1278521"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:11:00.039Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:11:00.039Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a4071894a6faa1278524"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:11:35.854Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:11:35.854Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a4181894a6faa1278527"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:11:52.951Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:11:52.951Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a4cc1894a6faa127852a"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:14:52.378Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:14:52.378Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a51c1894a6faa127852d"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:16:12.662Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:16:12.662Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a53c1894a6faa1278530"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:16:44.054Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:16:44.054Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a5701894a6faa1278533"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:17:36.984Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:17:36.984Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a6131894a6faa1278536"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:20:19.988Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:20:19.988Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a66b1894a6faa1278542"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:21:47.934Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:21:47.934Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a6721894a6faa127854b"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully updated user with ID: 669725fa7805357df8f15fa3",
+  "createdAt": {
+    "$date": "2024-07-18T05:21:54.834Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:21:54.834Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6698a7ed1894a6faa1278552"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T05:28:13.149Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T05:28:13.149Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699a66a2880aafe9fc7aec4"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T23:34:02.277Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T23:34:02.277Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699a85d2880aafe9fc7aeec"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T23:42:21.177Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T23:42:21.177Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699a8a02880aafe9fc7aef2"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "6699a8a02880aafe9fc7aef0"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-18T23:43:28.479Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T23:43:28.479Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699a8b22880aafe9fc7af28"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6699a8a02880aafe9fc7aef0",
+  "createdAt": {
+    "$date": "2024-07-18T23:43:46.710Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T23:43:46.710Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699a8e02880aafe9fc7af2e"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6699a8a02880aafe9fc7aef0",
+  "createdAt": {
+    "$date": "2024-07-18T23:44:32.688Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T23:44:32.688Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699a8e32880aafe9fc7af31"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6699a8a02880aafe9fc7aef0",
+  "createdAt": {
+    "$date": "2024-07-18T23:44:35.060Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T23:44:35.060Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699a8e42880aafe9fc7af34"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6699a8a02880aafe9fc7aef0"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-18T23:44:36.940Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T23:44:36.940Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699a9ec2880aafe9fc7af4a"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6699a8a02880aafe9fc7aef0",
+  "createdAt": {
+    "$date": "2024-07-18T23:49:00.357Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-18T23:49:00.357Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699ad7c2880aafe9fc7af5d"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6699a8a02880aafe9fc7aef0",
+  "createdAt": {
+    "$date": "2024-07-19T00:04:12.263Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:04:12.263Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699ad8f2880aafe9fc7af69"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6699a8a02880aafe9fc7aef0",
+  "createdAt": {
+    "$date": "2024-07-19T00:04:31.199Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:04:31.199Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699b3112880aafe9fc7affc"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-19T00:28:01.740Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:28:01.740Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699b3152880aafe9fc7afff"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-19T00:28:05.729Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:28:05.729Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699b38d2880aafe9fc7b004"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-19T00:30:05.532Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:30:05.532Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699b3902880aafe9fc7b007"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-19T00:30:08.804Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:30:08.804Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699b4582880aafe9fc7b024"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-19T00:33:28.891Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:33:28.891Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699ba2a2880aafe9fc7b02a"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-19T00:58:18.772Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:58:18.772Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699ba3a2880aafe9fc7b036"
+  },
+  "action": "RESET PASSWORD",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully reset password for user with ID: 669725d27805357df8f15f55",
+  "createdAt": {
+    "$date": "2024-07-19T00:58:34.086Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:58:34.086Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699ba422880aafe9fc7b03a"
+  },
+  "action": "RESET PASSWORD",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully reset password for user with ID: 669725fa7805357df8f15fa3",
+  "createdAt": {
+    "$date": "2024-07-19T00:58:42.772Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:58:42.772Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699ba482880aafe9fc7b03e"
+  },
+  "action": "RESET PASSWORD",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully reset password for user with ID: 669726077805357df8f15fa5",
+  "createdAt": {
+    "$date": "2024-07-19T00:58:48.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:58:48.748Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699ba762880aafe9fc7b046"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-19T00:59:34.637Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T00:59:34.637Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699c5b2a0327cff562943a7"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-19T01:47:30.874Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T01:47:30.874Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d27bb8bb83d7c7f112c0"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-19T02:42:03.786Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:42:03.786Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d293b8bb83d7c7f112d3"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-19T02:42:27.596Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:42:27.596Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d32eb8bb83d7c7f112eb"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-19T02:45:02.536Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:45:02.536Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d399b8bb83d7c7f112fe"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 6699d399547b89363f848ee0",
+  "createdAt": {
+    "$date": "2024-07-19T02:46:49.494Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:46:49.494Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699d3ccb8bb83d7c7f11311"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-19T02:47:40.037Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T02:47:40.037Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699dad78a01fef5b2f9edd6"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-19T03:17:43.452Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T03:17:43.452Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699df8ccfbee7d3bdabfdc7"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-19T03:37:48.386Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T03:37:48.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699e2f5f6dc9f9d6f9331fe"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-19T03:52:21.137Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-19T03:52:21.137Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669d9d5c7323ec918b5fcf8b"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-21T23:44:28.484Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-21T23:44:28.484Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669d9d607323ec918b5fcf98"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-21T23:44:32.479Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-21T23:44:32.479Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669da1cc7323ec918b5fd01f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T00:03:24.615Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T00:03:24.615Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669da1cf7323ec918b5fd022"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T00:03:27.935Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T00:03:27.935Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669da2db7323ec918b5fd033"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T00:07:55.882Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T00:07:55.882Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669da3447323ec918b5fd0d5"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T00:09:40.808Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T00:09:40.808Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669da3497323ec918b5fd0d8"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T00:09:45.385Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T00:09:45.385Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669da895046d6c670e493383"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T00:32:21.880Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T00:32:21.880Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db40e78cb27964835e9e1"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T01:21:18.346Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:21:18.346Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db41278cb27964835e9e4"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T01:21:22.878Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:21:22.878Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db44878cb27964835e9f8"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T01:22:16.649Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:22:16.649Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db44c78cb27964835e9fb"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T01:22:20.200Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:22:20.200Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db49a78cb27964835ea0f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T01:23:38.962Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:23:38.962Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db49f78cb27964835ea12"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T01:23:43.281Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:23:43.281Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db6105b01098c727db75e"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T01:29:52.005Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:29:52.005Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db6135b01098c727db761"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T01:29:55.245Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:29:55.245Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669db6ce5b01098c727db776"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T01:33:02.015Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T01:33:02.015Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dbff41c1f8d4725cc3bb8"
+  },
+  "action": "RESET PASSWORD",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully reset password for user with ID: 6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-22T02:12:04.858Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:12:04.858Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc00e1c1f8d4725cc3bbc"
+  },
+  "action": "ADDED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669dc00e1c1f8d4725cc3bba",
+  "createdAt": {
+    "$date": "2024-07-22T02:12:30.494Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:12:30.494Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc0111c1f8d4725cc3bbe"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T02:12:33.545Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:12:33.545Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc02a1c1f8d4725cc3bc4"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T02:12:58.359Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:12:58.359Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc0381c1f8d4725cc3bd8"
+  },
+  "action": "RESET PASSWORD",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully reset password for user with ID: 669dc00e1c1f8d4725cc3bba",
+  "createdAt": {
+    "$date": "2024-07-22T02:13:12.652Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:13:12.652Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc0421c1f8d4725cc3bdc"
+  },
+  "action": "ADDED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669dc0421c1f8d4725cc3bda",
+  "createdAt": {
+    "$date": "2024-07-22T02:13:22.703Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:13:22.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc0441c1f8d4725cc3bde"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T02:13:24.721Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:13:24.721Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc1df0f40e42d63bd03d1"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T02:20:15.717Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:20:15.717Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc1e10f40e42d63bd03de"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T02:20:17.242Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:20:17.242Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc1e70f40e42d63bd03e1"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T02:20:23.448Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:20:23.448Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc1f80f40e42d63bd0403"
+  },
+  "action": "DELETED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully deleted item with ID: 669dc0421c1f8d4725cc3bda",
+  "createdAt": {
+    "$date": "2024-07-22T02:20:40.752Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:20:40.752Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc20c0f40e42d63bd0407"
+  },
+  "action": "RESET PASSWORD",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully reset password for user with ID: 669dc00e1c1f8d4725cc3bba",
+  "createdAt": {
+    "$date": "2024-07-22T02:21:00.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:21:00.748Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc20d0f40e42d63bd0409"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T02:21:01.911Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:21:01.911Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc2120f40e42d63bd040c"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T02:21:06.900Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:21:06.900Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc21e0f40e42d63bd041f"
+  },
+  "action": "DELETED USER",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "Successfully deleted item with ID: 6698707af1f7752611ff7470",
+  "createdAt": {
+    "$date": "2024-07-22T02:21:18.989Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:21:18.989Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc2240f40e42d63bd0422"
+  },
+  "action": "DELETED USER",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "Successfully deleted item with ID: 6698603a7aef60b689c9fc20",
+  "createdAt": {
+    "$date": "2024-07-22T02:21:24.631Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:21:24.631Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc22d0f40e42d63bd0425"
+  },
+  "action": "DELETED USER",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "Successfully deleted item with ID: 66985f5b0a4bccc0b4711d1d",
+  "createdAt": {
+    "$date": "2024-07-22T02:21:33.468Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:21:33.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc24b0f40e42d63bd042a"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "Successfully updated user with ID: 6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-22T02:22:03.078Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:22:03.078Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc24e0f40e42d63bd042f"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "Successfully updated user with ID: 6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-22T02:22:06.760Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:22:06.760Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc2860f40e42d63bd043b"
+  },
+  "action": "ADDED USER",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "Successfully added new item with ID: 669dc2860f40e42d63bd0439",
+  "createdAt": {
+    "$date": "2024-07-22T02:23:02.441Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:23:02.441Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc2880f40e42d63bd043e"
+  },
+  "action": "DELETED USER",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "Successfully deleted item with ID: 669dc00e1c1f8d4725cc3bba",
+  "createdAt": {
+    "$date": "2024-07-22T02:23:04.599Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:23:04.599Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc28c0f40e42d63bd0440"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669dc00e1c1f8d4725cc3bba"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T02:23:08.385Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:23:08.385Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc2900f40e42d63bd0443"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669dc2860f40e42d63bd0439"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T02:23:12.290Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:23:12.290Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc4350f40e42d63bd0489"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "669dc4350f40e42d63bd0487"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-22T02:30:13.135Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:30:13.135Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc6f70f40e42d63bd04d2"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T02:41:59.015Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:41:59.015Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc7050f40e42d63bd04d7"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "669dc7050f40e42d63bd04d5"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-22T02:42:13.468Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:42:13.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc7330f40e42d63bd050a"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "669dc2860f40e42d63bd0439"
+  },
+  "details": "Successfully updated item with ID: 668c7a1b707dabc392aff337",
+  "createdAt": {
+    "$date": "2024-07-22T02:42:59.229Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:42:59.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc7530f40e42d63bd0537"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669dc7050f40e42d63bd04d5"
+  },
+  "details": "Successfully ordered with reference ID: 669dc7538c804c91a18af59d",
+  "createdAt": {
+    "$date": "2024-07-22T02:43:31.369Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:43:31.369Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc77b0f40e42d63bd056f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669dc7050f40e42d63bd04d5"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T02:44:11.806Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:44:11.806Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dc7b60f40e42d63bd0576"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "669dc7b60f40e42d63bd0574"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-22T02:45:10.130Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:45:10.130Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dcaba0f40e42d63bd05bb"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669dc7050f40e42d63bd04d5"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T02:58:02.877Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T02:58:02.877Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dcf830f40e42d63bd05fd"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "669dcf830f40e42d63bd05fb"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-22T03:18:27.567Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T03:18:27.567Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dcfc80f40e42d63bd062c"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669dcf830f40e42d63bd05fb"
+  },
+  "details": "Successfully ordered with reference ID: 669dcfc98c804c91a18af72c",
+  "createdAt": {
+    "$date": "2024-07-22T03:19:36.900Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T03:19:36.900Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dd00e0f40e42d63bd0660"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669dc2860f40e42d63bd0439"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T03:20:46.973Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T03:20:46.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dd03a0f40e42d63bd0662"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669dcf830f40e42d63bd05fb"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T03:21:30.368Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T03:21:30.368Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669dd0de0f40e42d63bd0666"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T03:24:14.409Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T03:24:14.409Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669eef8e9a695ed7282faa5b"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 669dc2860f40e42d63bd0439",
+  "createdAt": {
+    "$date": "2024-07-22T23:47:26.925Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T23:47:26.925Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef0899a695ed7282faa6b"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-22T23:51:37.326Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T23:51:37.326Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef08d9a695ed7282faa6e"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669dc2860f40e42d63bd0439"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-22T23:51:41.149Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-22T23:51:41.149Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef2939a695ed7282faa88"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669dc2860f40e42d63bd0439"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:00:19.662Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:00:19.662Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef2979a695ed7282faa8b"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:00:23.717Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:00:23.717Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef64286329bf70958e7a6"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:16:02.162Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:16:02.162Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef64686329bf70958e7a9"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669dc2860f40e42d63bd0439"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:16:06.013Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:16:06.013Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef74c86329bf70958e7cc"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669dc2860f40e42d63bd0439"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:20:28.510Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:20:28.510Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef7b186329bf70958e7db"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:22:09.972Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:22:09.972Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef7b686329bf70958e7ef"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 669725fa7805357df8f15fa3",
+  "createdAt": {
+    "$date": "2024-07-23T00:22:14.429Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:22:14.429Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef88f86329bf70958e807"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:25:51.384Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:25:51.384Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8b886329bf70958e80a"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:26:32.089Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:26:32.089Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8b986329bf70958e817"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:26:33.555Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:26:33.555Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8bc86329bf70958e81a"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:26:36.051Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:26:36.051Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8bd86329bf70958e828"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:26:37.349Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:26:37.349Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8be86329bf70958e835"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:26:38.847Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:26:38.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8c186329bf70958e838"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:26:41.141Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:26:41.141Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8c286329bf70958e845"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:26:42.660Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:26:42.660Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8c786329bf70958e848"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:26:47.003Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:26:47.003Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8d686329bf70958e863"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 669726077805357df8f15fa5",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:02.574Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:02.574Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8de86329bf70958e867"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 669725fa7805357df8f15fa3",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:10.640Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:10.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8e986329bf70958e86b"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 669725d27805357df8f15f55",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:21.421Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:21.421Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8ea86329bf70958e86d"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:22.916Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:22.916Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8ed86329bf70958e870"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:25.113Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:25.113Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8ee86329bf70958e87f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:26.461Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:26.461Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8f086329bf70958e882"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:28.311Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:28.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8f186329bf70958e88f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:29.404Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:29.404Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8f386329bf70958e892"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:31.009Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:31.009Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8f486329bf70958e89f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:32.133Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:32.133Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef8fb86329bf70958e8a2"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T00:27:39.406Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:27:39.406Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669ef92186329bf70958e8af"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T00:28:17.602Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:28:17.602Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efaf486329bf70958e8ef"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669efaf486329bf70958e8ed",
+  "createdAt": {
+    "$date": "2024-07-23T00:36:04.104Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:36:04.104Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efafe86329bf70958e8f8"
+  },
+  "action": "UPDATED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 668c9551d85054ce2f89aad3",
+  "createdAt": {
+    "$date": "2024-07-23T00:36:14.325Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:36:14.325Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efb0886329bf70958e905"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669efb0886329bf70958e903",
+  "createdAt": {
+    "$date": "2024-07-23T00:36:24.883Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:36:24.883Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efb1a86329bf70958e915"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669efb1a86329bf70958e913",
+  "createdAt": {
+    "$date": "2024-07-23T00:36:42.925Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:36:42.925Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efb2986329bf70958e929"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669efb2986329bf70958e927",
+  "createdAt": {
+    "$date": "2024-07-23T00:36:57.842Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:36:57.842Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efb3186329bf70958e92d"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 669efb3186329bf70958e92b",
+  "createdAt": {
+    "$date": "2024-07-23T00:37:05.234Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:37:05.234Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669efb8f86329bf70958e95b"
+  },
+  "action": "UPDATED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669731defb8bc779906e822f",
+  "createdAt": {
+    "$date": "2024-07-23T00:38:39.204Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:38:39.204Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669effc090ed328098981c0c"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 669effc0887cb44bc15ec4eb",
+  "createdAt": {
+    "$date": "2024-07-23T00:56:32.039Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T00:56:32.039Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f05152927996f829d7b0f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:19:17.064Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:19:17.064Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f05172927996f829d7b12"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:19:19.069Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:19:19.069Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f05c22927996f829d7ba3"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:22:10.871Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:22:10.871Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f05c52927996f829d7ba6"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:22:13.372Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:22:13.372Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f05ca2927996f829d7be0"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:22:18.480Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:22:18.480Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f05ce2927996f829d7be3"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:22:22.394Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:22:22.394Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f06742927996f829d7cd8"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:25:08.783Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:25:08.783Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f06762927996f829d7cdb"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:25:10.414Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:25:10.414Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f06872927996f829d7d09"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "Successfully ordered with reference ID: 669f0687887cb44bc15eca1f",
+  "createdAt": {
+    "$date": "2024-07-23T01:25:27.282Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:25:27.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f068e2927996f829d7d29"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:25:34.784Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:25:34.784Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f07252927996f829d7d2c"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:28:05.523Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:28:05.523Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f072d2927996f829d7d37"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:28:13.265Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:28:13.265Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f07312927996f829d7d3a"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:28:17.482Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:28:17.482Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f07332927996f829d7d47"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:28:19.774Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:28:19.774Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f07362927996f829d7d4a"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:28:22.087Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:28:22.087Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f077c2927996f829d7d5c"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:29:32.392Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:29:32.392Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f077e2927996f829d7d5f"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:29:34.043Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:29:34.043Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f07832927996f829d7d8f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:29:39.327Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:29:39.327Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f07852927996f829d7d92"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:29:41.121Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:29:41.121Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f07892927996f829d7dd4"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:29:45.679Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:29:45.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f07f02927996f829d7dd7"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:31:28.242Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:31:28.242Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f080d2927996f829d7e03"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:31:57.240Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:31:57.240Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f080e2927996f829d7e06"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:31:58.995Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:31:58.995Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f081d2927996f829d7e35"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "Successfully ordered with reference ID: 669f081e887cb44bc15ecaa8",
+  "createdAt": {
+    "$date": "2024-07-23T01:32:13.542Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:32:13.542Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f082b2927996f829d7e4f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:32:27.521Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:32:27.521Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f08312927996f829d7e52"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:32:33.628Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:32:33.628Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f09cc2927996f829d7f8e"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:39:24.341Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:39:24.341Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f09ce2927996f829d7f91"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:39:26.110Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:39:26.110Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f09d02927996f829d7fb4"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:39:28.926Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:39:28.926Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f09d62927996f829d7fb7"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T01:39:34.319Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:39:34.319Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f0cf22927996f829d8030"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669dc4350f40e42d63bd0487"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T01:52:50.128Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T01:52:50.128Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f12392927996f829d805d"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 669f123a887cb44bc15ecd06",
+  "createdAt": {
+    "$date": "2024-07-23T02:15:21.862Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:15:21.862Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1a702927996f829d814a"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T02:50:24.601Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:50:24.601Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1a782927996f829d814f"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "669f1a782927996f829d814d"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-23T02:50:32.182Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:50:32.182Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1a9d2927996f829d816b"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669f1a782927996f829d814d"
+  },
+  "details": "Successfully ordered with reference ID: 669f1a9e53546270e401d321",
+  "createdAt": {
+    "$date": "2024-07-23T02:51:09.890Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:51:09.890Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1aa22927996f829d818b"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669f1a782927996f829d814d"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T02:51:14.024Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:51:14.024Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1aa62927996f829d818e"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T02:51:18.210Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:51:18.210Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1aaa2927996f829d81a1"
+  },
+  "action": "DELETED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully deleted item with ID: 669f1a782927996f829d814d",
+  "createdAt": {
+    "$date": "2024-07-23T02:51:22.639Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:51:22.639Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1bad2927996f829d8272"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T02:55:41.098Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:55:41.098Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1bb82927996f829d8277"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "669f1bb82927996f829d8275"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-23T02:55:52.157Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T02:55:52.157Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1ce0a155b7ce2e09db24"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669f1bb82927996f829d8275"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T03:00:48.377Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:00:48.377Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1ce4a155b7ce2e09db27"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T03:00:52.420Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:00:52.420Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1eb5a155b7ce2e09db58"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T03:08:37.009Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:08:37.009Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1ec6a155b7ce2e09db67"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "Successfully ordered with reference ID: 669f1ec653546270e401d44b",
+  "createdAt": {
+    "$date": "2024-07-23T03:08:54.887Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:08:54.887Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f1edca155b7ce2e09dbdc"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T03:09:16.105Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:09:16.105Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2067929c708ce2497ae5"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: 669f206753546270e401d4da",
+  "createdAt": {
+    "$date": "2024-07-23T03:15:51.295Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:15:51.295Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f212eea2f433472200ff7"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T03:19:10.935Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:19:10.935Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f217fea2f43347220106c"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T03:20:31.058Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:20:31.058Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f25b8ea2f433472201329"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f25b8ea2f433472201325",
+  "createdAt": {
+    "$date": "2024-07-23T03:38:32.060Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:38:32.060Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f273cea2f43347220139a"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f273cea2f433472201396",
+  "createdAt": {
+    "$date": "2024-07-23T03:45:00.570Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:45:00.570Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f27d3ea2f4334722013d2"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f27d3ea2f4334722013cd",
+  "createdAt": {
+    "$date": "2024-07-23T03:47:31.087Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:47:31.087Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f28b3ea2f4334722013eb"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f28b3ea2f4334722013e7",
+  "createdAt": {
+    "$date": "2024-07-23T03:51:15.656Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T03:51:15.656Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2af3ea2f433472201415"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f2af3ea2f433472201412",
+  "createdAt": {
+    "$date": "2024-07-23T04:00:51.699Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:00:51.699Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2cc9ea2f433472201762"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f2cc9ea2f43347220175f",
+  "createdAt": {
+    "$date": "2024-07-23T04:08:41.151Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:08:41.151Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2d5eea2f4334722017e8"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f2d5eea2f4334722017e4",
+  "createdAt": {
+    "$date": "2024-07-23T04:11:10.814Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:11:10.814Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2e8dea2f4334722019eb"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 668c7a08707dabc392aff335",
+  "createdAt": {
+    "$date": "2024-07-23T04:16:13.534Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:16:13.534Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f2e90ea2f4334722019ee"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 668c7a1b707dabc392aff337",
+  "createdAt": {
+    "$date": "2024-07-23T04:16:16.555Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:16:16.555Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f3087ea2f433472201ab3"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6695c52079ffdfd7262c00ec",
+  "createdAt": {
+    "$date": "2024-07-23T04:24:39.968Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:24:39.968Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f31dbea2f433472201b63"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 668c7a1b707dabc392aff337",
+  "createdAt": {
+    "$date": "2024-07-23T04:30:19.945Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:30:19.945Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f31f5ea2f433472201b82"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669efaf486329bf70958e8ed",
+  "createdAt": {
+    "$date": "2024-07-23T04:30:45.858Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T04:30:45.858Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f6d4b63947939d9b83a44"
+  },
+  "action": "UPDATED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated recipe with ID: 669efb2986329bf70958e927",
+  "createdAt": {
+    "$date": "2024-07-23T08:43:55.404Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T08:43:55.404Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f6d7d63947939d9b83a67"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 6695de206000e257437750a8",
+  "createdAt": {
+    "$date": "2024-07-23T08:44:45.152Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T08:44:45.152Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f6d8163947939d9b83a6a"
+  },
+  "action": "DELETED STOCK",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully deleted item with ID: 6695d9b26000e25743774dd4",
+  "createdAt": {
+    "$date": "2024-07-23T08:44:49.934Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T08:44:49.934Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f6d9263947939d9b83a89"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f6d9263947939d9b83a84",
+  "createdAt": {
+    "$date": "2024-07-23T08:45:06.540Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T08:45:06.540Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f6e0763947939d9b83b31"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 6695de206000e257437750a8",
+  "createdAt": {
+    "$date": "2024-07-23T08:47:03.139Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T08:47:03.139Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f70a360b2224ce487d43e"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 668c7a1b707dabc392aff337",
+  "createdAt": {
+    "$date": "2024-07-23T08:58:11.378Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T08:58:11.378Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f71b6b26752a92a2bf544"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 669f71b6b26752a92a2bf53f",
+  "createdAt": {
+    "$date": "2024-07-23T09:02:46.756Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:02:46.756Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f721db26752a92a2bf55c"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669efaf486329bf70958e8ed",
+  "createdAt": {
+    "$date": "2024-07-23T09:04:29.947Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:04:29.947Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f7252b26752a92a2bf57f"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6699a8a02880aafe9fc7aef0"
+  },
+  "details": "Successfully ordered with transaction ID: 669f7252b26752a92a2bf57b",
+  "createdAt": {
+    "$date": "2024-07-23T09:05:22.832Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:05:22.832Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f753c7213e31d15962aea"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T09:17:48.996Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:17:48.996Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f75467213e31d15962afb"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669efaf486329bf70958e8ed",
+  "createdAt": {
+    "$date": "2024-07-23T09:17:58.697Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:17:58.697Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f755e7213e31d15962b15"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "Successfully ordered with transaction ID: 669f755e7213e31d15962b11",
+  "createdAt": {
+    "$date": "2024-07-23T09:18:22.928Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:18:22.928Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "669f75cddf9a8b2c2a70fc03"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "Successfully ordered with transaction ID: 669f75cddf9a8b2c2a70fbfe",
+  "createdAt": {
+    "$date": "2024-07-23T09:20:13.662Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T09:20:13.662Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0410888d63e06f90ea054"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-23T23:47:20.302Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:47:20.302Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0411f88d63e06f90ea057"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T23:47:43.526Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:47:43.526Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0412988d63e06f90ea078"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669efaf486329bf70958e8ed",
+  "createdAt": {
+    "$date": "2024-07-23T23:47:53.795Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:47:53.795Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0413488d63e06f90ea088"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 66a0413488d63e06f90ea084",
+  "createdAt": {
+    "$date": "2024-07-23T23:48:04.730Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:48:04.730Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0416088d63e06f90ea095"
+  },
+  "action": "UPDATED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669731defb8bc779906e822f",
+  "createdAt": {
+    "$date": "2024-07-23T23:48:48.391Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:48:48.391Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0416588d63e06f90ea099"
+  },
+  "action": "UPDATED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669731defb8bc779906e822f",
+  "createdAt": {
+    "$date": "2024-07-23T23:48:53.125Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:48:53.125Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0418688d63e06f90ea0ad"
+  },
+  "action": "UPDATED MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 668c80c8aa6ef9dd19242fd3",
+  "createdAt": {
+    "$date": "2024-07-23T23:49:26.331Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:49:26.331Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0428188d63e06f90ea0e7"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0428188d63e06f90ea0e5",
+  "createdAt": {
+    "$date": "2024-07-23T23:53:37.168Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:53:37.168Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0429188d63e06f90ea0f0"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0429188d63e06f90ea0ee",
+  "createdAt": {
+    "$date": "2024-07-23T23:53:53.180Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:53:53.180Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0429988d63e06f90ea0fd"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0429988d63e06f90ea0fb",
+  "createdAt": {
+    "$date": "2024-07-23T23:54:01.136Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:54:01.136Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a042b888d63e06f90ea106"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a042b888d63e06f90ea104",
+  "createdAt": {
+    "$date": "2024-07-23T23:54:32.423Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:54:32.423Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a042d588d63e06f90ea10f"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a042d588d63e06f90ea10d",
+  "createdAt": {
+    "$date": "2024-07-23T23:55:01.780Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:55:01.780Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a042e188d63e06f90ea121"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a042e188d63e06f90ea11f",
+  "createdAt": {
+    "$date": "2024-07-23T23:55:13.206Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:55:13.206Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a042ec88d63e06f90ea125"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a042ec88d63e06f90ea123",
+  "createdAt": {
+    "$date": "2024-07-23T23:55:24.166Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:55:24.166Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a042f488d63e06f90ea129"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a042f488d63e06f90ea127",
+  "createdAt": {
+    "$date": "2024-07-23T23:55:32.889Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:55:32.889Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a042ff88d63e06f90ea12c"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-23T23:55:43.590Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:55:43.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0431288d63e06f90ea182"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0431288d63e06f90ea180",
+  "createdAt": {
+    "$date": "2024-07-23T23:56:02.148Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:56:02.148Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0431c88d63e06f90ea194"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0431c88d63e06f90ea192",
+  "createdAt": {
+    "$date": "2024-07-23T23:56:12.215Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:56:12.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0436a88d63e06f90ea1af"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0436a88d63e06f90ea1ad",
+  "createdAt": {
+    "$date": "2024-07-23T23:57:30.328Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:57:30.328Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0437488d63e06f90ea1b8"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0437488d63e06f90ea1b6",
+  "createdAt": {
+    "$date": "2024-07-23T23:57:40.149Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:57:40.149Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0438788d63e06f90ea1bc"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0438788d63e06f90ea1ba",
+  "createdAt": {
+    "$date": "2024-07-23T23:57:59.251Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:57:59.251Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0438e88d63e06f90ea1bf"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 6695de206000e257437750a8",
+  "createdAt": {
+    "$date": "2024-07-23T23:58:06.563Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:58:06.563Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0439188d63e06f90ea1c2"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 669efaf486329bf70958e8ed",
+  "createdAt": {
+    "$date": "2024-07-23T23:58:09.531Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:58:09.531Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0439388d63e06f90ea1c5"
+  },
+  "action": "UPDATED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated item with ID: 668c7a1b707dabc392aff337",
+  "createdAt": {
+    "$date": "2024-07-23T23:58:11.988Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:58:11.988Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a043dd88d63e06f90ea1ce"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a043dd88d63e06f90ea1cc",
+  "createdAt": {
+    "$date": "2024-07-23T23:59:25.073Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:59:25.073Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a043e988d63e06f90ea1d7"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a043e988d63e06f90ea1d5",
+  "createdAt": {
+    "$date": "2024-07-23T23:59:37.947Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:59:37.947Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a043f788d63e06f90ea1db"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a043f788d63e06f90ea1d9",
+  "createdAt": {
+    "$date": "2024-07-23T23:59:51.172Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-23T23:59:51.172Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0441b88d63e06f90ea1df"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0441a88d63e06f90ea1dd",
+  "createdAt": {
+    "$date": "2024-07-24T00:00:27.064Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:00:27.064Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0442788d63e06f90ea1f1"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0442788d63e06f90ea1ef",
+  "createdAt": {
+    "$date": "2024-07-24T00:00:39.979Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:00:39.979Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0442f88d63e06f90ea1f5"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0442e88d63e06f90ea1f3",
+  "createdAt": {
+    "$date": "2024-07-24T00:00:47.044Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:00:47.044Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0443a88d63e06f90ea1f9"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0443a88d63e06f90ea1f7",
+  "createdAt": {
+    "$date": "2024-07-24T00:00:58.350Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:00:58.350Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0444f88d63e06f90ea1fd"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0444f88d63e06f90ea1fb",
+  "createdAt": {
+    "$date": "2024-07-24T00:01:19.907Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:01:19.907Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0445888d63e06f90ea201"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0445888d63e06f90ea1ff",
+  "createdAt": {
+    "$date": "2024-07-24T00:01:28.180Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:01:28.180Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0446088d63e06f90ea205"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0445f88d63e06f90ea203",
+  "createdAt": {
+    "$date": "2024-07-24T00:01:36.011Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:01:36.011Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a044e188d63e06f90ea21c"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a044e188d63e06f90ea21a",
+  "createdAt": {
+    "$date": "2024-07-24T00:03:45.868Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:03:45.868Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a044f188d63e06f90ea225"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a044f188d63e06f90ea223",
+  "createdAt": {
+    "$date": "2024-07-24T00:04:01.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:04:01.589Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0450988d63e06f90ea229"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0450988d63e06f90ea227",
+  "createdAt": {
+    "$date": "2024-07-24T00:04:25.181Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:04:25.181Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0451b88d63e06f90ea22d"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0451b88d63e06f90ea22b",
+  "createdAt": {
+    "$date": "2024-07-24T00:04:43.554Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:04:43.554Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0452888d63e06f90ea23a"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0452888d63e06f90ea238",
+  "createdAt": {
+    "$date": "2024-07-24T00:04:56.717Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:04:56.717Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0453888d63e06f90ea24c"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0453888d63e06f90ea24a",
+  "createdAt": {
+    "$date": "2024-07-24T00:05:12.382Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:05:12.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0454088d63e06f90ea252"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a0454088d63e06f90ea250",
+  "createdAt": {
+    "$date": "2024-07-24T00:05:20.376Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:05:20.376Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0459788d63e06f90ea25d"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T00:06:47.829Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:06:47.829Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a046a188d63e06f90ea266"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T00:11:13.562Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:11:13.562Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a046d288d63e06f90ea287"
+  },
+  "action": "UPDATED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated recipe with ID: 669efb2986329bf70958e927",
+  "createdAt": {
+    "$date": "2024-07-24T00:12:02.092Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:12:02.092Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a046d888d63e06f90ea28a"
+  },
+  "action": "UPDATED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated recipe with ID: 668dce64c2b17be024a1d238",
+  "createdAt": {
+    "$date": "2024-07-24T00:12:08.036Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:12:08.036Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0476588d63e06f90ea291"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T00:14:29.907Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:14:29.907Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0476888d63e06f90ea294"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T00:14:32.158Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:14:32.158Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a04df188d63e06f90ea304"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T00:42:25.572Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:42:25.572Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a04df488d63e06f90ea307"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T00:42:28.005Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:42:28.005Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a04df588d63e06f90ea314"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T00:42:29.921Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:42:29.921Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a04df888d63e06f90ea317"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T00:42:32.308Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:42:32.308Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a04dfa88d63e06f90ea324"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T00:42:34.881Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:42:34.881Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a04dfc88d63e06f90ea327"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T00:42:36.557Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:42:36.557Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a04dfe88d63e06f90ea332"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T00:42:38.251Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:42:38.251Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a04e0288d63e06f90ea335"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T00:42:42.646Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:42:42.646Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0507388d63e06f90ea37e"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with transaction ID: 66a0507388d63e06f90ea37a",
+  "createdAt": {
+    "$date": "2024-07-24T00:53:07.420Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T00:53:07.420Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a05a5f88d63e06f90ea40d"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T01:35:27.508Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T01:35:27.508Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a05a8c88d63e06f90ea41f"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T01:36:12.026Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T01:36:12.026Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a05a8f88d63e06f90ea422"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T01:36:15.658Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T01:36:15.658Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a05f5a88d63e06f90ea45f"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with transaction ID: 66a05f5a88d63e06f90ea45b",
+  "createdAt": {
+    "$date": "2024-07-24T01:56:42.099Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T01:56:42.099Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0614d88d63e06f90ea476"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a0614d88d63e06f90ea474",
+  "createdAt": {
+    "$date": "2024-07-24T02:05:01.522Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:05:01.522Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0615a88d63e06f90ea47f"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a0615a88d63e06f90ea47d",
+  "createdAt": {
+    "$date": "2024-07-24T02:05:14.394Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:05:14.394Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0616288d63e06f90ea48c"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a0616288d63e06f90ea48a",
+  "createdAt": {
+    "$date": "2024-07-24T02:05:22.222Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:05:22.222Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0618688d63e06f90ea49e"
+  },
+  "action": "ADDED NEW MENU ITEM",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a0618688d63e06f90ea49c",
+  "createdAt": {
+    "$date": "2024-07-24T02:05:58.316Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:05:58.316Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0619f88d63e06f90ea4a7"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a0619f88d63e06f90ea4a5",
+  "createdAt": {
+    "$date": "2024-07-24T02:06:23.980Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:06:23.980Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a061af88d63e06f90ea4b9"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a061af88d63e06f90ea4b7",
+  "createdAt": {
+    "$date": "2024-07-24T02:06:39.963Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:06:39.963Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a061bc88d63e06f90ea4bd"
+  },
+  "action": "ADDED STOCK ITEM",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a061bc88d63e06f90ea4bb",
+  "createdAt": {
+    "$date": "2024-07-24T02:06:52.102Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:06:52.102Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a061c688d63e06f90ea4ca"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a061c688d63e06f90ea4c8",
+  "createdAt": {
+    "$date": "2024-07-24T02:07:02.682Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:07:02.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a061ce88d63e06f90ea4ce"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully added new item with ID: 66a061ce88d63e06f90ea4cc",
+  "createdAt": {
+    "$date": "2024-07-24T02:07:10.821Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:07:10.821Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a061e788d63e06f90ea4d1"
+  },
+  "action": "DELETED RECIPE",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully deleted item with ID: 66a061ce88d63e06f90ea4cc",
+  "createdAt": {
+    "$date": "2024-07-24T02:07:35.113Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:07:35.113Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0662a88d63e06f90ea525"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T02:25:46.330Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:25:46.330Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06c3a88d63e06f90ea538"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T02:51:38.458Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:51:38.458Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06c6988d63e06f90ea53d"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T02:52:25.918Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:52:25.918Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06d4688d63e06f90ea542"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T02:56:06.864Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:56:06.864Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06d8388d63e06f90ea554"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T02:57:07.734Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:57:07.734Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06d8f88d63e06f90ea556"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: 66a06d85eeb8dc50ec288046",
+  "createdAt": {
+    "$date": "2024-07-24T02:57:19.531Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:57:19.531Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06dba88d63e06f90ea565"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T02:58:02.617Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T02:58:02.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06f7388d63e06f90ea575"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T03:05:23.074Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T03:05:23.074Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a06fae88d63e06f90ea59b"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T03:06:22.624Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T03:06:22.624Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a08f448d4b30f052556074"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T05:21:08.832Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:21:08.832Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a08f478d4b30f052556077"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:21:11.799Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:21:11.799Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a08f4a8d4b30f052556084"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T05:21:14.634Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:21:14.634Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a08f4c8d4b30f052556087"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:21:16.661Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:21:16.661Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a08f518d4b30f052556094"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725fa7805357df8f15fa3"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T05:21:21.288Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:21:21.288Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a08f538d4b30f052556097"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:21:23.509Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:21:23.509Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a08f558d4b30f0525560a4"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669726077805357df8f15fa5"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T05:21:25.313Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:21:25.313Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a08f578d4b30f0525560a7"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:21:27.478Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:21:27.478Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a090638d4b30f0525560f7"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T05:25:55.798Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:25:55.798Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a090918d4b30f0525560fe"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:26:41.193Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:26:41.193Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a091238d4b30f052556144"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with reference ID: ",
+  "createdAt": {
+    "$date": "2024-07-24T05:29:07.367Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:29:07.367Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a091628d4b30f052556173"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a091628d4b30f052556171",
+  "createdAt": {
+    "$date": "2024-07-24T05:30:10.189Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:10.189Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a091758d4b30f052556177"
+  },
+  "action": "ADDED RECIPE",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully added new item with ID: 66a091758d4b30f052556175",
+  "createdAt": {
+    "$date": "2024-07-24T05:30:29.236Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:29.236Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a091858d4b30f052556188"
+  },
+  "action": "SUCCESSFUL CAFE ORDER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully ordered with transaction ID: 66a091858d4b30f052556183",
+  "createdAt": {
+    "$date": "2024-07-24T05:30:45.750Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:30:45.750Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a091d98d4b30f0525561de"
+  },
+  "action": "USER SIGNUP",
+  "user": {
+    "$oid": "66a091d98d4b30f0525561dc"
+  },
+  "details": "New user signed up",
+  "createdAt": {
+    "$date": "2024-07-24T05:32:09.851Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:32:09.851Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a091e48d4b30f0525561f0"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 66a091d98d4b30f0525561dc",
+  "createdAt": {
+    "$date": "2024-07-24T05:32:20.815Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:32:20.815Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a092078d4b30f0525561f6"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:32:55.354Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:32:55.354Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0925e8d4b30f052556249"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T05:34:22.794Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:34:22.794Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0928b8d4b30f05255624c"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:35:07.008Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:35:07.008Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a092f98d4b30f052556264"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:36:57.522Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:36:57.522Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a093958d4b30f052556316"
+  },
+  "action": "UPDATED USER",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "Successfully updated user with ID: 6699a8a02880aafe9fc7aef0",
+  "createdAt": {
+    "$date": "2024-07-24T05:39:33.158Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:39:33.158Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a0941d8d4b30f052556389"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "6695c52079ffdfd7262c00ec"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T05:41:49.779Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:41:49.779Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a094208d4b30f05255638c"
+  },
+  "action": "USER LOGIN",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed in",
+  "createdAt": {
+    "$date": "2024-07-24T05:41:52.159Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:41:52.159Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66a094288d4b30f0525563a2"
+  },
+  "action": "USER LOGOUT",
+  "user": {
+    "$oid": "669725d27805357df8f15f55"
+  },
+  "details": "User signed out",
+  "createdAt": {
+    "$date": "2024-07-24T05:42:00.738Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T05:42:00.738Z"
+  }
+}]

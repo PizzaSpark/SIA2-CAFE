@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { Box, Button, Tooltip } from "@mui/material";
 import { Delete, Edit } from "@mui/icons-material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 
 export default function StockTable({ dataList, onEdit, onDelete }) {
     const columns = [
@@ -69,6 +69,12 @@ export default function StockTable({ dataList, onEdit, onDelete }) {
                 autoPageSize
                 pagination
                 disableRowSelectionOnClick
+                slots={{ toolbar: GridToolbar }}
+                slotProps={{
+                    toolbar: {
+                        showQuickFilter: true,
+                    },
+                }}
             />
         </Box>
     );
